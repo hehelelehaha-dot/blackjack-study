@@ -1,0 +1,717 @@
+{
+  "modules": {
+    "primer": {
+      "handout_zh": "讲义 Card Values，和白板 19 手。台面图讲义几乎没写。",
+      "goal_zh": "两秒内报出点数，分清软牌、硬牌、爆牌。本课 blackjack 按讲义赔 3 to 2。",
+      "sections": [
+        {
+          "h": "软牌和硬牌",
+          "body": "软牌：手里的 A 还能算 11。硬牌：没有 A，或者 A 算 11 会爆、所以只能算 1。A+4+3 是软 18。A+5+8 是硬 14。"
+        },
+        {
+          "h": "台面",
+          "body": "常见布局：荷官左手边 first base 先发，右手边 third base 后打。Shoe、弃牌架、筹码槽的位置看学校。毡上的赔率和 17 点规定以眼前这张桌为准。"
+        },
+        {
+          "h": "家中练习",
+          "body": "用一副牌做白板那 19 手。先报软、硬或爆，再报总数。全对了再计时。"
+        }
+      ],
+      "phrase_ids": [
+        "n-ace",
+        "n-soft-17",
+        "n-hard-14",
+        "n-twenty-one",
+        "n-bust"
+      ],
+      "pattern_ids": [
+        "pat-soft-hard"
+      ],
+      "checks": [
+        {
+          "q": "A, 4, 3 是多少？",
+          "a": "软 18。"
+        },
+        {
+          "q": "A, 5, 8 是多少？",
+          "a": "硬 14。A 只能算 1。"
+        },
+        {
+          "q": "白板：7, 6, A, 4？",
+          "a": "硬 18。"
+        },
+        {
+          "q": "白板：8, 5, A, 8？",
+          "a": "22，爆。"
+        },
+        {
+          "q": "讲义里 blackjack 赔几？",
+          "a": "3 to 2。不是 6 to 5。"
+        }
+      ],
+      "retell_zh": "用中文加上 soft、hard，说出定义，并各举讲义里的一个例子。",
+      "rule_ids": [
+        "values",
+        "soft-hard",
+        "payouts-32"
+      ],
+      "drill_ids": [
+        "hands"
+      ]
+    },
+    "shuffle": {
+      "handout_zh": "讲义未写，按常见做法；现场以主管/学校为准。",
+      "goal_zh": "按学校步骤洗完。牌压低，不露底。洗之前先大声喊 Shuffle。",
+      "sections": [
+        {
+          "h": "手法",
+          "body": "常见做法：该洗的时候先 wash，再按固定次数 riffle、strip、再 riffle。视频里的八副程序是：对半、右边转 180 度、每次抓一副到一副半、riffle riffle strip riffle。"
+        },
+        {
+          "h": "常见错误",
+          "body": "洗牌抬得太高。跳步。轻轻说 shuffle。转错边。一次抓得太多导致卡住。"
+        },
+        {
+          "h": "家中练习",
+          "body": "同一套步骤连续洗 10 遍。步骤顺序每次一样，没有牌翻面。再单独练大声喊 Shuffle。"
+        }
+      ],
+      "phrase_ids": [
+        "d-shuffle",
+        "d-announce-loud",
+        "d-riffle-pattern",
+        "d-deck-and-half",
+        "d-wash",
+        "d-im-shuffling"
+      ],
+      "pattern_ids": [
+        "pat-shuffle-verb"
+      ],
+      "checks": [
+        {
+          "q": "为什么洗牌要压低？",
+          "a": "避免露出底牌或其他牌面。讲义未写，按常见做法。"
+        },
+        {
+          "q": "可以自己改顺序吗？",
+          "a": "不可以。学校步骤按顺序做完。"
+        },
+        {
+          "q": "有洗牌机就可以不管牌吗？",
+          "a": "不行。仍要按程序保护牌。"
+        }
+      ],
+      "retell_zh": "按顺序说出洗牌步骤，带上 Shuffle、riffle、strip。",
+      "rule_ids": [
+        "policies"
+      ],
+      "drill_ids": []
+    },
+    "cut": {
+      "handout_zh": "讲义未写，按常见做法；现场以主管/学校为准。",
+      "goal_zh": "把切牌卡交给客人切，按切点切开，再把切牌卡插回学校规定的深度。",
+      "sections": [
+        {
+          "h": "手法",
+          "body": "递卡，说 Would you like to cut? 或 Please cut。客人插入后切开。没人切，荷官自己切。切多深以学校为准。"
+        },
+        {
+          "h": "常见错误",
+          "body": "没请客人就自己切。切完把切牌卡随便一插。露牌。"
+        },
+        {
+          "h": "家中练习",
+          "body": "用一张不同颜色的牌当切牌卡，重复 10 次：递、切、插回固定深度。"
+        }
+      ],
+      "phrase_ids": [
+        "d-would-you-cut",
+        "d-please-cut",
+        "d-thank-you"
+      ],
+      "pattern_ids": [
+        "pat-would-you"
+      ],
+      "checks": [
+        {
+          "q": "通常谁决定切在哪里？",
+          "a": "客人。没人切才由荷官切。"
+        },
+        {
+          "q": "切牌卡出来之后？",
+          "a": "先打完当前这局，再洗。常见做法。"
+        },
+        {
+          "q": "Penetration 是什么？",
+          "a": "切牌卡的深度，也就是这靴牌发到多深再洗。"
+        }
+      ],
+      "retell_zh": "从递卡到卡插回 shoe，按顺序说一遍。",
+      "rule_ids": [],
+      "drill_ids": []
+    },
+    "burn": {
+      "handout_zh": "讲义未写，按常见做法；现场以主管/学校为准。",
+      "goal_zh": "洗切之后、发牌之前，把规定的烧牌放进弃牌架。",
+      "sections": [
+        {
+          "h": "手法",
+          "body": "常见是烧第一张，不亮给客人。有的房规会闪一下。烧几张、亮不亮，以学校为准。"
+        },
+        {
+          "h": "常见错误",
+          "body": "不该亮的时候把烧牌翻开。忘了放进弃牌架。烧多或漏烧。"
+        },
+        {
+          "h": "家中练习",
+          "body": "切完后烧 1 张到固定的弃牌位置，然后再发。重复 10 圈。"
+        }
+      ],
+      "phrase_ids": [
+        "d-burning",
+        "d-burn-card"
+      ],
+      "pattern_ids": [
+        "pat-burn"
+      ],
+      "checks": [
+        {
+          "q": "烧牌一般在什么时候？",
+          "a": "洗切完成、第一圈发牌之前。"
+        },
+        {
+          "q": "烧牌通常放哪？",
+          "a": "弃牌架，不是 shoe。"
+        }
+      ],
+      "retell_zh": "什么时候烧、烧完放哪、为什么不能随便亮。",
+      "rule_ids": [],
+      "drill_ids": []
+    },
+    "deal": {
+      "handout_zh": "点数用 Card Values。$100 及以上和彩色大筹的喊话用 Terminology。发牌手法本身讲义未写。",
+      "goal_zh": "从 first base 发到 third base，只给有注的位置。荷官一明一暗。大额先喊再发。",
+      "sections": [
+        {
+          "h": "讲义喊话",
+          "body": "下注 $100 或以上，发牌前喊 Cheques Play。黑筹、紫筹、橙筹下注喊 Black Action、Purple Action、Orange Action。"
+        },
+        {
+          "h": "常见做法",
+          "body": "开始发了，客人不应再改注。Shoe 局牌通常朝上、客人不碰。Pitch 时牌朝下注点飞，不要朝人脸。先发明还是先发暗，以学校为准。视频 03 里，讲师说 no more bets 要配合手势，因为摄像机听不见。"
+        },
+        {
+          "h": "家中练习",
+          "body": "摆 5 个注，从左到右发两圈，自己一明一暗。加一个 $100 的位置，发牌前先喊 Cheques Play。"
+        }
+      ],
+      "phrase_ids": [
+        "d-cheques-play",
+        "d-black-action",
+        "d-purple-action",
+        "d-orange-action",
+        "d-no-more-bets",
+        "n-first-base",
+        "n-third-base"
+      ],
+      "pattern_ids": [
+        "pat-action"
+      ],
+      "checks": [
+        {
+          "q": "哪个位置先发？",
+          "a": "First base，荷官左手边。常见做法。"
+        },
+        {
+          "q": "客人下注 $100，发牌前喊什么？",
+          "a": "Cheques Play。讲义。"
+        },
+        {
+          "q": "客人用黑筹下注喊什么？",
+          "a": "Black Action。讲义。"
+        },
+        {
+          "q": "Shoe 局客人的牌通常朝哪？",
+          "a": "朝上，而且通常不能碰。讲义未写，按常见做法。"
+        }
+      ],
+      "retell_zh": "从检查下注到发完两圈，包括什么时候喊 Cheques Play。",
+      "rule_ids": [
+        "values",
+        "calls"
+      ],
+      "drill_ids": [
+        "hands"
+      ]
+    },
+    "peek": {
+      "handout_zh": "讲义 Insurance。边注用 Match the Dealer 和 Kings Bounty。偷看手法讲义未写。",
+      "goal_zh": "明牌是 A：先结两个边注，再喊 Insurance Open，再偷看。不能把底牌亮给客人。",
+      "sections": [
+        {
+          "h": "讲义顺序",
+          "body": "荷官第一张是 A。先结算 Match the Dealer 和 Kings Bounty。清楚喊 Insurance Open，并沿保险线做手势。保险不超过原注的一半。客人自己有 blackjack 可以 even money。然后才偷看。"
+        },
+        {
+          "h": "10 点明牌",
+          "body": "讲义的保险只写了 A。10 点明牌不开保险。常见做法是立刻偷看。"
+        },
+        {
+          "h": "家中练习",
+          "body": "三个位置：一个有边注，一个买满额保险，一个要 even money。按顺序做 10 次。$25 的满额保险是 $12.50。"
+        }
+      ],
+      "phrase_ids": [
+        "d-insurance-open",
+        "d-even-money",
+        "d-blackjack"
+      ],
+      "pattern_ids": [
+        "pat-insurance"
+      ],
+      "checks": [
+        {
+          "q": "什么时候开保险？",
+          "a": "荷官第一张是 A。讲义。"
+        },
+        {
+          "q": "喊 Insurance Open 之前先做什么？",
+          "a": "先结算 Match the Dealer 和 Kings Bounty。"
+        },
+        {
+          "q": "$25 的满额保险是多少？",
+          "a": "$12.50。"
+        },
+        {
+          "q": "$20 的 blackjack 要 even money，赔多少？",
+          "a": "$20，1 to 1，不是 3 to 2。"
+        },
+        {
+          "q": "保险可以少于一半吗？多于一半呢？",
+          "a": "可以少于或等于一半。不可以多于一半。"
+        }
+      ],
+      "retell_zh": "从明牌是 A 到偷看结束，必须说到边注先结，再 Insurance Open。",
+      "rule_ids": [
+        "insurance",
+        "match",
+        "kings"
+      ],
+      "drill_ids": [
+        "insurance",
+        "match",
+        "kings"
+      ]
+    },
+    "signals": {
+      "handout_zh": "讲义 Splits and Doubling Down。手势本身讲义未写。",
+      "goal_zh": "看懂再给牌。分牌最多 4 手。A 只分一次、只给 1 张。加倍筹码在原注右侧。",
+      "sections": [
+        {
+          "h": "讲义",
+          "body": "对子可分，再放一份同额注。最多分 3 次、共 4 手。A 只能分一次，每手 1 张，分开的 A 不能加倍。其他分牌后可以加倍。任意两张可加倍，blackjack 除外。少于原注要喊 doubling down for less。不常见的加倍要喊，例如 doubling down on a hard 12。对子先问 split 还是 double。"
+        },
+        {
+          "h": "待确认",
+          "body": "分牌那段印着 All double down bets must be moved to the right side of the original bet。加倍那段也写筹码放原注右侧。照原文保留。这句印在分牌段里，问过老师再改。"
+        },
+        {
+          "h": "视频里的口头加倍",
+          "body": "视频 03：客人说 I'd like to double, please。讲师说不用再要手势，因为没有别的选择，但一定要 prove the bet，然后 card and move on。Surrender 讲义未写。"
+        },
+        {
+          "h": "常见手势",
+          "body": "讲义未写手势。常见：要牌是敲或刮桌，停牌是手在牌上平挥。只靠口头不够，摄像机要看见。现场以学校为准。"
+        }
+      ],
+      "phrase_ids": [
+        "d-double-less",
+        "d-double-hard-12",
+        "d-split-or-double",
+        "d-signal-please",
+        "d-one-card",
+        "p-split-please",
+        "p-double-please"
+      ],
+      "pattern_ids": [
+        "pat-double"
+      ],
+      "checks": [
+        {
+          "q": "最多分成几手？",
+          "a": "4 手，也就是分 3 次。讲义。"
+        },
+        {
+          "q": "分开的 A 怎么打？",
+          "a": "每手只给 1 张，不能再加倍。"
+        },
+        {
+          "q": "加倍但筹码少于原注，喊什么？",
+          "a": "doubling down for less."
+        },
+        {
+          "q": "硬 12 加倍，喊什么？",
+          "a": "doubling down on a hard 12."
+        },
+        {
+          "q": "分牌后的 A+10 是 blackjack 吗？",
+          "a": "不是。是 21，不按 3 to 2。"
+        }
+      ],
+      "retell_zh": "说清分牌上限、分 A 的限制、加倍放哪、哪两句必须喊。",
+      "rule_ids": [
+        "splits"
+      ],
+      "drill_ids": []
+    },
+    "dealer-hand": {
+      "handout_zh": "点数用 Card Values。讲义没有写停 17 还是补软 17。",
+      "goal_zh": "客人打完，翻开底牌，按规则补或停，大声报总数。荷官没有选择。",
+      "sections": [
+        {
+          "h": "培训桌毡",
+          "body": "视频 03 的培训桌毡：Dealer stands on all 17。笔记里的毡文是 DEALER MUST DRAW TO 16 AND STAND ON ALL 17s。也就是 16 必须补，所有 17 都停，含软 17。这只代表那张培训桌，不是已确认的 Turning Stone 实地规则。考试桌是否一样：没记录。"
+        },
+        {
+          "h": "常见规则",
+          "body": "硬 16 及以下补，硬 17 及以上停。软 17 看毡。A+6+10 是硬 17，不是软 17。"
+        },
+        {
+          "h": "家中练习",
+          "body": "先口头报 Dealer has sixteen，补牌后再报新总数或 Dealer busts。另做软牌，先声明这桌是 S17 还是 H17。"
+        }
+      ],
+      "phrase_ids": [
+        "d-dealer-16",
+        "d-dealer-17",
+        "d-dealer-soft-17",
+        "d-dealer-busts",
+        "d-dealer-bj"
+      ],
+      "pattern_ids": [
+        "pat-dealer-has"
+      ],
+      "checks": [
+        {
+          "q": "荷官硬 16？",
+          "a": "必须补。"
+        },
+        {
+          "q": "荷官硬 17？",
+          "a": "停。"
+        },
+        {
+          "q": "培训桌毡上的软 17？",
+          "a": "停。来自培训桌毡，不是讲义，也不是已确认的实地规则。"
+        },
+        {
+          "q": "A+5 再来一张 10？",
+          "a": "硬 16，必须再补。"
+        },
+        {
+          "q": "K, 3, A, 6？",
+          "a": "硬 20，停。"
+        }
+      ],
+      "retell_zh": "从翻底牌到停或爆，说明 16 和这张培训桌的软 17。",
+      "rule_ids": [
+        "felt-s17",
+        "soft-hard"
+      ],
+      "drill_ids": [
+        "hands"
+      ]
+    },
+    "payouts": {
+      "handout_zh": "Blackjack Payouts 3 to 2、Cheque Rundown、Breaking Down Cheques、两个边注表、换筹喊话。",
+      "goal_zh": "切出摄像机能读的筹码。Blackjack 按讲义 3 to 2 赔。边注按讲义表赔。",
+      "sections": [
+        {
+          "h": "3 to 2",
+          "body": "记住 $1 到 $10 就能推任何注。$25 = $20+$5 → $30+$7.50 = $37.50。讲义没有 6 to 5。"
+        },
+        {
+          "h": "切法",
+          "body": "白、红、黑、橙按 5。粉、绿、紫按 4。5 张绿是 4-1，不是一摞 5。一摞 20 张：白 $20，粉 $50，红 $100，绿 $500，黑 $2,000，紫 $10,000，橙 $20,000，灰 $100,000。"
+        },
+        {
+          "h": "视频里多出来的赔付手法",
+          "body": "按颜色整笔赔，工作区里做，size in，禁止 partial payment。大筹码在底。这些句子讲义页上没有，来自视频 03。"
+        },
+        {
+          "h": "换筹",
+          "body": "进来的在左，切出去的在右。$100 及以上等批准。喊话用讲义原句。"
+        }
+      ],
+      "phrase_ids": [
+        "d-pays-32",
+        "d-change-100",
+        "d-cheque-change-100",
+        "d-color-coming",
+        "d-color-up-100",
+        "d-color-for-color",
+        "d-no-partial",
+        "d-twelve-red-sixty"
+      ],
+      "pattern_ids": [
+        "pat-change",
+        "pat-color"
+      ],
+      "checks": [
+        {
+          "q": "$25 blackjack 赔多少？",
+          "a": "$37.50。"
+        },
+        {
+          "q": "$35 blackjack？",
+          "a": "$52.50。"
+        },
+        {
+          "q": "5 张绿怎么亮？",
+          "a": "4-1。"
+        },
+        {
+          "q": "20 张红等于？",
+          "a": "$100。"
+        },
+        {
+          "q": "$25 的 Match the Dealer，1 Suited Match？",
+          "a": "赔 $350。"
+        },
+        {
+          "q": "$50 Kings Bounty，一对黑桃 K 且荷官 blackjack？",
+          "a": "$25,000 封顶，不是 $50,000。"
+        }
+      ],
+      "retell_zh": "说明 1 到 10 怎么推出 $25 的 $37.50，再说 5 张绿为什么是 4-1。",
+      "rule_ids": [
+        "payouts-32",
+        "cheques",
+        "rundown",
+        "insurance",
+        "match",
+        "kings",
+        "calls"
+      ],
+      "drill_ids": [
+        "payouts",
+        "rundown",
+        "breaking",
+        "match",
+        "kings"
+      ]
+    },
+    "take": {
+      "handout_zh": "讲义未写，按常见做法；现场以主管/学校为准。 和赔付是同一轮扫桌。",
+      "goal_zh": "输的先收筹码，再收牌。不要漏，也不要把赢的收走。",
+      "sections": [
+        {
+          "h": "常见顺序",
+          "body": "从 third base 收到 first base，也就是荷官的右到左。以学校为准。Push：注留在桌上，拍一下桌。已经赔过的 blackjack 不要再赔一次。"
+        },
+        {
+          "h": "常见错误",
+          "body": "先收牌忘了收注。方向反了。Push 也收走了。"
+        },
+        {
+          "h": "家中练习",
+          "body": "5 个位置写好 win / lose / push / blackjack。从自己的右边扫到左边，10 圈。"
+        }
+      ],
+      "phrase_ids": [
+        "d-push",
+        "n-sorry"
+      ],
+      "pattern_ids": [
+        "pat-thats"
+      ],
+      "checks": [
+        {
+          "q": "常见结算方向？",
+          "a": "从 third base 到 first base。以学校为准。"
+        },
+        {
+          "q": "输的位置先收什么？",
+          "a": "先收筹码，再收牌。常见做法。"
+        },
+        {
+          "q": "Push 怎么办？",
+          "a": "注留在桌上，拍桌。常见做法。"
+        },
+        {
+          "q": "已经赔过的 blackjack 还要再赔吗？",
+          "a": "不要。"
+        }
+      ],
+      "retell_zh": "从桌子哪边开始，遇到输、赢、平各做什么。",
+      "rule_ids": [
+        "payouts-32"
+      ],
+      "drill_ids": []
+    },
+    "clear-cards": {
+      "handout_zh": "讲义未写，按常见做法；现场以主管/学校为准。",
+      "goal_zh": "结算完的牌收进弃牌架，不要收进 shoe，也不要收还没赔的牌。",
+      "sections": [
+        {
+          "h": "手法",
+          "body": "弃牌架多在荷官右侧。收牌顺序按学校。切牌卡出来之后，打完这一圈再洗。"
+        },
+        {
+          "h": "常见错误",
+          "body": "还没赔完就收牌。牌收回 shoe。顺序乱得没法还原。"
+        },
+        {
+          "h": "家中练习",
+          "body": "和收注连做。每圈结束，弃牌盒里的张数应等于发出去的张数，含烧牌和荷官的牌。"
+        }
+      ],
+      "phrase_ids": [
+        "d-last-hand",
+        "n-shuffle-coming"
+      ],
+      "pattern_ids": [
+        "pat-last"
+      ],
+      "checks": [
+        {
+          "q": "用过的牌放哪？",
+          "a": "弃牌架，不是 shoe。"
+        },
+        {
+          "q": "还没赔的位置能先收牌吗？",
+          "a": "不能。"
+        },
+        {
+          "q": "切牌卡从 shoe 里出来后？",
+          "a": "打完这一圈，再洗。常见做法。"
+        }
+      ],
+      "retell_zh": "什么时候收牌、收到哪、切牌卡出来后这一圈怎么收尾。",
+      "rule_ids": [],
+      "drill_ids": []
+    },
+    "palms": {
+      "handout_zh": "讲义 General Policies。亮掌手法本身讲义未写。",
+      "goal_zh": "该亮掌的时候双手给摄像机看。出错不自己改，叫主管。",
+      "sections": [
+        {
+          "h": "讲义必须执行",
+          "body": "Never argue with a guest。出错自己改是不允许的，Call a supervisor。对输赢保持中立。不要教客人怎么下注或怎么打。禁止 cross firing。喊 change、color up 的声音要让主管听见。"
+        },
+        {
+          "h": "亮掌",
+          "body": "讲义未写动作。常见是掌心和掌背对着摄像机，尤其是离台、交班、现金进 drop box 之后。手是空的，动作慢到能看清。"
+        },
+        {
+          "h": "家中练习",
+          "body": "每圈结束亮一次掌。再模拟赔错：什么都不要改，喊 Floor, please 或 Supervisor, please。"
+        }
+      ],
+      "phrase_ids": [
+        "d-floor",
+        "d-supervisor",
+        "d-ask-supervisor",
+        "d-never-argue",
+        "d-change-100"
+      ],
+      "pattern_ids": [
+        "pat-supervisor"
+      ],
+      "checks": [
+        {
+          "q": "赔错了怎么办？",
+          "a": "不能自己改。Call a supervisor。讲义。"
+        },
+        {
+          "q": "可以和客人争谁赢了吗？",
+          "a": "不可以。"
+        },
+        {
+          "q": "客人问这手该不该加倍，能教他怎么打吗？",
+          "a": "不能教他怎么下注或怎么打。可以解释规则。"
+        },
+        {
+          "q": "Cross firing 是什么？",
+          "a": "直播台时荷官之间闲聊，除非是这局要交接的信息。禁止。"
+        }
+      ],
+      "retell_zh": "什么时候亮掌、出错为什么不能自己改、用哪句把主管叫来。",
+      "rule_ids": [
+        "policies"
+      ],
+      "drill_ids": []
+    },
+    "full-round": {
+      "handout_zh": "把前面各步串起来。边注和保险的顺序以讲义为准。",
+      "goal_zh": "从洗牌到收牌连续走完，该喊的句子不漏。",
+      "sections": [
+        {
+          "h": "顺序",
+          "body": "洗 → 切 → 烧 → 检查下注并在需要时喊 Cheques Play 或颜色 Action → 发两圈 → 有边注先结 → 明牌是 A 就 Insurance Open → 偷看 → 手势、加倍、分牌 → 荷官翻牌补或停 → 从右到左赔和收 → 收牌 → 该亮掌时亮掌。"
+        },
+        {
+          "h": "家中练习",
+          "body": "每天 5 圈。至少安排一次 Cheques Play、一次保险、一次 doubling down for less、一次分牌、一次 3 to 2。"
+        }
+      ],
+      "phrase_ids": [
+        "d-shuffle",
+        "d-cheques-play",
+        "d-insurance-open",
+        "d-pays-32",
+        "d-floor"
+      ],
+      "pattern_ids": [],
+      "checks": [
+        {
+          "q": "边注和 Insurance Open 谁先？",
+          "a": "先结 Match the Dealer 和 Kings Bounty，再喊 Insurance Open。"
+        },
+        {
+          "q": "出错了呢？",
+          "a": "不自己改，叫主管。"
+        }
+      ],
+      "retell_zh": "不看稿说出一圈，必须提到边注和 Insurance Open 的先后。",
+      "rule_ids": [
+        "insurance",
+        "splits",
+        "policies"
+      ],
+      "drill_ids": [
+        "mock"
+      ]
+    },
+    "mock": {
+      "handout_zh": "用讲义练习题和已经过关的视频。这不是 Turning Stone 考试。",
+      "goal_zh": "自己判断能不能发一圈，以及听不听得懂。",
+      "sections": [
+        {
+          "h": "三块",
+          "body": "听懂：抽已过关的视频，题型是讲师说要怎么做。动手：在家发 3 圈，包含洗切烧、Cheques Play、保险、分牌、doubling for less、3 to 2、收输注、收牌、亮掌。心算：19 手点数、3 to 2、满额保险、切筹、两个边注表。"
+        },
+        {
+          "h": "没记录",
+          "body": "考试日期、笔试还是上桌、考不考边注：没记录。不要把这个模拟当成考试原题。"
+        }
+      ],
+      "phrase_ids": [],
+      "pattern_ids": [],
+      "checks": [
+        {
+          "q": "这个模拟是 Turning Stone 的考试吗？",
+          "a": "不是。考试日期和形式没记录。"
+        }
+      ],
+      "retell_zh": "用一分钟说出一圈里哪几句必须喊。",
+      "rule_ids": [
+        "unknown"
+      ],
+      "drill_ids": [
+        "listening",
+        "mock"
+      ]
+    }
+  }
+}

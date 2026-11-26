@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0F3D2E">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Blackjack 学习app">
+  <title>Blackjack 学习app</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="app"><p class="loading">正在打开…</p></div>
+  <nav id="tabbar" aria-label="主要">
+    <a href="#/" data-nav="home"><span class="nav-ico" aria-hidden="true">⌂</span><span>首页</span></a>
+    <a href="#/class" data-nav="class"><span class="nav-ico" aria-hidden="true">▣</span><span>课堂</span></a>
+    <a href="#/en" data-nav="english"><span class="nav-ico" aria-hidden="true">Aa</span><span>英语</span></a>
+    <a href="#/rules" data-nav="rules"><span class="nav-ico" aria-hidden="true">§</span><span>规则</span></a>
+    <a href="#/notes" data-nav="notes"><span class="nav-ico" aria-hidden="true">✎</span><span>笔记</span></a>
+    <a href="#/practice" data-nav="practice"><span class="nav-ico" aria-hidden="true">✓</span><span>练习</span></a>
+  </nav>
+  <div id="toast" role="status" hidden></div>
+  <div id="lightbox" hidden>
+    <button type="button" id="light-close">关闭</button>
+    <div class="light-scroll"><img id="light-img" alt=""></div>
+  </div>
+  <script src="./app.js" defer></script>
+</body>
+</html>

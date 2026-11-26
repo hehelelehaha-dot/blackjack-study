@@ -1,0 +1,715 @@
+{
+  "drills": [
+    {
+      "id": "hands",
+      "title_zh": "点数",
+      "title_en": "Hand totals",
+      "blurb_zh": "白板 19 手。先选软、硬或爆，再填总数。",
+      "kind": "quiz",
+      "questions": [
+        {
+          "type": "hand",
+          "cards": "A, 6",
+          "kind": "soft",
+          "total": 17,
+          "audio_id": "n-hand-01",
+          "explain_zh": "11+6，A 仍算 11。白板第 1 手。"
+        },
+        {
+          "type": "hand",
+          "cards": "A, 4, 3",
+          "kind": "soft",
+          "total": 18,
+          "audio_id": "n-hand-02",
+          "explain_zh": "讲义例子：A+4+3 是软 18。"
+        },
+        {
+          "type": "hand",
+          "cards": "A, 9",
+          "kind": "soft",
+          "total": 20,
+          "audio_id": "n-hand-03",
+          "explain_zh": "11+9，软 20。"
+        },
+        {
+          "type": "hand",
+          "cards": "A, 5, 2",
+          "kind": "soft",
+          "total": 18,
+          "audio_id": "n-hand-04",
+          "explain_zh": "11+5+2，软 18。"
+        },
+        {
+          "type": "hand",
+          "cards": "5, A, 3",
+          "kind": "soft",
+          "total": 19,
+          "audio_id": "n-hand-05",
+          "explain_zh": "5+11+3，软 19。"
+        },
+        {
+          "type": "hand",
+          "cards": "3, 3, A, 2",
+          "kind": "soft",
+          "total": 19,
+          "audio_id": "n-hand-06",
+          "explain_zh": "3+3+11+2，软 19。"
+        },
+        {
+          "type": "hand",
+          "cards": "7, 6, A, 4",
+          "kind": "hard",
+          "total": 18,
+          "audio_id": "n-hand-07",
+          "explain_zh": "A 算 11 会爆，所以 A=1，硬 18。"
+        },
+        {
+          "type": "hand",
+          "cards": "8, 5, A, 8",
+          "kind": "bust",
+          "total": 22,
+          "audio_id": "n-hand-08",
+          "explain_zh": "就算 A=1 也是 22，爆。"
+        },
+        {
+          "type": "hand",
+          "cards": "K, 3, A, 6",
+          "kind": "hard",
+          "total": 20,
+          "audio_id": "n-hand-09",
+          "explain_zh": "K=10。A 只能算 1，硬 20。"
+        },
+        {
+          "type": "hand",
+          "cards": "7, 4, A, 4, 5",
+          "kind": "hard",
+          "total": 21,
+          "audio_id": "n-hand-10",
+          "explain_zh": "A 必须算 1，硬 21。这不是 blackjack。"
+        },
+        {
+          "type": "hand",
+          "cards": "A, 3, 3",
+          "kind": "soft",
+          "total": 17,
+          "audio_id": "n-hand-11",
+          "explain_zh": "11+3+3，软 17。"
+        },
+        {
+          "type": "hand",
+          "cards": "A, 2, 3, 5",
+          "kind": "soft",
+          "total": 21,
+          "audio_id": "n-hand-12",
+          "explain_zh": "11+2+3+5，软 21。不是两张的 blackjack。"
+        },
+        {
+          "type": "hand",
+          "cards": "4, 4, 4, 5",
+          "kind": "hard",
+          "total": 17,
+          "audio_id": "n-hand-13",
+          "explain_zh": "没有 A，硬 17。"
+        },
+        {
+          "type": "hand",
+          "cards": "A, A, 9",
+          "kind": "soft",
+          "total": 21,
+          "audio_id": "n-hand-14",
+          "explain_zh": "一张 A 算 11，另一张算 1，软 21。"
+        },
+        {
+          "type": "hand",
+          "cards": "A, 4, A, 6, 8",
+          "kind": "hard",
+          "total": 20,
+          "audio_id": "n-hand-15",
+          "explain_zh": "两张 A 都只能算 1，硬 20。"
+        },
+        {
+          "type": "hand",
+          "cards": "4, 4, 2, A",
+          "kind": "soft",
+          "total": 21,
+          "audio_id": "n-hand-16",
+          "explain_zh": "4+4+2+11，软 21。"
+        },
+        {
+          "type": "hand",
+          "cards": "6, 8, 7",
+          "kind": "hard",
+          "total": 21,
+          "audio_id": "n-hand-17",
+          "explain_zh": "没有 A，硬 21。"
+        },
+        {
+          "type": "hand",
+          "cards": "5, 7, 9",
+          "kind": "hard",
+          "total": 21,
+          "audio_id": "n-hand-18",
+          "explain_zh": "没有 A，硬 21。"
+        },
+        {
+          "type": "hand",
+          "cards": "8, 3, 10",
+          "kind": "hard",
+          "total": 21,
+          "audio_id": "n-hand-19",
+          "explain_zh": "没有 A，硬 21。"
+        }
+      ]
+    },
+    {
+      "id": "payouts",
+      "title_zh": "3:2 赔付",
+      "title_en": "Blackjack pays 3 to 2",
+      "blurb_zh": "赔的是赢的钱。原注留在桌上。讲义只有 3 to 2。",
+      "kind": "quiz",
+      "questions": [
+        {
+          "type": "number",
+          "prompt_zh": "客人 blackjack，注 $5。赔多少？",
+          "prompt_en": "Bet $5.",
+          "answer": 7.5,
+          "explain_zh": "讲义：$5 赔 $7.50。原注留在桌上。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "注 $25。赔多少？",
+          "prompt_en": "Bet $25.",
+          "answer": 37.5,
+          "explain_zh": "$20 赔 $30，$5 赔 $7.50，合起来 $37.50。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "注 $35。赔多少？",
+          "prompt_en": "Bet $35.",
+          "answer": 52.5,
+          "explain_zh": "$30 赔 $45，$5 赔 $7.50，合起来 $52.50。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "注 $7.50。赔多少？",
+          "prompt_en": "Bet $7.50.",
+          "answer": 11.25,
+          "explain_zh": "讲义 Common Blackjacks：$7.50 赔 $11.25。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "注 $75。赔多少？",
+          "prompt_en": "Bet $75.",
+          "answer": 112.5,
+          "explain_zh": "$50 赔 $75，$25 赔 $37.50，合起来 $112.50。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "注 $55。赔多少？",
+          "prompt_en": "Bet $55.",
+          "answer": 82.5,
+          "explain_zh": "讲义表：$55 赔 $82.50。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "注 $80。赔多少？",
+          "prompt_en": "Bet $80.",
+          "answer": 120,
+          "explain_zh": "$80 赔 $120。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "注 $150。赔多少？",
+          "prompt_en": "Bet $150.",
+          "answer": 225,
+          "explain_zh": "$150 赔 $225。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "注 $425。赔多少？",
+          "prompt_en": "Bet $425.",
+          "answer": 637.5,
+          "explain_zh": "讲义表：$425 赔 $637.50。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "只用 1 到 10：$6 的赔付乘 10，是多少？",
+          "prompt_en": "Build a $60 pay from the 1–10 row.",
+          "answer": 90,
+          "explain_zh": "$6 赔 $9，乘 10 是 $90。也可以 $50+$10 → $75+$15。"
+        }
+      ]
+    },
+    {
+      "id": "insurance",
+      "title_zh": "保险金额",
+      "title_en": "Insurance amounts",
+      "blurb_zh": "满额是原注的一半。Even money 是 1 to 1。",
+      "kind": "quiz",
+      "questions": [
+        {
+          "type": "number",
+          "prompt_zh": "注 $25，满额保险下多少？",
+          "prompt_en": "Full insurance on $25.",
+          "answer": 12.5,
+          "explain_zh": "讲义表：$12.50。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "注 $37.50，满额保险？",
+          "prompt_en": "Full insurance on $37.50.",
+          "answer": 18.75,
+          "explain_zh": "讲义表：$18.75。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "注 $80，满额保险？",
+          "prompt_en": "Full insurance on $80.",
+          "answer": 40,
+          "explain_zh": "一半是 $40。"
+        },
+        {
+          "type": "choice",
+          "prompt_zh": "注 $100，客人买 $30 保险。可以吗？",
+          "prompt_en": "",
+          "choices": [
+            "可以，一半或更少都允许",
+            "不可以，必须正好一半",
+            "不可以，保险至少要一半"
+          ],
+          "answer": 0,
+          "explain_zh": "讲义：half of their original bet or less。$30 少于 $50。"
+        },
+        {
+          "type": "choice",
+          "prompt_zh": "什么时候喊 Insurance Open？",
+          "prompt_en": "",
+          "choices": [
+            "先结完 Match the Dealer 和 Kings Bounty，而且明牌是 A",
+            "一发完牌就喊",
+            "明牌是 10 的时候喊",
+            "客人要求才喊"
+          ],
+          "answer": 0,
+          "explain_zh": "讲义顺序：边注先结，再喊。只有 A 才开保险。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "客人 blackjack，注 $20，要 even money。赔多少？",
+          "prompt_en": "Even money on $20.",
+          "answer": 20,
+          "explain_zh": "1 to 1，不是 3 to 2。赔 $20。"
+        }
+      ]
+    },
+    {
+      "id": "rundown",
+      "title_zh": "切筹口诀",
+      "title_en": "Cheque rundown",
+      "blurb_zh": "白红黑橙按 5。粉绿紫按 4。",
+      "kind": "quiz",
+      "questions": [
+        {
+          "type": "choice",
+          "prompt_zh": "7 张红怎么切？",
+          "prompt_en": "",
+          "choices": [
+            "3-3-1",
+            "4-4",
+            "5",
+            "4-1"
+          ],
+          "answer": 0,
+          "explain_zh": "红按 5。7 = 3-3-1。"
+        },
+        {
+          "type": "choice",
+          "prompt_zh": "5 张白？",
+          "prompt_en": "",
+          "choices": [
+            "5",
+            "4-1",
+            "3-3"
+          ],
+          "answer": 0,
+          "explain_zh": "白按 5。5 就是 5。"
+        },
+        {
+          "type": "choice",
+          "prompt_zh": "5 张绿？",
+          "prompt_en": "",
+          "choices": [
+            "4-1",
+            "5",
+            "3-3-1"
+          ],
+          "answer": 0,
+          "explain_zh": "绿按 4。5 = 4-1，不是一摞 5。"
+        },
+        {
+          "type": "choice",
+          "prompt_zh": "10 张黑？",
+          "prompt_en": "",
+          "choices": [
+            "5-5",
+            "4-4-2",
+            "4-4-1"
+          ],
+          "answer": 0,
+          "explain_zh": "黑按 5。10 = 5-5。"
+        },
+        {
+          "type": "choice",
+          "prompt_zh": "10 张紫？",
+          "prompt_en": "",
+          "choices": [
+            "4-4-2",
+            "5-5",
+            "4-4"
+          ],
+          "answer": 0,
+          "explain_zh": "紫按 4。10 = 4-4-2。"
+        },
+        {
+          "type": "choice",
+          "prompt_zh": "9 张橙？",
+          "prompt_en": "",
+          "choices": [
+            "4-4-1",
+            "4-4-2",
+            "5-5"
+          ],
+          "answer": 0,
+          "explain_zh": "橙按 5。9 = 4-4-1。"
+        },
+        {
+          "type": "choice",
+          "prompt_zh": "6 张粉？",
+          "prompt_en": "",
+          "choices": [
+            "3-3",
+            "4-1",
+            "5-5"
+          ],
+          "answer": 0,
+          "explain_zh": "粉按 4。6 = 3-3。"
+        },
+        {
+          "type": "choice",
+          "prompt_zh": "为什么 5 张绿不写成 5？",
+          "prompt_en": "",
+          "choices": [
+            "绿在按 4 拆的一组里，所以是 4-1",
+            "绿筹不能叠过 4 张",
+            "讲义印错了"
+          ],
+          "answer": 0,
+          "explain_zh": "粉、绿、紫按 4。"
+        }
+      ]
+    },
+    {
+      "id": "breaking",
+      "title_zh": "一摞筹码",
+      "title_en": "Breaking down cheques",
+      "blurb_zh": "20 张一摞的金额和颜色。",
+      "kind": "quiz",
+      "questions": [
+        {
+          "type": "number",
+          "prompt_zh": "20 张红是多少钱？",
+          "prompt_en": "One stack of 20 red.",
+          "answer": 100,
+          "explain_zh": "红 $5，20 张 $100。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "20 张绿是多少钱？",
+          "prompt_en": "One stack of 20 green.",
+          "answer": 500,
+          "explain_zh": "绿 $25，20 张 $500。"
+        },
+        {
+          "type": "choice",
+          "prompt_zh": "粉筹面额，以及按几拆？",
+          "prompt_en": "",
+          "choices": [
+            "$2.50，按 4",
+            "$2，按 5",
+            "$5，按 4",
+            "$25，按 5"
+          ],
+          "answer": 0,
+          "explain_zh": "讲义：粉 $2.50，按 4。"
+        },
+        {
+          "type": "choice",
+          "prompt_zh": "一整管黑筹怎么拆？",
+          "prompt_en": "",
+          "choices": [
+            "按 5",
+            "按 4",
+            "按 2"
+          ],
+          "answer": 0,
+          "explain_zh": "黑按 5。20 张是 $2,000。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "20 张橙是多少钱？",
+          "prompt_en": "20 orange.",
+          "answer": 20000,
+          "explain_zh": "橙 $1,000，20 张 $20,000。手法：1 and 1, stack, size in, drop 1, stack。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "20 张灰是多少钱？",
+          "prompt_en": "20 grey.",
+          "answer": 100000,
+          "explain_zh": "灰 $5,000，20 张 $100,000。按 4 拆。手法：1 and 1, stack and size in。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "20 张红换成绿，要几张绿？",
+          "prompt_en": "Color 20 red into green.",
+          "answer": 4,
+          "explain_zh": "$100 ÷ $25 = 4 张绿。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "3 张绿加 4 张红，一共多少？",
+          "prompt_en": "3 green and 4 red.",
+          "answer": 95,
+          "explain_zh": "$75 + $20 = $95。"
+        }
+      ]
+    },
+    {
+      "id": "match",
+      "title_zh": "Match the Dealer",
+      "title_en": "Match the Dealer",
+      "blurb_zh": "按讲义赔率表。有 A 时在保险之前结算。",
+      "kind": "quiz",
+      "questions": [
+        {
+          "type": "number",
+          "prompt_zh": "$25，1 Suited Match。赔多少？",
+          "prompt_en": "$25, one suited match.",
+          "answer": 350,
+          "explain_zh": "14 to 1。讲义表 $350。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "$5，2 Suited Matches。赔多少？",
+          "prompt_en": "$5, two suited matches.",
+          "answer": 140,
+          "explain_zh": "28 to 1。$140。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "$20，1 Suited 加 1 Unsuited。赔多少？",
+          "prompt_en": "$20, one suited and one unsuited.",
+          "answer": 340,
+          "explain_zh": "17 to 1。$340。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "$10，2 Unsuited。赔多少？",
+          "prompt_en": "$10, two unsuited.",
+          "answer": 60,
+          "explain_zh": "6 to 1。$60。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "$75，1 Unsuited。赔多少？",
+          "prompt_en": "$75, one unsuited.",
+          "answer": 225,
+          "explain_zh": "3 to 1。$225。"
+        },
+        {
+          "type": "choice",
+          "prompt_zh": "这笔边注相对保险，什么时候赔？",
+          "prompt_en": "",
+          "choices": [
+            "喊 Insurance Open 之前",
+            "保险结算之后",
+            "荷官补牌之后"
+          ],
+          "answer": 0,
+          "explain_zh": "讲义：先结 Match the Dealer 和 Kings Bounty。"
+        }
+      ]
+    },
+    {
+      "id": "kings",
+      "title_zh": "Kings Bounty",
+      "title_en": "Kings Bounty",
+      "blurb_zh": "单注 $1 到 $100。累计最高赔 $25,000。",
+      "kind": "quiz",
+      "questions": [
+        {
+          "type": "number",
+          "prompt_zh": "$10，两张同花 K（30-1）。赔多少？",
+          "prompt_en": "$10, two suited kings.",
+          "answer": 300,
+          "explain_zh": "讲义表 $300。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "$5，非同花 20（4-1）。赔多少？",
+          "prompt_en": "$5, unsuited 20.",
+          "answer": 20,
+          "explain_zh": "$20。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "$25，一对黑桃 K（100-1）。赔多少？",
+          "prompt_en": "$25, pair of spade kings.",
+          "answer": 2500,
+          "explain_zh": "$2,500。还没到封顶。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "$50，一对黑桃 K 而且荷官 blackjack（1000-1）。赔多少？",
+          "prompt_en": "$50 at 1000 to 1.",
+          "answer": 25000,
+          "explain_zh": "未封顶是 $50,000。讲义累计最高 $25,000。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "$2.50，同花 20（9-1）。赔多少？",
+          "prompt_en": "$2.50, suited 20.",
+          "answer": 22.5,
+          "explain_zh": "$22.50。"
+        },
+        {
+          "type": "choice",
+          "prompt_zh": "Kings Bounty 的最低和最高注？",
+          "prompt_en": "",
+          "choices": [
+            "$1 到 $100，而且先于 Insurance Open 结算",
+            "$5 到 $500",
+            "没有上限"
+          ],
+          "answer": 0,
+          "explain_zh": "讲义印着 MINIMUM $1，MAXIMUM $100。"
+        }
+      ]
+    },
+    {
+      "id": "listening",
+      "title_zh": "听懂复习",
+      "title_en": "Listening review",
+      "blurb_zh": "只列出已经过关的视频。再做一遍不会取消过关。",
+      "kind": "listening",
+      "questions": []
+    },
+    {
+      "id": "mock",
+      "title_zh": "综合模拟",
+      "title_en": "Final mock",
+      "blurb_zh": "这不是 Turning Stone 考试。日期和形式：没记录。题目来自讲义和已入库的视频。",
+      "kind": "quiz",
+      "questions": [
+        {
+          "type": "hand",
+          "cards": "A, 4, 3",
+          "kind": "soft",
+          "total": 18,
+          "audio_id": "n-hand-02",
+          "explain_zh": "讲义软牌例子。"
+        },
+        {
+          "type": "hand",
+          "cards": "8, 5, A, 8",
+          "kind": "bust",
+          "total": 22,
+          "audio_id": "n-hand-08",
+          "explain_zh": "白板：爆。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "Blackjack，$25。赔多少？",
+          "prompt_en": "",
+          "answer": 37.5,
+          "explain_zh": "3 to 2 是 $37.50。"
+        },
+        {
+          "type": "choice",
+          "prompt_zh": "5 张绿怎么切？",
+          "prompt_en": "",
+          "choices": [
+            "4-1",
+            "5",
+            "3-3"
+          ],
+          "answer": 0,
+          "explain_zh": "绿按 4。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "$25 的满额保险是多少？",
+          "prompt_en": "",
+          "answer": 12.5,
+          "explain_zh": "一半，$12.50。"
+        },
+        {
+          "type": "choice",
+          "prompt_zh": "Insurance Open 之前先做什么？",
+          "prompt_en": "",
+          "choices": [
+            "结算 Match the Dealer 和 Kings Bounty",
+            "先偷看底牌",
+            "先问客人要不要加倍"
+          ],
+          "answer": 0,
+          "explain_zh": "讲义顺序。"
+        },
+        {
+          "type": "choice",
+          "prompt_zh": "分开的 A，每手给几张？",
+          "prompt_en": "",
+          "choices": [
+            "1 张，而且不能再加倍",
+            "可以继续要牌",
+            "两张，算 blackjack"
+          ],
+          "answer": 0,
+          "explain_zh": "讲义。"
+        },
+        {
+          "type": "choice",
+          "prompt_zh": "培训桌上的软 17 怎么打？",
+          "prompt_en": "",
+          "choices": [
+            "停。这是培训桌毡，不是已确认的实地规则",
+            "必须补，讲义这样印的",
+            "没记录，所以不要停也不要补"
+          ],
+          "answer": 0,
+          "explain_zh": "毡上 Dealer stands on all 17。讲义没写。实地：没记录。"
+        },
+        {
+          "type": "number",
+          "prompt_zh": "12 张红筹是多少？",
+          "prompt_en": "Twelve red.",
+          "answer": 60,
+          "explain_zh": "红 $5。视频里确认是 Sixty，不是 Sixteen。",
+          "audio_id": "d-twelve-red-sixty"
+        },
+        {
+          "type": "choice",
+          "prompt_zh": "赔错了怎么办？",
+          "prompt_en": "",
+          "choices": [
+            "停下，不自己改，叫主管",
+            "马上把多给的拿回来",
+            "跟客人商量一个折中"
+          ],
+          "answer": 0,
+          "explain_zh": "讲义：never correct your own mistakes。"
+        }
+      ]
+    }
+  ]
+}
