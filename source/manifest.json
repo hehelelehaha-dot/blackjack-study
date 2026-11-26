@@ -50,33 +50,25 @@
   "incoming_videos": [
     {
       "id": "v01",
-      "game": "blackjack",
-      "module_id": null,
-      "order": null,
-      "title": "v01 (unassigned)",
-      "note": "Nova's raw clip; being watched separately. Compress, write the listening pack, then slot into a module. Leave this placeholder until then.",
-      "path": "raw/v01.mov",
-      "status": "placeholder",
-      "transcript_en": "",
-      "transcript_zh": "",
-      "glossary": [],
-      "dictation_lines": [],
-      "listening_questions": []
+      "status": "assigned",
+      "module_id": "shuffle",
+      "order": 1,
+      "path": "raw/v01.mov"
     },
     {
       "id": "v02",
-      "game": "blackjack",
-      "module_id": null,
-      "order": null,
-      "title": "v02 (unassigned)",
-      "note": "Nova's raw clip; being watched separately. Compress, write the listening pack, then slot into a module. Leave this placeholder until then.",
-      "path": "raw/v02.mov",
-      "status": "placeholder",
-      "transcript_en": "",
-      "transcript_zh": "",
-      "glossary": [],
-      "dictation_lines": [],
-      "listening_questions": []
+      "status": "assigned",
+      "module_id": "shuffle",
+      "order": 2,
+      "path": "raw/v02.mov"
+    },
+    {
+      "id": "resend-49049bb6",
+      "status": "assigned_pending_vNN",
+      "module_id": "payouts",
+      "order": 1,
+      "path": "raw/resends/49049bb6.mov",
+      "note": "Working copy; not v03-v22."
     }
   ],
   "games": [
@@ -101,7 +93,46 @@
           "title_zh": "洗牌",
           "title_en": "Shuffle",
           "handouts": [],
-          "videos": []
+          "videos": [
+            {
+              "id": "v01",
+              "game": "blackjack",
+              "module_id": "shuffle",
+              "order": 1,
+              "title": "Announce \"Shuffle!\"",
+              "note": "洗牌前必须大声向楼面喊 “Shuffle!”，不是在请示许可。先于完整洗牌。",
+              "path": "raw/v01.mov",
+              "source": "v01",
+              "duration_sec": 86.500125,
+              "duration": "1:26.5",
+              "transcript_en": "",
+              "transcript_zh": "",
+              "status": "keep",
+              "glossary": [],
+              "dictation_lines": [],
+              "listening_questions": [],
+              "notes_path": "raw/v01_notes.md"
+            },
+            {
+              "id": "v02",
+              "game": "blackjack",
+              "module_id": "shuffle",
+              "order": 2,
+              "title": "8-deck shuffle procedure",
+              "note": "八副牌洗牌：喊 Shuffle → 对半、内沿各抓 1–1.5 副，Riffle-Riffle-Strip-Riffle，循环；考核目标 3.5 分钟内。",
+              "path": "raw/v02.mov",
+              "source": "v02",
+              "duration_sec": 238.916208,
+              "duration": "3:58.9",
+              "transcript_en": "",
+              "transcript_zh": "",
+              "status": "keep",
+              "glossary": [],
+              "dictation_lines": [],
+              "listening_questions": [],
+              "notes_path": "raw/v02_notes.md"
+            }
+          ]
         },
         {
           "id": "cut",
@@ -177,7 +208,28 @@
             "654f18c2 (Kings Bounty paytable)",
             "362e6c75 (Change / Cheque change / Color up calls)"
           ],
-          "videos": []
+          "videos": [
+            {
+              "id": "resend-49049bb6",
+              "game": "blackjack",
+              "module_id": "payouts",
+              "order": 1,
+              "title": "Scan the layout, prove bets, pay color for color",
+              "note": "开局扫台面、大筹码在底；向镜头分色证明分牌/加倍注；按颜色整笔赔付，禁止分次赔。",
+              "path": "raw/resends/49049bb6.mov",
+              "source": "resend-49049bb6",
+              "duration_sec": 626.897292,
+              "duration": "10:26.9",
+              "transcript_en": "raw/resends/49049bb6.transcript.en.txt",
+              "transcript_zh": "",
+              "status": "keep",
+              "glossary": [],
+              "dictation_lines": [],
+              "listening_questions": [],
+              "notes_path": "raw/resends/49049bb6_notes.md",
+              "assignment_note": "Not numbered v03–v22. Only landed copy of a 90.2 MB lesson; hash vs missing bd24eb49 pending. Re-id by batch mtime when the 20 files arrive."
+            }
+          ]
         },
         {
           "id": "take",
@@ -225,5 +277,17 @@
         }
       ]
     }
-  ]
+  ],
+  "source_map": "raw/SOURCE_MAP.md",
+  "video_order": "blackjack/VIDEO_ORDER.md",
+  "intake_status": {
+    "as_of": "2026-11-26 18:21 America/New_York",
+    "original_20_batch": "missing from attachments; v03-v22 not assigned",
+    "later_sends_9": "only 49049bb6 present; processed as resend-49049bb6, not a vNN",
+    "on_disk_unique": [
+      "v01",
+      "v02",
+      "resend-49049bb6"
+    ]
+  }
 }
