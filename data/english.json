@@ -1,0 +1,845 @@
+{
+  "categories": [
+    {
+      "id": "shuffle",
+      "title_zh": "洗牌",
+      "title_en": "Shuffle"
+    },
+    {
+      "id": "deal",
+      "title_zh": "发牌",
+      "title_en": "Deal"
+    },
+    {
+      "id": "insurance",
+      "title_zh": "保险",
+      "title_en": "Insurance"
+    },
+    {
+      "id": "signals",
+      "title_zh": "加倍和分牌",
+      "title_en": "Doubles and splits"
+    },
+    {
+      "id": "dealer",
+      "title_zh": "荷官的牌",
+      "title_en": "Dealer hand"
+    },
+    {
+      "id": "pay",
+      "title_zh": "赔付",
+      "title_en": "Payouts"
+    },
+    {
+      "id": "change",
+      "title_zh": "换筹",
+      "title_en": "Change"
+    },
+    {
+      "id": "floor",
+      "title_zh": "主管和客人",
+      "title_en": "Floor and guests"
+    },
+    {
+      "id": "guest",
+      "title_zh": "客人会说的",
+      "title_en": "Guest lines"
+    }
+  ],
+  "phrases": [
+    {
+      "id": "d-shuffle",
+      "cat": "shuffle",
+      "audio_id": "d-shuffle",
+      "zh": "洗牌。洗之前大声喊，让楼面听见。",
+      "when_zh": "轮到洗牌、还没动手。",
+      "source_zh": "视频 01"
+    },
+    {
+      "id": "d-announce-loud",
+      "cat": "shuffle",
+      "audio_id": "d-announce-loud",
+      "zh": "宣布的声音要让 floor 听见。",
+      "when_zh": "每次洗牌之前。",
+      "source_zh": "视频 01"
+    },
+    {
+      "id": "d-not-permission",
+      "cat": "shuffle",
+      "audio_id": "d-not-permission",
+      "zh": "这声不是在请示许可。",
+      "when_zh": "有人把 Shuffle 喊得像在问可不可以。",
+      "source_zh": "视频 01"
+    },
+    {
+      "id": "d-vocal-game",
+      "cat": "shuffle",
+      "audio_id": "d-vocal-game",
+      "zh": "这是一个要一直出声的游戏。",
+      "when_zh": "讲师提醒声音太小的时候。",
+      "source_zh": "视频 01"
+    },
+    {
+      "id": "d-loud-in-charge",
+      "cat": "shuffle",
+      "audio_id": "d-loud-in-charge",
+      "zh": "声音要大，自己要镇得住。",
+      "when_zh": "接下来两周的练习目标。",
+      "source_zh": "视频 01"
+    },
+    {
+      "id": "d-riffle-pattern",
+      "cat": "shuffle",
+      "audio_id": "d-riffle-pattern",
+      "zh": "八副洗牌的节奏。",
+      "when_zh": "抓好一副到一副半之后。",
+      "source_zh": "视频 02"
+    },
+    {
+      "id": "d-strip",
+      "cat": "shuffle",
+      "audio_id": "d-strip",
+      "zh": "Strip 是一、二、三，放到上面，再 riffle。",
+      "when_zh": "第二次 riffle 之后。",
+      "source_zh": "视频 02"
+    },
+    {
+      "id": "d-deck-and-half",
+      "cat": "shuffle",
+      "audio_id": "d-deck-and-half",
+      "zh": "一次抓一副到一副半。",
+      "when_zh": "从两叠的内侧抓牌。",
+      "source_zh": "视频 02"
+    },
+    {
+      "id": "d-wash",
+      "cat": "shuffle",
+      "audio_id": "d-wash",
+      "zh": "牌面朝下打乱。",
+      "when_zh": "讲义未写。常见洗牌的第一步。",
+      "source_zh": "蓝图常见做法"
+    },
+    {
+      "id": "d-im-shuffling",
+      "cat": "shuffle",
+      "audio_id": "d-im-shuffling",
+      "zh": "我在洗牌。",
+      "when_zh": "需要出声让周围知道你在洗。",
+      "source_zh": "蓝图"
+    },
+    {
+      "id": "d-would-you-cut",
+      "cat": "deal",
+      "audio_id": "d-would-you-cut",
+      "zh": "请客人切牌。",
+      "when_zh": "洗完、把切牌卡递出去。",
+      "source_zh": "讲义未写，常见说法"
+    },
+    {
+      "id": "d-please-cut",
+      "cat": "deal",
+      "audio_id": "d-please-cut",
+      "zh": "请切。",
+      "when_zh": "客人还没动的时候，短一点的说法。",
+      "source_zh": "讲义未写，常见说法"
+    },
+    {
+      "id": "d-thank-you",
+      "cat": "deal",
+      "audio_id": "d-thank-you",
+      "zh": "客人切完，说谢谢。",
+      "when_zh": "切牌卡已经插好。",
+      "source_zh": "常见说法"
+    },
+    {
+      "id": "d-burning",
+      "cat": "deal",
+      "audio_id": "d-burning",
+      "zh": "正在烧牌。",
+      "when_zh": "发第一圈之前。",
+      "source_zh": "讲义未写，常见说法"
+    },
+    {
+      "id": "d-cheques-play",
+      "cat": "deal",
+      "audio_id": "d-cheques-play",
+      "zh": "有 $100 或以上的注。",
+      "when_zh": "发牌之前。讲义原句。",
+      "source_zh": "讲义 Terminology"
+    },
+    {
+      "id": "d-black-action",
+      "cat": "deal",
+      "audio_id": "d-black-action",
+      "zh": "有人用黑筹下注。",
+      "when_zh": "发牌之前。",
+      "source_zh": "讲义"
+    },
+    {
+      "id": "d-purple-action",
+      "cat": "deal",
+      "audio_id": "d-purple-action",
+      "zh": "有人用紫筹下注。",
+      "when_zh": "发牌之前。",
+      "source_zh": "讲义"
+    },
+    {
+      "id": "d-orange-action",
+      "cat": "deal",
+      "audio_id": "d-orange-action",
+      "zh": "有人用橙筹下注。",
+      "when_zh": "发牌之前。",
+      "source_zh": "讲义"
+    },
+    {
+      "id": "d-no-more-bets",
+      "cat": "deal",
+      "audio_id": "d-no-more-bets",
+      "zh": "停止下注。",
+      "when_zh": "视频里要配合手势，摄像机听不见这句话。",
+      "source_zh": "视频 03。讲义未写这句"
+    },
+    {
+      "id": "d-good-luck",
+      "cat": "deal",
+      "audio_id": "d-good-luck",
+      "zh": "客人买筹时说。",
+      "when_zh": "讲义 Guest Service。也可以和 no more bets 一起说。",
+      "source_zh": "讲义"
+    },
+    {
+      "id": "d-scan-layout",
+      "cat": "deal",
+      "audio_id": "d-scan-layout",
+      "zh": "发牌时扫台面。",
+      "when_zh": "牌发出去之前。",
+      "source_zh": "视频 03"
+    },
+    {
+      "id": "d-biggest-bottom",
+      "cat": "deal",
+      "audio_id": "d-biggest-bottom",
+      "zh": "最大的筹码在底下。",
+      "when_zh": "扫台面时看见叠错了。",
+      "source_zh": "视频 03"
+    },
+    {
+      "id": "n-first-base",
+      "cat": "deal",
+      "audio_id": "n-first-base",
+      "zh": "荷官左手边，先发先打。",
+      "when_zh": "说位置的时候。",
+      "source_zh": "常见台面用语"
+    },
+    {
+      "id": "n-third-base",
+      "cat": "deal",
+      "audio_id": "n-third-base",
+      "zh": "荷官右手边，最后打。",
+      "when_zh": "说位置的时候。",
+      "source_zh": "常见台面用语"
+    },
+    {
+      "id": "d-insurance-open",
+      "cat": "insurance",
+      "audio_id": "d-insurance-open",
+      "zh": "保险窗口开了。",
+      "when_zh": "两个边注已经结完，明牌是 A。",
+      "source_zh": "讲义 Insurance"
+    },
+    {
+      "id": "d-even-money",
+      "cat": "insurance",
+      "audio_id": "d-even-money",
+      "zh": "问有 blackjack 的客人要不要 1 to 1。",
+      "when_zh": "保险开着、客人自己是 blackjack。",
+      "source_zh": "讲义"
+    },
+    {
+      "id": "d-blackjack",
+      "cat": "insurance",
+      "audio_id": "d-blackjack",
+      "zh": "这手是 blackjack。",
+      "when_zh": "荷官或客人。",
+      "source_zh": "讲义 / 视频"
+    },
+    {
+      "id": "n-insurance",
+      "cat": "insurance",
+      "audio_id": "n-insurance",
+      "zh": "保险。",
+      "when_zh": "荷官明牌是 A 才有。",
+      "source_zh": "讲义"
+    },
+    {
+      "id": "n-even-money",
+      "cat": "insurance",
+      "audio_id": "n-even-money",
+      "zh": "Even money，1 to 1，不是 3 to 2。",
+      "when_zh": "客人自己有 blackjack。",
+      "source_zh": "讲义"
+    },
+    {
+      "id": "d-double-less",
+      "cat": "signals",
+      "audio_id": "d-double-less",
+      "zh": "加倍的钱少于原注，必须喊出来核对。",
+      "when_zh": "客人把较少的筹码放上。",
+      "source_zh": "讲义"
+    },
+    {
+      "id": "d-double-hard-12",
+      "cat": "signals",
+      "audio_id": "d-double-hard-12",
+      "zh": "硬 12 加倍。不常见，要喊。",
+      "when_zh": "讲义的例子。",
+      "source_zh": "讲义"
+    },
+    {
+      "id": "d-split-or-double",
+      "cat": "signals",
+      "audio_id": "d-split-or-double",
+      "zh": "对子既可分也可加倍，先问。",
+      "when_zh": "两张点数相同。",
+      "source_zh": "讲义"
+    },
+    {
+      "id": "d-signal-please",
+      "cat": "signals",
+      "audio_id": "d-signal-please",
+      "zh": "请给一个手势。",
+      "when_zh": "讲义没写这句。常见做法，摄像机要看见。",
+      "source_zh": "讲义未写"
+    },
+    {
+      "id": "d-one-card",
+      "cat": "signals",
+      "audio_id": "d-one-card",
+      "zh": "加倍只给一张。",
+      "when_zh": "注已经证明过。",
+      "source_zh": "视频 03：card and move on"
+    },
+    {
+      "id": "d-card-and-move",
+      "cat": "signals",
+      "audio_id": "d-card-and-move",
+      "zh": "给一张牌，不要停在那里等。",
+      "when_zh": "口头加倍、注已证明。",
+      "source_zh": "视频 03"
+    },
+    {
+      "id": "d-prove-bet",
+      "cat": "signals",
+      "audio_id": "d-prove-bet",
+      "zh": "把注证明给摄像机。",
+      "when_zh": "多种颜色，不能只伸一根手指。",
+      "source_zh": "视频 03"
+    },
+    {
+      "id": "d-dealer-16",
+      "cat": "dealer",
+      "audio_id": "d-dealer-16",
+      "zh": "荷官 16。",
+      "when_zh": "要补牌。",
+      "source_zh": "常见报点"
+    },
+    {
+      "id": "d-dealer-17",
+      "cat": "dealer",
+      "audio_id": "d-dealer-17",
+      "zh": "荷官 17。",
+      "when_zh": "硬 17 停。",
+      "source_zh": "常见报点"
+    },
+    {
+      "id": "d-dealer-soft-17",
+      "cat": "dealer",
+      "audio_id": "d-dealer-soft-17",
+      "zh": "荷官软 17。",
+      "when_zh": "培训桌毡：停。实地看毡。",
+      "source_zh": "培训桌毡 / 报点"
+    },
+    {
+      "id": "d-dealer-busts",
+      "cat": "dealer",
+      "audio_id": "d-dealer-busts",
+      "zh": "荷官爆了。",
+      "when_zh": "超过 21。",
+      "source_zh": "常见报点"
+    },
+    {
+      "id": "d-dealer-bj",
+      "cat": "dealer",
+      "audio_id": "d-dealer-bj",
+      "zh": "荷官 blackjack。",
+      "when_zh": "偷看之后。",
+      "source_zh": "常见报点"
+    },
+    {
+      "id": "n-ace",
+      "cat": "dealer",
+      "audio_id": "n-ace",
+      "zh": "A 是 1 或 11。",
+      "when_zh": "报点数。",
+      "source_zh": "讲义 Card Values"
+    },
+    {
+      "id": "n-bust",
+      "cat": "dealer",
+      "audio_id": "n-bust",
+      "zh": "爆了。",
+      "when_zh": "超过 21。",
+      "source_zh": "讲义"
+    },
+    {
+      "id": "d-pays-32",
+      "cat": "pay",
+      "audio_id": "d-pays-32",
+      "zh": "Blackjack 赔 3 to 2。",
+      "when_zh": "讲义只印了这个赔率。",
+      "source_zh": "讲义"
+    },
+    {
+      "id": "d-color-for-color",
+      "cat": "pay",
+      "audio_id": "d-color-for-color",
+      "zh": "按颜色赔，不要把几种颜色混成一次随手丢出去。",
+      "when_zh": "多种颜色的赢注。",
+      "source_zh": "视频 03"
+    },
+    {
+      "id": "d-no-partial",
+      "cat": "pay",
+      "audio_id": "d-no-partial",
+      "zh": "不能分次赔。",
+      "when_zh": "发现拿少了：全部收回，再一次赔完。",
+      "source_zh": "视频 03"
+    },
+    {
+      "id": "d-pay-once",
+      "cat": "pay",
+      "audio_id": "d-pay-once",
+      "zh": "一次赔完。",
+      "when_zh": "和 no partial payments 是同一条。",
+      "source_zh": "视频 03"
+    },
+    {
+      "id": "d-size-in",
+      "cat": "pay",
+      "audio_id": "d-size-in",
+      "zh": "按高度对齐，多余的拿回来。",
+      "when_zh": "同色赔付。换颜色就不能靠这个证明。",
+      "source_zh": "视频 03"
+    },
+    {
+      "id": "d-twelve-red-sixty",
+      "cat": "pay",
+      "audio_id": "d-twelve-red-sixty",
+      "zh": "12 张红筹是 60。",
+      "when_zh": "红筹 $5。不要听成 16。",
+      "source_zh": "视频 03，已改正"
+    },
+    {
+      "id": "d-push",
+      "cat": "pay",
+      "audio_id": "d-push",
+      "zh": "平了。注留在桌上。",
+      "when_zh": "点数相同。",
+      "source_zh": "常见说法"
+    },
+    {
+      "id": "d-working-area",
+      "cat": "pay",
+      "audio_id": "d-working-area",
+      "zh": "身前这一块是工作区。",
+      "when_zh": "赔付和换筹都在这里做，不是在槽里做。",
+      "source_zh": "视频 03 / 讲义换筹"
+    },
+    {
+      "id": "d-change-100",
+      "cat": "change",
+      "audio_id": "d-change-100",
+      "zh": "现金换 $100 筹码。",
+      "when_zh": "$100 及以上等批准。声音要让主管听见。",
+      "source_zh": "讲义"
+    },
+    {
+      "id": "d-cheque-change-100",
+      "cat": "change",
+      "audio_id": "d-cheque-change-100",
+      "zh": "大筹换小筹，$100。",
+      "when_zh": "左边进，右边出。等批准。",
+      "source_zh": "讲义"
+    },
+    {
+      "id": "d-color-coming",
+      "cat": "change",
+      "audio_id": "d-color-coming",
+      "zh": "先喊，等批准，才能把客人的筹码拿进来。",
+      "when_zh": "客人要换成大面额离开。",
+      "source_zh": "讲义"
+    },
+    {
+      "id": "d-color-up-100",
+      "cat": "change",
+      "audio_id": "d-color-up-100",
+      "zh": "色筹金额。再等主管批准。",
+      "when_zh": "已经拆完、切出大面额之后。",
+      "source_zh": "讲义，例子是 X Amount"
+    },
+    {
+      "id": "d-floor",
+      "cat": "floor",
+      "audio_id": "d-floor",
+      "zh": "请楼面过来。",
+      "when_zh": "出错、或需要主管。",
+      "source_zh": "常见叫法。讲义要求叫主管"
+    },
+    {
+      "id": "d-supervisor",
+      "cat": "floor",
+      "audio_id": "d-supervisor",
+      "zh": "请主管过来。",
+      "when_zh": "任何要改正的错。",
+      "source_zh": "讲义"
+    },
+    {
+      "id": "d-ask-supervisor",
+      "cat": "floor",
+      "audio_id": "d-ask-supervisor",
+      "zh": "好问题，我请主管来。",
+      "when_zh": "客人问了你不该自己决定的事。",
+      "source_zh": "常见说法，配合讲义"
+    },
+    {
+      "id": "d-never-argue",
+      "cat": "floor",
+      "audio_id": "d-never-argue",
+      "zh": "永远不要跟客人争。",
+      "when_zh": "对结果有争议的时候。",
+      "source_zh": "讲义"
+    },
+    {
+      "id": "d-hand-motions",
+      "cat": "floor",
+      "audio_id": "d-hand-motions",
+      "zh": "摄像机看见的是手势。",
+      "when_zh": "no more bets 本身录不进去。",
+      "source_zh": "视频 03"
+    },
+    {
+      "id": "n-floor",
+      "cat": "floor",
+      "audio_id": "n-floor",
+      "zh": "Floor，楼面主管。",
+      "when_zh": "视频里说 your floor。",
+      "source_zh": "视频 01"
+    },
+    {
+      "id": "p-split-please",
+      "cat": "guest",
+      "audio_id": "p-split-please",
+      "zh": "客人说想分牌。",
+      "when_zh": "听到以后先看注、再证明。",
+      "source_zh": "视频 03"
+    },
+    {
+      "id": "p-double-please",
+      "cat": "guest",
+      "audio_id": "p-double-please",
+      "zh": "客人说想加倍。",
+      "when_zh": "讲师说不用再要手势，但要证明这笔注。",
+      "source_zh": "视频 03"
+    },
+    {
+      "id": "d-thank-you",
+      "cat": "guest",
+      "audio_id": "d-thank-you",
+      "zh": "客人离开或切完牌，道谢。",
+      "when_zh": "讲义：离开时 thank them。",
+      "source_zh": "讲义 Guest Service"
+    },
+    {
+      "id": "d-last-hand",
+      "cat": "deal",
+      "audio_id": "d-last-hand",
+      "zh": "最后一局。",
+      "when_zh": "切牌卡已经出来，这一圈打完就洗。",
+      "source_zh": "常见说法"
+    },
+    {
+      "id": "dict-v03-minimum",
+      "cat": "deal",
+      "audio_id": "dict-v03-minimum",
+      "zh": "这张培训桌最低 $10，不要用 $5。",
+      "when_zh": "讲义没写桌限。不是已确认的实地桌限。",
+      "source_zh": "视频 03"
+    }
+  ],
+  "patterns": [
+    {
+      "id": "pat-soft-hard",
+      "cat": "dealer",
+      "title_zh": "报软牌或硬牌",
+      "template": "This is a ____ ____.",
+      "options": [
+        {
+          "label": "soft 17",
+          "audio_id": "n-soft-17"
+        },
+        {
+          "label": "soft 18",
+          "audio_id": "n-soft-18"
+        },
+        {
+          "label": "hard 18",
+          "audio_id": "n-hard-18"
+        },
+        {
+          "label": "hard 20",
+          "audio_id": "n-hard-20"
+        }
+      ]
+    },
+    {
+      "id": "pat-shuffle-verb",
+      "cat": "shuffle",
+      "title_zh": "洗牌动词",
+      "template": "I'm going to ____ the cards.",
+      "options": [
+        {
+          "label": "wash",
+          "audio_id": "n-going-wash"
+        },
+        {
+          "label": "riffle",
+          "audio_id": "n-going-riffle"
+        },
+        {
+          "label": "shuffle",
+          "audio_id": "n-going-shuffle"
+        }
+      ]
+    },
+    {
+      "id": "pat-would-you",
+      "cat": "shuffle",
+      "title_zh": "Would you like to",
+      "template": "Would you like to ____?",
+      "options": [
+        {
+          "label": "cut",
+          "audio_id": "d-would-you-cut"
+        },
+        {
+          "label": "play",
+          "audio_id": "n-would-play"
+        }
+      ]
+    },
+    {
+      "id": "pat-burn",
+      "cat": "deal",
+      "title_zh": "烧牌",
+      "template": "The first card is the ____ card.",
+      "options": [
+        {
+          "label": "burn",
+          "audio_id": "n-first-burn"
+        }
+      ]
+    },
+    {
+      "id": "pat-action",
+      "cat": "deal",
+      "title_zh": "颜色 Action",
+      "template": "____ Action.",
+      "options": [
+        {
+          "label": "Black",
+          "audio_id": "d-black-action"
+        },
+        {
+          "label": "Purple",
+          "audio_id": "d-purple-action"
+        },
+        {
+          "label": "Orange",
+          "audio_id": "d-orange-action"
+        }
+      ]
+    },
+    {
+      "id": "pat-insurance",
+      "cat": "insurance",
+      "title_zh": "保险窗口",
+      "template": "Insurance is ____.",
+      "options": [
+        {
+          "label": "open",
+          "audio_id": "n-ins-open"
+        },
+        {
+          "label": "closed",
+          "audio_id": "n-ins-closed"
+        }
+      ]
+    },
+    {
+      "id": "pat-even",
+      "cat": "insurance",
+      "title_zh": "Even money",
+      "template": "Even money on ____.",
+      "options": [
+        {
+          "label": "20",
+          "audio_id": "n-even-20"
+        },
+        {
+          "label": "25",
+          "audio_id": "n-even-25"
+        },
+        {
+          "label": "50",
+          "audio_id": "n-even-50"
+        }
+      ]
+    },
+    {
+      "id": "pat-double",
+      "cat": "signals",
+      "title_zh": "不常见的加倍",
+      "template": "Doubling down on a hard ____.",
+      "options": [
+        {
+          "label": "12",
+          "audio_id": "n-dd-12"
+        },
+        {
+          "label": "13",
+          "audio_id": "n-dd-13"
+        },
+        {
+          "label": "14",
+          "audio_id": "n-dd-14"
+        }
+      ]
+    },
+    {
+      "id": "pat-dealer-has",
+      "cat": "dealer",
+      "title_zh": "报荷官的点",
+      "template": "Dealer ____.",
+      "options": [
+        {
+          "label": "has 16",
+          "audio_id": "d-dealer-16"
+        },
+        {
+          "label": "has 17",
+          "audio_id": "d-dealer-17"
+        },
+        {
+          "label": "soft 17",
+          "audio_id": "d-dealer-soft-17"
+        },
+        {
+          "label": "busts",
+          "audio_id": "d-dealer-busts"
+        },
+        {
+          "label": "stands",
+          "audio_id": "n-dealer-stands"
+        }
+      ]
+    },
+    {
+      "id": "pat-change",
+      "cat": "change",
+      "title_zh": "现金换筹",
+      "template": "Change ____.",
+      "options": [
+        {
+          "label": "50",
+          "audio_id": "n-change-50"
+        },
+        {
+          "label": "100",
+          "audio_id": "d-change-100"
+        },
+        {
+          "label": "200",
+          "audio_id": "n-change-200"
+        }
+      ]
+    },
+    {
+      "id": "pat-color",
+      "cat": "change",
+      "title_zh": "Color up",
+      "template": "Color up ____.",
+      "options": [
+        {
+          "label": "100",
+          "audio_id": "d-color-up-100"
+        },
+        {
+          "label": "200",
+          "audio_id": "n-color-200"
+        },
+        {
+          "label": "500",
+          "audio_id": "n-color-500"
+        }
+      ]
+    },
+    {
+      "id": "pat-thats",
+      "cat": "pay",
+      "title_zh": "结果",
+      "template": "That's a ____.",
+      "options": [
+        {
+          "label": "push",
+          "audio_id": "n-thats-push"
+        },
+        {
+          "label": "bust",
+          "audio_id": "n-thats-bust"
+        },
+        {
+          "label": "blackjack",
+          "audio_id": "n-thats-bj"
+        }
+      ]
+    },
+    {
+      "id": "pat-last",
+      "cat": "deal",
+      "title_zh": "最后一局",
+      "template": "Last ____.",
+      "options": [
+        {
+          "label": "hand",
+          "audio_id": "d-last-hand"
+        }
+      ]
+    },
+    {
+      "id": "pat-supervisor",
+      "cat": "floor",
+      "title_zh": "叫主管",
+      "template": "Let me ask my ____.",
+      "options": [
+        {
+          "label": "supervisor",
+          "audio_id": "d-ask-supervisor"
+        },
+        {
+          "label": "floor",
+          "audio_id": "n-ask-floor"
+        }
+      ]
+    }
+  ]
+}
