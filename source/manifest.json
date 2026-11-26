@@ -1,0 +1,229 @@
+{
+  "app": "dealer-exam",
+  "listening_gate": true,
+  "unlock_rule": "Pass listening_questions on a video before the next video in that module unlocks. Suggested pass line: 80%. Handout drills (payouts, hand totals, cheque rundown) are separate practice and do not replace the listening gate.",
+  "video_fields": [
+    "game",
+    "order",
+    "title",
+    "note",
+    "path",
+    "transcript_en",
+    "transcript_zh",
+    "glossary",
+    "dictation_lines",
+    "listening_questions"
+  ],
+  "video_entry_schema": {
+    "game": "blackjack",
+    "module_id": "",
+    "order": 1,
+    "title": "",
+    "note": "One line on the dealing skill this clip teaches.",
+    "path": "blackjack/NN-short-title.mp4",
+    "transcript_en": "",
+    "transcript_zh": "",
+    "glossary": [
+      {
+        "term_en": "",
+        "term_zh": "",
+        "heard_as": ""
+      }
+    ],
+    "dictation_lines": [
+      {
+        "en": "",
+        "zh": ""
+      }
+    ],
+    "listening_questions": [
+      {
+        "q_en": "What did the instructor say to do with …?",
+        "q_zh": "讲师说对……要怎么处理？",
+        "answer_en": "",
+        "answer_zh": ""
+      }
+    ]
+  },
+  "source_handouts": "/workspace/dealer-exam-videos/handouts/HANDOUTS.md",
+  "blueprint": "/workspace/dealer-exam-videos/blackjack/BLUEPRINT.md",
+  "incoming_videos": [
+    {
+      "id": "v01",
+      "game": "blackjack",
+      "module_id": null,
+      "order": null,
+      "title": "v01 (unassigned)",
+      "note": "Nova's raw clip; being watched separately. Compress, write the listening pack, then slot into a module. Leave this placeholder until then.",
+      "path": "raw/v01.mov",
+      "status": "placeholder",
+      "transcript_en": "",
+      "transcript_zh": "",
+      "glossary": [],
+      "dictation_lines": [],
+      "listening_questions": []
+    },
+    {
+      "id": "v02",
+      "game": "blackjack",
+      "module_id": null,
+      "order": null,
+      "title": "v02 (unassigned)",
+      "note": "Nova's raw clip; being watched separately. Compress, write the listening pack, then slot into a module. Leave this placeholder until then.",
+      "path": "raw/v02.mov",
+      "status": "placeholder",
+      "transcript_en": "",
+      "transcript_zh": "",
+      "glossary": [],
+      "dictation_lines": [],
+      "listening_questions": []
+    }
+  ],
+  "games": [
+    {
+      "game": "blackjack",
+      "modules": [
+        {
+          "id": "primer",
+          "order": 0,
+          "title_zh": "规则速览与台面认识",
+          "title_en": "Rules primer and table layout",
+          "handouts": [
+            "d64e69e5 (Card Values, canonical)",
+            "d5aefea0 (chart duplicate)",
+            "3db62f0a (whiteboard totals exercise)"
+          ],
+          "videos": []
+        },
+        {
+          "id": "shuffle",
+          "order": 1,
+          "title_zh": "洗牌",
+          "title_en": "Shuffle",
+          "handouts": [],
+          "videos": []
+        },
+        {
+          "id": "cut",
+          "order": 2,
+          "title_zh": "切牌",
+          "title_en": "Cut",
+          "handouts": [],
+          "videos": []
+        },
+        {
+          "id": "burn",
+          "order": 3,
+          "title_zh": "烧牌",
+          "title_en": "Burn",
+          "handouts": [],
+          "videos": []
+        },
+        {
+          "id": "deal",
+          "order": 4,
+          "title_zh": "发牌（Shoe 或 Pitch）",
+          "title_en": "Dealing: shoe or pitch",
+          "handouts": [
+            "d64e69e5 (Card Values, reading totals)",
+            "362e6c75 (Cheques Play / color Action)"
+          ],
+          "videos": []
+        },
+        {
+          "id": "peek",
+          "order": 5,
+          "title_zh": "底牌、偷看与保险",
+          "title_en": "Hole card, peek, and insurance",
+          "handouts": [
+            "ac4b4964 (Insurance)",
+            "9242132d (Match The Dealer, settle first)",
+            "654f18c2 (Kings Bounty, settle first)"
+          ],
+          "videos": []
+        },
+        {
+          "id": "signals",
+          "order": 6,
+          "title_zh": "读手势与给牌",
+          "title_en": "Reading signals, hitting, doubles and splits",
+          "handouts": [
+            "452bcaea (Splits and Doubling Down)"
+          ],
+          "videos": []
+        },
+        {
+          "id": "dealer-hand",
+          "order": 7,
+          "title_zh": "荷官补牌与停牌",
+          "title_en": "Dealer hits and stands",
+          "handouts": [
+            "d64e69e5 (Card Values)",
+            "3db62f0a (totals drill)"
+          ],
+          "videos": []
+        },
+        {
+          "id": "payouts",
+          "order": 8,
+          "title_zh": "赔付与切筹码",
+          "title_en": "Payouts and chip cutting",
+          "handouts": [
+            "82c66396 (Blackjack Payouts 3:2)",
+            "b0771019 (Cheque Rundown)",
+            "613cccc3 (Breaking Down Cheques)",
+            "ac4b4964 (Insurance amounts)",
+            "9242132d (Match The Dealer paytable)",
+            "654f18c2 (Kings Bounty paytable)",
+            "362e6c75 (Change / Cheque change / Color up calls)"
+          ],
+          "videos": []
+        },
+        {
+          "id": "take",
+          "order": 9,
+          "title_zh": "收走输掉的注",
+          "title_en": "Taking losing bets",
+          "handouts": [],
+          "videos": []
+        },
+        {
+          "id": "clear-cards",
+          "order": 10,
+          "title_zh": "收牌",
+          "title_en": "Clearing cards",
+          "handouts": [],
+          "videos": []
+        },
+        {
+          "id": "palms",
+          "order": 11,
+          "title_zh": "亮掌",
+          "title_en": "Showing palms",
+          "handouts": [
+            "b392946f (General Policies: do not self-correct, call a supervisor)"
+          ],
+          "videos": []
+        },
+        {
+          "id": "full-round",
+          "order": 12,
+          "title_zh": "完整一圈",
+          "title_en": "Full-round run-through",
+          "handouts": [],
+          "videos": []
+        },
+        {
+          "id": "mock",
+          "order": 13,
+          "title_zh": "综合模拟",
+          "title_en": "Final mock",
+          "handouts": [
+            "All practice question sets in HANDOUTS.md"
+          ],
+          "videos": []
+        }
+      ]
+    }
+  ]
+}
