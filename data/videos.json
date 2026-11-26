@@ -1,0 +1,1724 @@
+{
+  "game": "blackjack",
+  "pass_line": 0.8,
+  "watch_line": 0.8,
+  "gate_zh": "听懂题只解锁同一模块里的下一条，通过线 80%。洗牌要先过 Announce Shuffle，才解锁八副牌洗牌。赔付这条是该模块的第一条，一开始就能看。中间还没有视频的模块不会挡路。",
+  "modules": [
+    {
+      "id": "primer",
+      "order": 0,
+      "title_zh": "规则速览与台面认识",
+      "title_en": "Rules primer and table layout"
+    },
+    {
+      "id": "shuffle",
+      "order": 1,
+      "title_zh": "洗牌",
+      "title_en": "Shuffle"
+    },
+    {
+      "id": "cut",
+      "order": 2,
+      "title_zh": "切牌",
+      "title_en": "Cut"
+    },
+    {
+      "id": "burn",
+      "order": 3,
+      "title_zh": "烧牌",
+      "title_en": "Burn"
+    },
+    {
+      "id": "deal",
+      "order": 4,
+      "title_zh": "发牌（Shoe 或 Pitch）",
+      "title_en": "Dealing: shoe or pitch"
+    },
+    {
+      "id": "peek",
+      "order": 5,
+      "title_zh": "底牌、偷看与保险",
+      "title_en": "Hole card, peek, and insurance"
+    },
+    {
+      "id": "signals",
+      "order": 6,
+      "title_zh": "读手势与给牌",
+      "title_en": "Reading signals, hitting, doubles and splits"
+    },
+    {
+      "id": "dealer-hand",
+      "order": 7,
+      "title_zh": "荷官补牌与停牌",
+      "title_en": "Dealer hits and stands"
+    },
+    {
+      "id": "payouts",
+      "order": 8,
+      "title_zh": "赔付与切筹码",
+      "title_en": "Payouts and chip cutting"
+    },
+    {
+      "id": "take",
+      "order": 9,
+      "title_zh": "收走输掉的注",
+      "title_en": "Taking losing bets"
+    },
+    {
+      "id": "clear-cards",
+      "order": 10,
+      "title_zh": "收牌",
+      "title_en": "Clearing cards"
+    },
+    {
+      "id": "palms",
+      "order": 11,
+      "title_zh": "亮掌",
+      "title_en": "Showing palms"
+    },
+    {
+      "id": "full-round",
+      "order": 12,
+      "title_zh": "完整一圈",
+      "title_en": "Full-round run-through"
+    },
+    {
+      "id": "mock",
+      "order": 13,
+      "title_zh": "综合模拟",
+      "title_en": "Final mock"
+    }
+  ],
+  "videos": [
+    {
+      "id": "shuffle-01",
+      "game": "blackjack",
+      "module_id": "shuffle",
+      "order": 1,
+      "title": "Announce Shuffle",
+      "note": "洗牌前必须大声向楼面喊 Shuffle，不是在请示许可。",
+      "path": "blackjack/01-announce-shuffle.mp4",
+      "duration": "1:26",
+      "duration_sec": 86.5,
+      "transcript_status": "whisper",
+      "transcript_note": "逐字稿来自录音（faster-whisper small.en），不是讲义。结尾讲师说的是先从 two decks 开始，再取 one deck 对切。笔记里曾写成只从一副开始，这里以录音为准。最后一句在视频结尾被截断。",
+      "transcript_en": "Start. What do we have to do? I'm on the game. What do I do when it's time to shuffle? Shuffle! All right, do you hear how loud that was? Anytime that you guys have to shuffle, before you shuffle, you have to announce it. You have to announce it loud enough that your floor can hear you. Now you're not asking for permission, okay? You don't need permission, but you need to say it loud enough that he can hear you. Remember, he's probably watching three, four, maybe five different games. And remember, being at a casino on a Friday, Saturday night, it's loud. You got the music. You got people screaming and laughing and crying, right? You have all of this noise going on. So when it's time to shuffle, you can't be just like, shuffle. No one's going to hear that. It's Shuffle, okay? Nice and loud. Remember, I said earlier today, this is a very vocal game. Everything you do, you have to talk, and you have to say it loud enough for everyone in here. So if we're shy, if we have a soft voice, these next couple weeks are the time to practice. We've got to be loud, loud and in charge, okay? Now he announced shuffle. For right now, we're going to start with two decks. We've got one deck and cut it in half. So the cut card is going to go right now.",
+      "transcript_zh": "开始。我们要做什么？我已经在桌上了。轮到洗牌的时候我该做什么？洗牌！（这一声是大声示范）听到刚才有多大声了吗？每次要洗牌，洗之前必须先宣布。要宣布得够大声，让你的楼面主管听得见。你这不是在请示许可。你不需要许可，但要说得他听得见。记住，他可能同时看着三、四，甚至五张桌。赌场周五、周六晚上很吵。有音乐。有人在叫、在笑、在哭，对吧？这些声音都在响。所以轮到洗牌时，不能只是轻轻说一声 shuffle。没人听得见。要说 Shuffle，好吗？又清楚又大声。记得我今天早些时候说过，这是一个很需要出声的游戏。你做的每件事都要说出来，而且要让这里的每个人都听得见。如果害羞、声音小，接下来这两周就是练的时候。我们要大声，声音大，自己镇得住。他已经喊了 shuffle。现在我们先从两副牌开始。我们拿一副，对切成两半。所以切牌卡现在就要放上去。（视频在这里结束，句子被截断）",
+      "cues": [
+        {
+          "t": 0,
+          "en": "Start. What do we have to do?",
+          "zh": "开始。我们要做什么？"
+        },
+        {
+          "t": 2,
+          "en": "I'm on the game.",
+          "zh": "我已经在桌上了。"
+        },
+        {
+          "t": 4,
+          "en": "What do I do when it's time to shuffle?",
+          "zh": "轮到洗牌的时候我该做什么？"
+        },
+        {
+          "t": 6,
+          "en": "Shuffle!",
+          "zh": "洗牌！（这一声是大声示范）",
+          "audio_id": "d-shuffle"
+        },
+        {
+          "t": 7,
+          "en": "All right, do you hear how loud that was?",
+          "zh": "听到刚才有多大声了吗？"
+        },
+        {
+          "t": 10,
+          "en": "Anytime that you guys have to shuffle, before you shuffle, you have to announce it.",
+          "zh": "每次要洗牌，洗之前必须先宣布。"
+        },
+        {
+          "t": 17,
+          "en": "You have to announce it loud enough that your floor can hear you.",
+          "zh": "要宣布得够大声，让你的楼面主管听得见。",
+          "audio_id": "d-announce-loud"
+        },
+        {
+          "t": 22,
+          "en": "Now you're not asking for permission, okay?",
+          "zh": "你这不是在请示许可。",
+          "audio_id": "d-not-permission"
+        },
+        {
+          "t": 24,
+          "en": "You don't need permission, but you need to say it loud enough that he can hear you.",
+          "zh": "你不需要许可，但要说得他听得见。",
+          "audio_id": "d-no-permission-needed"
+        },
+        {
+          "t": 28,
+          "en": "Remember, he's probably watching three, four, maybe five different games.",
+          "zh": "记住，他可能同时看着三、四，甚至五张桌。"
+        },
+        {
+          "t": 32,
+          "en": "And remember, being at a casino on a Friday, Saturday night, it's loud.",
+          "zh": "赌场周五、周六晚上很吵。"
+        },
+        {
+          "t": 37,
+          "en": "You got the music.",
+          "zh": "有音乐。"
+        },
+        {
+          "t": 38,
+          "en": "You got people screaming and laughing and crying, right?",
+          "zh": "有人在叫、在笑、在哭，对吧？"
+        },
+        {
+          "t": 43,
+          "en": "You have all of this noise going on.",
+          "zh": "这些声音都在响。"
+        },
+        {
+          "t": 45,
+          "en": "So when it's time to shuffle, you can't be just like, shuffle.",
+          "zh": "所以轮到洗牌时，不能只是轻轻说一声 shuffle。",
+          "audio_id": "d-quiet-shuffle"
+        },
+        {
+          "t": 50,
+          "en": "No one's going to hear that.",
+          "zh": "没人听得见。"
+        },
+        {
+          "t": 51,
+          "en": "It's Shuffle, okay? Nice and loud.",
+          "zh": "要说 Shuffle，好吗？又清楚又大声。",
+          "audio_id": "d-shuffle-loud"
+        },
+        {
+          "t": 55,
+          "en": "Remember, I said earlier today, this is a very vocal game.",
+          "zh": "记得我今天早些时候说过，这是一个很需要出声的游戏。",
+          "audio_id": "d-vocal-game"
+        },
+        {
+          "t": 58,
+          "en": "Everything you do, you have to talk, and you have to say it loud enough for everyone in here.",
+          "zh": "你做的每件事都要说出来，而且要让这里的每个人都听得见。"
+        },
+        {
+          "t": 64,
+          "en": "So if we're shy, if we have a soft voice, these next couple weeks are the time to practice.",
+          "zh": "如果害羞、声音小，接下来这两周就是练的时候。"
+        },
+        {
+          "t": 71,
+          "en": "We've got to be loud, loud and in charge, okay?",
+          "zh": "我们要大声，声音大，自己镇得住。",
+          "audio_id": "d-loud-in-charge"
+        },
+        {
+          "t": 75,
+          "en": "Now he announced shuffle.",
+          "zh": "他已经喊了 shuffle。"
+        },
+        {
+          "t": 78,
+          "en": "For right now, we're going to start with two decks.",
+          "zh": "现在我们先从两副牌开始。",
+          "audio_id": "dict-v01-two-decks"
+        },
+        {
+          "t": 81,
+          "en": "We've got one deck and cut it in half.",
+          "zh": "我们拿一副，对切成两半。",
+          "audio_id": "dict-v01-cut-half"
+        },
+        {
+          "t": 84,
+          "en": "So the cut card is going to go right now.",
+          "zh": "所以切牌卡现在就要放上去。（视频在这里结束，句子被截断）"
+        }
+      ],
+      "glossary": [
+        {
+          "term_en": "Shuffle!",
+          "term_zh": "洗牌，要大声喊",
+          "heard_as": "Shuffle! / a quiet shuffle",
+          "audio_id": "d-shuffle"
+        },
+        {
+          "term_en": "announce",
+          "term_zh": "洗牌前先宣布",
+          "heard_as": "you have to announce it",
+          "audio_id": "d-announce-loud"
+        },
+        {
+          "term_en": "floor",
+          "term_zh": "楼面主管",
+          "heard_as": "your floor can hear you",
+          "audio_id": "n-floor"
+        },
+        {
+          "term_en": "permission",
+          "term_zh": "许可。这里不是在请示",
+          "heard_as": "you're not asking for permission",
+          "audio_id": "d-not-permission"
+        },
+        {
+          "term_en": "vocal game",
+          "term_zh": "很需要出声的游戏",
+          "heard_as": "this is a very vocal game",
+          "audio_id": "d-vocal-game"
+        },
+        {
+          "term_en": "loud and in charge",
+          "term_zh": "声音大，自己镇得住",
+          "heard_as": "loud and in charge",
+          "audio_id": "d-loud-in-charge"
+        },
+        {
+          "term_en": "cut it in half",
+          "term_zh": "对切成两半",
+          "heard_as": "cut it in half",
+          "audio_id": "dict-v01-cut-half"
+        }
+      ],
+      "dictation_lines": [
+        {
+          "en": "You have to announce it loud enough that your floor can hear you.",
+          "zh": "要宣布得够大声，让楼面主管听得见。",
+          "audio_id": "d-announce-loud"
+        },
+        {
+          "en": "You're not asking for permission.",
+          "zh": "你不是在请示许可。",
+          "audio_id": "d-not-permission"
+        },
+        {
+          "en": "You don't need permission.",
+          "zh": "你不需要许可。",
+          "audio_id": "d-no-permission-needed"
+        },
+        {
+          "en": "This is a very vocal game.",
+          "zh": "这是一个很需要出声的游戏。",
+          "audio_id": "d-vocal-game"
+        },
+        {
+          "en": "We've got to be loud, loud and in charge.",
+          "zh": "要大声，而且自己镇得住。",
+          "audio_id": "d-loud-in-charge"
+        },
+        {
+          "en": "For right now, we're going to start with two decks.",
+          "zh": "现在先从两副牌开始。",
+          "audio_id": "dict-v01-two-decks"
+        },
+        {
+          "en": "We've got one deck and cut it in half.",
+          "zh": "拿一副，对切成两半。",
+          "audio_id": "dict-v01-cut-half"
+        }
+      ],
+      "listening_questions": [
+        {
+          "q_en": "What did the instructor say to do before you shuffle?",
+          "q_zh": "讲师说洗牌之前要怎么做？",
+          "answer_en": "Announce it loud enough that the floor can hear you.",
+          "answer_zh": "要大声宣布，让楼面主管听得见。",
+          "choices": [
+            {
+              "en": "Announce it loud enough that the floor can hear you.",
+              "zh": "大声宣布，让楼面听得见。"
+            },
+            {
+              "en": "Ask the floor for permission.",
+              "zh": "先向楼面请示许可。"
+            },
+            {
+              "en": "Wait until the floor says shuffle.",
+              "zh": "等楼面说了 shuffle 再动手。"
+            },
+            {
+              "en": "Shuffle quietly so the guests are not disturbed.",
+              "zh": "轻轻洗，免得打扰客人。"
+            }
+          ]
+        },
+        {
+          "q_en": "What did the instructor say about permission?",
+          "q_zh": "讲师说这声 Shuffle 和许可是什么关系？",
+          "answer_en": "You are not asking for permission, and you do not need permission.",
+          "answer_zh": "不是在请示，也不需要许可。",
+          "choices": [
+            {
+              "en": "You are not asking for permission, and you do not need permission.",
+              "zh": "不是请示，也不需要许可。"
+            },
+            {
+              "en": "You must get permission before every shuffle.",
+              "zh": "每次洗牌都要先得到许可。"
+            },
+            {
+              "en": "Only a supervisor is allowed to say shuffle.",
+              "zh": "只有主管能说 shuffle。"
+            },
+            {
+              "en": "Permission is required on Friday and Saturday.",
+              "zh": "周五周六才需要许可。"
+            }
+          ]
+        },
+        {
+          "q_en": "Why did the instructor say the call has to be loud?",
+          "q_zh": "讲师说为什么这声必须大？",
+          "answer_en": "The floor may be watching three to five games, and a casino night is loud.",
+          "answer_zh": "楼面可能同时看三到五张桌，而且赌场晚上很吵。",
+          "choices": [
+            {
+              "en": "The floor may be watching three to five games, and a casino night is loud.",
+              "zh": "楼面可能看好几张桌，赌场晚上很吵。"
+            },
+            {
+              "en": "The guests have to hear it before they can cut.",
+              "zh": "客人听见了才能切牌。"
+            },
+            {
+              "en": "The cameras only record loud sounds.",
+              "zh": "摄像机只录大声。"
+            },
+            {
+              "en": "A quiet shuffle is faster.",
+              "zh": "轻声洗牌更快。"
+            }
+          ]
+        },
+        {
+          "q_en": "What did the instructor say not to do?",
+          "q_zh": "讲师说不要怎样喊？",
+          "answer_en": "Don't say a quiet shuffle that no one will hear.",
+          "answer_zh": "不要轻轻说一声 shuffle，那样没人听见。",
+          "choices": [
+            {
+              "en": "Don't say a quiet shuffle that no one will hear.",
+              "zh": "不要轻轻说，没人听得见。"
+            },
+            {
+              "en": "Don't announce it before you touch the cards.",
+              "zh": "不要在碰牌之前宣布。"
+            },
+            {
+              "en": "Don't say it on Friday.",
+              "zh": "周五不要说。"
+            },
+            {
+              "en": "Don't cut the deck in half.",
+              "zh": "不要把牌对切。"
+            }
+          ]
+        },
+        {
+          "q_en": "What did the instructor say this game is?",
+          "q_zh": "讲师说这是一种什么样的游戏？",
+          "answer_en": "A very vocal game. You have to talk, loud enough for everyone to hear.",
+          "answer_zh": "很需要出声。做每件事都要说，而且要让大家都听见。",
+          "choices": [
+            {
+              "en": "A very vocal game. You have to talk, loud enough for everyone to hear.",
+              "zh": "很需要出声，而且要让大家都听见。"
+            },
+            {
+              "en": "A quiet game.",
+              "zh": "安静的游戏。"
+            },
+            {
+              "en": "A game where only the floor speaks.",
+              "zh": "只有楼面说话的游戏。"
+            },
+            {
+              "en": "A game with no calls at all.",
+              "zh": "完全不用喊话的游戏。"
+            }
+          ]
+        },
+        {
+          "q_en": "After the announcement, what did the instructor say to do right now?",
+          "q_zh": "喊完之后，讲师说现在要怎么做？",
+          "answer_en": "Start with two decks, take one deck, and cut it in half.",
+          "answer_zh": "先从两副开始，拿一副，对切成两半。",
+          "choices": [
+            {
+              "en": "Start with two decks, take one deck, and cut it in half.",
+              "zh": "两副开始，拿一副对切。"
+            },
+            {
+              "en": "Wash all eight decks.",
+              "zh": "把八副都打乱。"
+            },
+            {
+              "en": "Burn the first card.",
+              "zh": "先烧第一张。"
+            },
+            {
+              "en": "Deal the first hand.",
+              "zh": "直接发第一局。"
+            }
+          ]
+        }
+      ],
+      "overview": {
+        "summary_zh": "这条先练嘴，不练整套手法。人已经在桌上、轮到洗牌时，要先喊 Shuffle。这不是请示许可。楼面可能同时看好几张桌，周五周六又吵，所以要大声。讲师说这是一个 very vocal game。喊完之后，这一段先从两副牌里拿出一副对切。",
+        "points": [
+          {
+            "t": 10,
+            "zh": "洗之前必须先宣布。"
+          },
+          {
+            "t": 22,
+            "zh": "不是请示许可。"
+          },
+          {
+            "t": 28,
+            "zh": "楼面可能看着 3 到 5 张桌。"
+          },
+          {
+            "t": 55,
+            "zh": "这是 very vocal game。"
+          },
+          {
+            "t": 78,
+            "zh": "现在从 two decks 开始，拿 one deck 对切。"
+          }
+        ],
+        "mistakes_zh": [
+          "轻轻说一声 shuffle，楼面听不见。",
+          "把这声喊话当成在等许可。",
+          "声音小还拖着不练。接下来两周就是练大声的时候。"
+        ]
+      },
+      "rules": [
+        {
+          "source_zh": "讲义没有洗牌步骤",
+          "text_zh": "讲义未写洗牌手法，按常见做法；现场以主管/学校为准。牌要压低，不翻面，不自己发明顺序。"
+        },
+        {
+          "source_zh": "讲义 General Policies",
+          "text_zh": "喊 change、color up 等，声音要让主管听见。这条视频把同一条用到了 Shuffle：洗牌前的宣布也要让 floor 听见。"
+        }
+      ],
+      "rule_ids": [
+        "policies"
+      ]
+    },
+    {
+      "id": "shuffle-02",
+      "game": "blackjack",
+      "module_id": "shuffle",
+      "order": 2,
+      "title": "Eight-deck shuffle",
+      "note": "八副牌洗牌：对半、右边转 180 度，抓 1 到 1.5 副，riffle riffle strip riffle。考核目标三分半。",
+      "path": "blackjack/02-eight-deck-shuffle.mp4",
+      "duration": "3:59",
+      "duration_sec": 238.9,
+      "transcript_status": "whisper",
+      "transcript_note": "逐字稿来自录音。切牌卡、eight-deck shuffle 已按第二遍听写核对。考核时间原文是 by audition time。有一句讲为什么转 180 度，教室里比较糊，英文按听写保留。",
+      "transcript_en": "You're going to put all eight decks where it says pays, or right around in that area. Now what you need to do is you need to cut the deck in half. It doesn't have to be exact, but it has to be close. A good way to also do that is you can just break it down and put it right next to it. See, it's pretty much level. Now once we cut the deck in half, this is very important. We are going to rotate the deck on the right-hand side. 180 degrees, with your finger, and it's always going to be on the right side. You just do it with your finger, 180 degrees. One important reason, probably what you'd understand right now, is because we don't keep the shuffle in the same corners all the time. Now, once we have it cut into two even piles and he rotates 180, at the same time he's going to go and grab cards. Ideally you want between a deck and a deck and a half of cards. You don't put them together. This right here is probably close to a deck and a half, maybe a deck and a quarter. This is pretty good. You don't want a lot of cards, because if you have more than this, when you riffle it's going to jam up and it's going to be hard. Anything less, like if you do like this, you'll be shuffling forever. So remember, ideally it's between a deck and a deck and a half. Now you're going to put the cards together, and now you're pulling them apart. And now you're going to do what you already know: riffle, riffle, strip, riffle. This is your second riffle. Now strip: one, two, three, and on top, and then riffle. Then you put the cards onto the cut card in the middle. Now you're going to grab cards from both the middle and the end. We have a little bit more from here than here, just a little bit more. Put the cards together, then pull them apart, and then you're going to alternate side to side until we get into one pile. Ideally you want to get this done in less than three and a half minutes. Now that's by audition time, okay? I had a gentleman. He was like in his older 60s. He came in part time. But his first shuffle was like 16 minutes and 47 seconds. By the end of the four weeks, his shuffle was done in like 3 minutes and 27 seconds. So don't get overwhelmed. They'll get there, trust me. Now that you guys know this eight-deck shuffle, when you first get to this class every single day, you don't have to look for me for what to do. You punch in, and you automatically go to a table and do your eight-deck shuffle. Everyone's got to do one eight-deck shuffle when they get to class, and then we start the day after that. And here's his last part: riffle, riffle, strip, riffle. Okay, any questions?",
+      "transcript_zh": "把八副牌放在毡上写着 pays 的地方，或者就在那一块附近。现在要把这叠牌对半切开。不必刚好一半，但要接近。也可以拆开并排摆。看，两边基本上一样高。对半切开之后，这一步很重要。我们要转右边那一叠。用手指转 180 度，而且永远转右边那一叠。就用手指转 180 度。一个现在就能懂的原因是：不要让洗牌总停在同样的几个角上。（这句教室里有点糊，英文按听写保留）切成两叠、转了 180 度之后，同时去抓牌。最好抓一副到一副半。先不要把它们合在一起。这里大概接近一副半，也许一副又四分之一。这样挺好。牌不要太多。再多，riffle 的时候会卡住，很难洗拢。抓得太少，你会洗个没完。所以记住，最好是一副到一副半。现在把牌合上，再拉开。然后做你已经会的：riffle，riffle，strip，riffle。这是第二次 riffle。然后 strip：一、二、三，放到上面，再 riffle。然后把牌放到中间的切牌卡上。接下来从中间和两端都抓牌。这边比那边多抓一点点，就多一点点。合上，拉开，左右交替，直到合成一叠。最好在三分半以内做完。这是考核时的时间，好吗？我有过一个学员，六十多岁。他是兼职来的。他第一次洗牌大约 16 分 47 秒。四周课结束时，他大约 3 分 27 秒就能洗完。所以别被吓到。他们做得到的，相信我。你们会了这个八副洗牌。以后每天一到课，不用找我问该干什么。打卡之后，自己去一张桌，做八副牌洗牌。到课先做一次八副洗牌，然后再开始当天的课。最后再看一遍：riffle，riffle，strip，riffle。还有问题吗？",
+      "cues": [
+        {
+          "t": 0.3,
+          "en": "You're going to put all eight decks where it says pays, or right around in that area.",
+          "zh": "把八副牌放在毡上写着 pays 的地方，或者就在那一块附近。",
+          "audio_id": "dict-v02-pays"
+        },
+        {
+          "t": 5.9,
+          "en": "Now what you need to do is you need to cut the deck in half.",
+          "zh": "现在要把这叠牌对半切开。"
+        },
+        {
+          "t": 9.2,
+          "en": "It doesn't have to be exact, but it has to be close.",
+          "zh": "不必刚好一半，但要接近。"
+        },
+        {
+          "t": 13.6,
+          "en": "A good way to also do that is you can just break it down and put it right next to it. See, it's pretty much level.",
+          "zh": "也可以拆开并排摆。看，两边基本上一样高。"
+        },
+        {
+          "t": 19.8,
+          "en": "Now once we cut the deck in half, this is very important.",
+          "zh": "对半切开之后，这一步很重要。"
+        },
+        {
+          "t": 23.8,
+          "en": "We are going to rotate the deck on the right-hand side.",
+          "zh": "我们要转右边那一叠。"
+        },
+        {
+          "t": 28.4,
+          "en": "180 degrees, with your finger, and it's always going to be on the right side.",
+          "zh": "用手指转 180 度，而且永远转右边那一叠。",
+          "audio_id": "dict-v02-rotate"
+        },
+        {
+          "t": 34.1,
+          "en": "You just do it with your finger, 180 degrees.",
+          "zh": "就用手指转 180 度。"
+        },
+        {
+          "t": 40.5,
+          "en": "One important reason, probably what you'd understand right now, is because we don't keep the shuffle in the same corners all the time.",
+          "zh": "一个现在就能懂的原因是：不要让洗牌总停在同样的几个角上。（这句教室里有点糊，英文按听写保留）"
+        },
+        {
+          "t": 51.8,
+          "en": "Now, once we have it cut into two even piles and he rotates 180, at the same time he's going to go and grab cards.",
+          "zh": "切成两叠、转了 180 度之后，同时去抓牌。"
+        },
+        {
+          "t": 63.9,
+          "en": "Ideally you want between a deck and a deck and a half of cards. You don't put them together.",
+          "zh": "最好抓一副到一副半。先不要把它们合在一起。",
+          "audio_id": "d-deck-and-half"
+        },
+        {
+          "t": 72.1,
+          "en": "This right here is probably close to a deck and a half, maybe a deck and a quarter. This is pretty good.",
+          "zh": "这里大概接近一副半，也许一副又四分之一。这样挺好。"
+        },
+        {
+          "t": 78.8,
+          "en": "You don't want a lot of cards, because if you have more than this, when you riffle it's going to jam up and it's going to be hard.",
+          "zh": "牌不要太多。再多，riffle 的时候会卡住，很难洗拢。",
+          "audio_id": "dict-v02-jam"
+        },
+        {
+          "t": 88.6,
+          "en": "Anything less, like if you do like this, you'll be shuffling forever.",
+          "zh": "抓得太少，你会洗个没完。"
+        },
+        {
+          "t": 95.7,
+          "en": "So remember, ideally it's between a deck and a deck and a half.",
+          "zh": "所以记住，最好是一副到一副半。"
+        },
+        {
+          "t": 98.9,
+          "en": "Now you're going to put the cards together, and now you're pulling them apart.",
+          "zh": "现在把牌合上，再拉开。"
+        },
+        {
+          "t": 105.4,
+          "en": "And now you're going to do what you already know: riffle, riffle, strip, riffle.",
+          "zh": "然后做你已经会的：riffle，riffle，strip，riffle。",
+          "audio_id": "d-riffle-pattern"
+        },
+        {
+          "t": 107.2,
+          "en": "This is your second riffle. Now strip: one, two, three, and on top, and then riffle.",
+          "zh": "这是第二次 riffle。然后 strip：一、二、三，放到上面，再 riffle。",
+          "audio_id": "d-strip"
+        },
+        {
+          "t": 115.9,
+          "en": "Then you put the cards onto the cut card in the middle.",
+          "zh": "然后把牌放到中间的切牌卡上。",
+          "audio_id": "d-cut-card-middle"
+        },
+        {
+          "t": 120.3,
+          "en": "Now you're going to grab cards from both the middle and the end.",
+          "zh": "接下来从中间和两端都抓牌。"
+        },
+        {
+          "t": 128.1,
+          "en": "We have a little bit more from here than here, just a little bit more.",
+          "zh": "这边比那边多抓一点点，就多一点点。"
+        },
+        {
+          "t": 131.8,
+          "en": "Put the cards together, then pull them apart, and then you're going to alternate side to side until we get into one pile.",
+          "zh": "合上，拉开，左右交替，直到合成一叠。"
+        },
+        {
+          "t": 147,
+          "en": "Ideally you want to get this done in less than three and a half minutes.",
+          "zh": "最好在三分半以内做完。",
+          "audio_id": "dict-v02-time"
+        },
+        {
+          "t": 155.7,
+          "en": "Now that's by audition time, okay?",
+          "zh": "这是考核时的时间，好吗？",
+          "audio_id": "dict-v02-audition"
+        },
+        {
+          "t": 159.2,
+          "en": "I had a gentleman. He was like in his older 60s.",
+          "zh": "我有过一个学员，六十多岁。"
+        },
+        {
+          "t": 164.4,
+          "en": "He came in part time.",
+          "zh": "他是兼职来的。"
+        },
+        {
+          "t": 168.2,
+          "en": "But his first shuffle was like 16 minutes and 47 seconds.",
+          "zh": "他第一次洗牌大约 16 分 47 秒。"
+        },
+        {
+          "t": 174,
+          "en": "By the end of the four weeks, his shuffle was done in like 3 minutes and 27 seconds.",
+          "zh": "四周课结束时，他大约 3 分 27 秒就能洗完。"
+        },
+        {
+          "t": 184.9,
+          "en": "So don't get overwhelmed. They'll get there, trust me.",
+          "zh": "所以别被吓到。他们做得到的，相信我。"
+        },
+        {
+          "t": 190.8,
+          "en": "Now that you guys know this eight-deck shuffle, when you first get to this class every single day, you don't have to look for me for what to do.",
+          "zh": "你们会了这个八副洗牌。以后每天一到课，不用找我问该干什么。"
+        },
+        {
+          "t": 201.4,
+          "en": "You punch in, and you automatically go to a table and do your eight-deck shuffle.",
+          "zh": "打卡之后，自己去一张桌，做八副牌洗牌。",
+          "audio_id": "dict-v02-punch"
+        },
+        {
+          "t": 206.6,
+          "en": "Everyone's got to do one eight-deck shuffle when they get to class, and then we start the day after that.",
+          "zh": "到课先做一次八副洗牌，然后再开始当天的课。"
+        },
+        {
+          "t": 214.3,
+          "en": "And here's his last part: riffle, riffle, strip, riffle. Okay, any questions?",
+          "zh": "最后再看一遍：riffle，riffle，strip，riffle。还有问题吗？"
+        }
+      ],
+      "glossary": [
+        {
+          "term_en": "eight-deck shuffle",
+          "term_zh": "八副牌洗牌",
+          "heard_as": "eight-deck shuffle",
+          "audio_id": "dict-v02-punch"
+        },
+        {
+          "term_en": "pays",
+          "term_zh": "毡上写着赔率的那一块",
+          "heard_as": "where it says pays",
+          "audio_id": "dict-v02-pays"
+        },
+        {
+          "term_en": "cut in half",
+          "term_zh": "对半切开，不必分毫不差",
+          "heard_as": "cut the deck in half",
+          "audio_id": "d-would-you-cut"
+        },
+        {
+          "term_en": "180 degrees",
+          "term_zh": "右边那叠转 180 度",
+          "heard_as": "rotate … 180 degrees … right side",
+          "audio_id": "dict-v02-rotate"
+        },
+        {
+          "term_en": "a deck and a half",
+          "term_zh": "一副到一副半",
+          "heard_as": "between a deck and a deck and a half",
+          "audio_id": "d-deck-and-half"
+        },
+        {
+          "term_en": "riffle",
+          "term_zh": "交错洗牌",
+          "heard_as": "riffle, riffle, strip, riffle",
+          "audio_id": "d-riffle"
+        },
+        {
+          "term_en": "strip",
+          "term_zh": "抽牌：一、二、三，再放到上面",
+          "heard_as": "one, two, three, and on top",
+          "audio_id": "d-strip"
+        },
+        {
+          "term_en": "cut card",
+          "term_zh": "切牌卡",
+          "heard_as": "onto the cut card in the middle",
+          "audio_id": "d-cut-card-middle"
+        },
+        {
+          "term_en": "jam up",
+          "term_zh": "牌太多，riffle 会卡住",
+          "heard_as": "it's going to jam up",
+          "audio_id": "dict-v02-jam"
+        },
+        {
+          "term_en": "audition time",
+          "term_zh": "考核时的时间要求",
+          "heard_as": "that's by audition time",
+          "audio_id": "dict-v02-audition"
+        },
+        {
+          "term_en": "punch in",
+          "term_zh": "打卡上班",
+          "heard_as": "you punch in",
+          "audio_id": "dict-v02-punch"
+        }
+      ],
+      "dictation_lines": [
+        {
+          "en": "Put all eight decks where it says pays, or right around that area.",
+          "zh": "八副牌放在写着 pays 的附近。",
+          "audio_id": "dict-v02-pays"
+        },
+        {
+          "en": "Rotate the deck on the right side 180 degrees with your finger.",
+          "zh": "用手指把右边那叠转 180 度。",
+          "audio_id": "dict-v02-rotate"
+        },
+        {
+          "en": "Ideally you want between a deck and a deck and a half.",
+          "zh": "最好抓一副到一副半。",
+          "audio_id": "d-deck-and-half"
+        },
+        {
+          "en": "If you have more than that, when you riffle it's going to jam up.",
+          "zh": "再多，riffle 会卡住。",
+          "audio_id": "dict-v02-jam"
+        },
+        {
+          "en": "Riffle, riffle, strip, riffle.",
+          "zh": "洗牌节奏：riffle，riffle，strip，riffle。",
+          "audio_id": "d-riffle-pattern"
+        },
+        {
+          "en": "Strip: one, two, three, and on top, and then riffle.",
+          "zh": "Strip 是一、二、三，放到上面，再 riffle。",
+          "audio_id": "d-strip"
+        },
+        {
+          "en": "Put the cards onto the cut card in the middle.",
+          "zh": "洗完放到中间的切牌卡上。",
+          "audio_id": "d-cut-card-middle"
+        },
+        {
+          "en": "You want to get this done in less than three and a half minutes.",
+          "zh": "三分半以内做完。",
+          "audio_id": "dict-v02-time"
+        },
+        {
+          "en": "You punch in and you automatically go to a table and do your eight-deck shuffle.",
+          "zh": "打卡后自己去桌做八副洗牌。",
+          "audio_id": "dict-v02-punch"
+        }
+      ],
+      "listening_questions": [
+        {
+          "q_en": "What did the instructor say to do with the eight decks at the start?",
+          "q_zh": "讲师说八副牌一开始放哪？",
+          "answer_en": "Where it says pays, or right around that area.",
+          "answer_zh": "放在毡上写着 pays 的地方，或那一块附近。",
+          "choices": [
+            {
+              "en": "Where it says pays, or right around that area.",
+              "zh": "pays 附近。"
+            },
+            {
+              "en": "In the discard rack.",
+              "zh": "放进弃牌架。"
+            },
+            {
+              "en": "In the shoe before any cut.",
+              "zh": "还没切就装进 shoe。"
+            },
+            {
+              "en": "Face up in front of the guests.",
+              "zh": "牌面朝上摆到客人面前。"
+            }
+          ]
+        },
+        {
+          "q_en": "What did the instructor say to do with the right-hand pile?",
+          "q_zh": "讲师说右边那叠要怎么处理？",
+          "answer_en": "Rotate it 180 degrees with your finger. Always the right side.",
+          "answer_zh": "用手指转 180 度，而且永远是右边。",
+          "choices": [
+            {
+              "en": "Rotate it 180 degrees with your finger. Always the right side.",
+              "zh": "手指转 180 度，永远转右边。"
+            },
+            {
+              "en": "Turn it face up.",
+              "zh": "翻成牌面朝上。"
+            },
+            {
+              "en": "Rotate the left pile.",
+              "zh": "转左边那叠。"
+            },
+            {
+              "en": "Leave both piles as they are.",
+              "zh": "两叠都不要动。"
+            }
+          ]
+        },
+        {
+          "q_en": "How many cards did the instructor say to hold for a riffle?",
+          "q_zh": "讲师说一次 riffle 抓多少牌？",
+          "answer_en": "Between a deck and a deck and a half.",
+          "answer_zh": "一副到一副半。",
+          "choices": [
+            {
+              "en": "Between a deck and a deck and a half.",
+              "zh": "一副到一副半。"
+            },
+            {
+              "en": "The whole eight-deck stack.",
+              "zh": "整叠八副。"
+            },
+            {
+              "en": "Exactly two decks.",
+              "zh": "正好两副。"
+            },
+            {
+              "en": "Half a deck only.",
+              "zh": "只能半副。"
+            }
+          ]
+        },
+        {
+          "q_en": "What did the instructor say happens if you hold more than that?",
+          "q_zh": "讲师说抓得太多会怎样？",
+          "answer_en": "When you riffle, it is going to jam up and be hard.",
+          "answer_zh": "riffle 的时候会卡住，很难洗拢。",
+          "choices": [
+            {
+              "en": "When you riffle, it is going to jam up and be hard.",
+              "zh": "riffle 会卡住。"
+            },
+            {
+              "en": "The floor voids the shuffle.",
+              "zh": "楼面会判这轮洗牌无效。"
+            },
+            {
+              "en": "You must burn extra cards.",
+              "zh": "必须多烧几张。"
+            },
+            {
+              "en": "The cut card will not fit.",
+              "zh": "切牌卡放不进去。"
+            }
+          ]
+        },
+        {
+          "q_en": "What pattern did the instructor say to use?",
+          "q_zh": "讲师说的洗牌节奏是什么？",
+          "answer_en": "Riffle, riffle, strip, riffle.",
+          "answer_zh": "Riffle，riffle，strip，riffle。",
+          "choices": [
+            {
+              "en": "Riffle, riffle, strip, riffle.",
+              "zh": "Riffle，riffle，strip，riffle。"
+            },
+            {
+              "en": "Strip, strip, riffle.",
+              "zh": "Strip，strip，riffle。"
+            },
+            {
+              "en": "Wash, then one riffle.",
+              "zh": "先 wash，再 riffle 一次。"
+            },
+            {
+              "en": "Riffle only, no strip.",
+              "zh": "只 riffle，不要 strip。"
+            }
+          ]
+        },
+        {
+          "q_en": "What did the instructor say the strip is?",
+          "q_zh": "讲师说 strip 怎么做？",
+          "answer_en": "One, two, three, and on top, and then riffle.",
+          "answer_zh": "一、二、三，放到上面，然后再 riffle。",
+          "choices": [
+            {
+              "en": "One, two, three, and on top, and then riffle.",
+              "zh": "一、二、三，放到上面，再 riffle。"
+            },
+            {
+              "en": "Strip the whole deck into four face-up piles.",
+              "zh": "整副拆成四叠并且翻开。"
+            },
+            {
+              "en": "Strip once and stop.",
+              "zh": "抽一次就停。"
+            },
+            {
+              "en": "Turn every packet face up.",
+              "zh": "每一小叠都翻开。"
+            }
+          ]
+        },
+        {
+          "q_en": "Where did the instructor say to place the cards after that pattern?",
+          "q_zh": "讲师说这一轮之后牌放到哪？",
+          "answer_en": "Onto the cut card in the middle.",
+          "answer_zh": "放到中间的切牌卡上。",
+          "choices": [
+            {
+              "en": "Onto the cut card in the middle.",
+              "zh": "中间的切牌卡上。"
+            },
+            {
+              "en": "Into the discard rack.",
+              "zh": "放进弃牌架。"
+            },
+            {
+              "en": "Into the guest's hand.",
+              "zh": "递到客人手里。"
+            },
+            {
+              "en": "Back into the shoe immediately.",
+              "zh": "马上装回 shoe。"
+            }
+          ]
+        },
+        {
+          "q_en": "What time did the instructor say to aim for, and when?",
+          "q_zh": "讲师说时间目标是多少，用在什么时候？",
+          "answer_en": "Less than three and a half minutes, by audition time.",
+          "answer_zh": "三分半以内，这是考核时的要求。",
+          "choices": [
+            {
+              "en": "Less than three and a half minutes, by audition time.",
+              "zh": "三分半以内，考核的时候。"
+            },
+            {
+              "en": "Under one minute every day.",
+              "zh": "每天一分钟以内。"
+            },
+            {
+              "en": "Exactly sixteen minutes.",
+              "zh": "正好十六分钟。"
+            },
+            {
+              "en": "Five minutes, including the deal.",
+              "zh": "连发牌一共五分钟。"
+            }
+          ]
+        },
+        {
+          "q_en": "What did the instructor say to do after you punch in?",
+          "q_zh": "讲师说打卡之后要做什么？",
+          "answer_en": "Automatically go to a table and do your eight-deck shuffle.",
+          "answer_zh": "自己去一张桌，做八副牌洗牌。",
+          "choices": [
+            {
+              "en": "Automatically go to a table and do your eight-deck shuffle.",
+              "zh": "自己去桌做八副洗牌。"
+            },
+            {
+              "en": "Wait for the floor to announce shuffle.",
+              "zh": "等楼面来宣布洗牌。"
+            },
+            {
+              "en": "Practice pitching first.",
+              "zh": "先练发牌。"
+            },
+            {
+              "en": "Count the cheques before anything else.",
+              "zh": "先数筹码，别的先不做。"
+            }
+          ]
+        }
+      ],
+      "overview": {
+        "summary_zh": "八副牌的洗牌程序。牌放在毡上 pays 附近，对半切开，右边那叠用手指转 180 度，然后每次抓大约一副到一副半，做 riffle、riffle、strip、riffle，放到中间的切牌卡上，左右交替直到一叠。抓太多会卡住，太少会洗很久。考核目标是三分半以内。每天打卡后自己去桌做一次。",
+        "points": [
+          {
+            "t": 0.3,
+            "zh": "八副牌放在 pays 附近。"
+          },
+          {
+            "t": 28,
+            "zh": "右边那叠转 180 度。"
+          },
+          {
+            "t": 64,
+            "zh": "一次抓一副到一副半，先不要合在一起。"
+          },
+          {
+            "t": 105,
+            "zh": "节奏是 riffle, riffle, strip, riffle。"
+          },
+          {
+            "t": 116,
+            "zh": "放到中间的 cut card 上。"
+          },
+          {
+            "t": 147,
+            "zh": "考核：三分半以内。"
+          },
+          {
+            "t": 201,
+            "zh": "打卡后自己去桌练。"
+          }
+        ],
+        "mistakes_zh": [
+          "一次抓得超过一副半，riffle 会 jam up。",
+          "抓得太少，会洗很久。",
+          "转错边。讲师说永远转右边。",
+          "把牌总留在同样的角上。转 180 度就是为了换角。这一句录音有点糊。"
+        ]
+      },
+      "rules": [
+        {
+          "source_zh": "讲义未写",
+          "text_zh": "讲义没有洗牌图，也没有写 180 度、一副半、三分半。这些是这条课堂视频里的做法。现场以主管/学校为准。"
+        },
+        {
+          "source_zh": "视频里的考核时间",
+          "text_zh": "讲师说 ideally less than three and a half minutes，并且说 that's by audition time。这是课堂上的练习目标，不是 Turning Stone 考试时间。考试日期和形式：没记录。"
+        }
+      ],
+      "rule_ids": []
+    },
+    {
+      "id": "payouts-01",
+      "game": "blackjack",
+      "module_id": "payouts",
+      "order": 1,
+      "title": "Scan, prove, pay in color",
+      "note": "开局扫台面；向镜头证明分牌和加倍；按颜色整笔赔，不能分次赔。",
+      "path": "blackjack/03-payouts-table-scan-and-color-pay.mp4",
+      "duration": "10:27",
+      "duration_sec": 626.9,
+      "transcript_status": "whisper",
+      "transcript_note": "01:03 之后按带时间戳的 whisper 稿。00:00–01:03 那份稿被 VAD 截掉了，开头用笔记里的无 VAD 听写补上。09:57–10:01 听写写成 Sixteen，已改为 Sixty：12 张红筹 × $5 = $60。checks / bot 改成 cheques / bet，术语里保留原来听到的词。",
+      "transcript_en": "When you're dealing, it's important that you scan your layout. I told you guys, say no more bets, but can the camera hear anything? No. What do they see? Hand motions. I could say, all right, no more bets, good luck, or I could just say good luck. The important thing is I'm doing this hand motion. Make sure it's $10, okay? Make sure they're not playing five. Biggest cheques have always got to be on the bottom. You're scanning your layout. You see this before we have cards. So that's what I mean by scanning your layout. Make sure you guys are scanning your layout when you see a black chip. Sometimes people try to hide a chip on the bottom. People are trying to cheat. There's like a dirty stack. The chips aren't proper. They try and get over table maximum. That's part of scanning the layout. What would you like to do, sir? I would like to split, please. How much do I have here? Why is he asking me? You break it down, find out how much it is, and put it back together. Seventy-five plus fifteen is ninety. That's how you count as a dealer. Sir, you got ninety dollars. Now we have to prove the bet. It's not just a simple using your finger, because there's multiple colors. Who is it for? The camera. We prove the green for the camera. Now we stack it back up. Now we prove the red to the camera. Now that bet is just proved. Now let's make it look like a split. Give it a little room, original card. Notice how I'm keeping my hand out here. I'm not being confrontational. Fifteen. Stay. Three or thirteen. I'd like to double, please. Do I need a hand signal? No. No choices, right? But do I need to prove it? Yes. It's just card and move on. I'm not sitting here waiting in this awkward silence. You can't pay multi-color bets. We have to get that bet color for color. They are two separate bets, so this is the first bet we're going to do. Three moves. You take the one color, put it on top. One, two, three. This is your working area. I see the green is three high. I see the red is three high. So I know that I have six green, six red. No partial payments. If you don't have enough, you have to take everything back. Now you pay the whole thing at one time. Always pay everything at once. Grab more than what you need. Come out here, size in. Whatever you didn't use, bring back to your rack. If he's got all this red, you can pay it in green, so you still have red for other people. If you want to pay a different color, you need to break it down, because we have to prove what we're doing. How high can we go with the red? Five. And that's how we put down 12 red, which is how much? Sixty. Sixty. If it were the same color, we size in. A different color is not the same. There's no sizing, and it's not proved the same way.",
+      "transcript_zh": "发牌的时候，扫一遍台面很重要。我让你们说 no more bets，可摄像机听得见吗？听不见。他们看见什么？手势。我可以喊 no more bets, good luck，也可以只说 good luck。重要的是我在做这个手势。确认是 10 块，好吗？不要让他们用 5 块在玩。最大的筹码永远要在底下。你在扫台面。牌还没发，你就看见了。这就是我说的扫台面。看见黑筹的时候，一定要扫台面。有时有人把一枚筹码藏在底下。有人想作弊。这叫 dirty stack，筹码不规矩。他们想超过桌限。这也是扫台面要看的。先生，您想怎么打？客人：我想分牌。我这里是多少？他为什么问我？你要拆开数清楚，再摞回去。75 加 15 是 90。荷官要这样数。先生，您是 90 块。现在必须向镜头证明这笔注。不只是用手指点一下，因为有好几种颜色。证明给谁看？给摄像机。先把绿筹亮给摄像机，摞回去，再把红筹亮给摄像机。这笔注就算证明过了。现在做成一笔分牌的样子。留一点空，原来的牌放好。注意我的手是伸在外面的。不要做得像在跟人起冲突。Fifteen。Stay。3 或者 13。客人：我想加倍。还需要手势吗？不需要。没有别的选择，对吧？但要不要证明这笔注？要。给一张牌就走。不要停在那里干等。多种颜色的注不能混着赔。要按颜色，一种颜色对一种颜色来赔。这是两笔分开的注。先赔第一笔。三个动作。拿一种颜色，放到上面。一、二、三。这里是你的工作区。我看见绿筹三张高，红筹三张高。所以我知道一共是六张绿、六张红。不能分次赔。如果不够，整笔拿回来。一次把整笔赔出去。永远一次赔完。多拿一点。拿出来，size in。没用到的放回筹码槽。如果他已经有很多红筹，你可以改赔绿筹，好把红筹留给别人。如果要换一种颜色赔，必须把注拆开，因为我们做的每一步都要能被证明。红筹最高能叠多高来证明？五张。所以我们摆出 12 张红筹。是多少？Sixty。60 块。Sixty。（听写稿写成了 Sixteen，这里按 12×$5 改正）如果是同一种颜色，就 size in。换了颜色就不一样：不能靠 size in，证明的方式也不同。",
+      "cues": [
+        {
+          "t": 11,
+          "en": "When you're dealing, it's important that you scan your layout.",
+          "zh": "发牌的时候，扫一遍台面很重要。",
+          "audio_id": "d-scan-layout"
+        },
+        {
+          "t": 29,
+          "en": "I told you guys, say no more bets, but can the camera hear anything? No. What do they see? Hand motions.",
+          "zh": "我让你们说 no more bets，可摄像机听得见吗？听不见。他们看见什么？手势。",
+          "audio_id": "d-hand-motions"
+        },
+        {
+          "t": 43,
+          "en": "I could say, all right, no more bets, good luck, or I could just say good luck. The important thing is I'm doing this hand motion.",
+          "zh": "我可以喊 no more bets, good luck，也可以只说 good luck。重要的是我在做这个手势。"
+        },
+        {
+          "t": 63,
+          "en": "Make sure it's $10, okay? Make sure they're not playing five.",
+          "zh": "确认是 10 块，好吗？不要让他们用 5 块在玩。",
+          "audio_id": "dict-v03-minimum"
+        },
+        {
+          "t": 73,
+          "en": "Biggest cheques have always got to be on the bottom.",
+          "zh": "最大的筹码永远要在底下。",
+          "audio_id": "d-biggest-bottom"
+        },
+        {
+          "t": 79,
+          "en": "You're scanning your layout. You see this before we have cards.",
+          "zh": "你在扫台面。牌还没发，你就看见了。"
+        },
+        {
+          "t": 119,
+          "en": "So that's what I mean by scanning your layout.",
+          "zh": "这就是我说的扫台面。"
+        },
+        {
+          "t": 122,
+          "en": "Make sure you guys are scanning your layout when you see a black chip.",
+          "zh": "看见黑筹的时候，一定要扫台面。"
+        },
+        {
+          "t": 131,
+          "en": "Sometimes people try to hide a chip on the bottom. People are trying to cheat.",
+          "zh": "有时有人把一枚筹码藏在底下。有人想作弊。"
+        },
+        {
+          "t": 143,
+          "en": "There's like a dirty stack. The chips aren't proper. They try and get over table maximum. That's part of scanning the layout.",
+          "zh": "这叫 dirty stack，筹码不规矩。他们想超过桌限。这也是扫台面要看的。",
+          "audio_id": "d-dirty-stack"
+        },
+        {
+          "t": 160,
+          "en": "What would you like to do, sir?",
+          "zh": "先生，您想怎么打？"
+        },
+        {
+          "t": 167,
+          "en": "I would like to split, please.",
+          "zh": "客人：我想分牌。",
+          "audio_id": "p-split-please"
+        },
+        {
+          "t": 170,
+          "en": "How much do I have here?",
+          "zh": "我这里是多少？"
+        },
+        {
+          "t": 176,
+          "en": "Why is he asking me? You break it down, find out how much it is, and put it back together.",
+          "zh": "他为什么问我？你要拆开数清楚，再摞回去。"
+        },
+        {
+          "t": 193,
+          "en": "Seventy-five plus fifteen is ninety. That's how you count as a dealer.",
+          "zh": "75 加 15 是 90。荷官要这样数。"
+        },
+        {
+          "t": 196,
+          "en": "Sir, you got ninety dollars.",
+          "zh": "先生，您是 90 块。"
+        },
+        {
+          "t": 201,
+          "en": "Now we have to prove the bet. It's not just a simple using your finger, because there's multiple colors.",
+          "zh": "现在必须向镜头证明这笔注。不只是用手指点一下，因为有好几种颜色。",
+          "audio_id": "d-prove-bet"
+        },
+        {
+          "t": 221,
+          "en": "Who is it for? The camera.",
+          "zh": "证明给谁看？给摄像机。",
+          "audio_id": "d-prove-camera"
+        },
+        {
+          "t": 228,
+          "en": "We prove the green for the camera. Now we stack it back up. Now we prove the red to the camera. Now that bet is just proved.",
+          "zh": "先把绿筹亮给摄像机，摞回去，再把红筹亮给摄像机。这笔注就算证明过了。"
+        },
+        {
+          "t": 247,
+          "en": "Now let's make it look like a split. Give it a little room, original card.",
+          "zh": "现在做成一笔分牌的样子。留一点空，原来的牌放好。"
+        },
+        {
+          "t": 281,
+          "en": "Notice how I'm keeping my hand out here. I'm not being confrontational.",
+          "zh": "注意我的手是伸在外面的。不要做得像在跟人起冲突。"
+        },
+        {
+          "t": 302,
+          "en": "Fifteen. Stay.",
+          "zh": "Fifteen。Stay。"
+        },
+        {
+          "t": 307,
+          "en": "Three or thirteen.",
+          "zh": "3 或者 13。"
+        },
+        {
+          "t": 313,
+          "en": "I'd like to double, please.",
+          "zh": "客人：我想加倍。",
+          "audio_id": "p-double-please"
+        },
+        {
+          "t": 316,
+          "en": "Do I need a hand signal? No. No choices, right? But do I need to prove it? Yes.",
+          "zh": "还需要手势吗？不需要。没有别的选择，对吧？但要不要证明这笔注？要。"
+        },
+        {
+          "t": 334,
+          "en": "It's just card and move on. I'm not sitting here waiting in this awkward silence.",
+          "zh": "给一张牌就走。不要停在那里干等。",
+          "audio_id": "d-card-and-move"
+        },
+        {
+          "t": 351,
+          "en": "You can't pay multi-color bets. We have to get that bet color for color.",
+          "zh": "多种颜色的注不能混着赔。要按颜色，一种颜色对一种颜色来赔。",
+          "audio_id": "d-color-for-color"
+        },
+        {
+          "t": 361,
+          "en": "They are two separate bets, so this is the first bet we're going to do. Three moves.",
+          "zh": "这是两笔分开的注。先赔第一笔。三个动作。"
+        },
+        {
+          "t": 371,
+          "en": "You take the one color, put it on top. One, two, three.",
+          "zh": "拿一种颜色，放到上面。一、二、三。"
+        },
+        {
+          "t": 393,
+          "en": "This is your working area.",
+          "zh": "这里是你的工作区。",
+          "audio_id": "d-working-area"
+        },
+        {
+          "t": 400,
+          "en": "I see the green is three high. I see the red is three high. So I know that I have six green, six red.",
+          "zh": "我看见绿筹三张高，红筹三张高。所以我知道一共是六张绿、六张红。"
+        },
+        {
+          "t": 442,
+          "en": "No partial payments. If you don't have enough, you have to take everything back.",
+          "zh": "不能分次赔。如果不够，整笔拿回来。",
+          "audio_id": "d-no-partial"
+        },
+        {
+          "t": 455,
+          "en": "Now you pay the whole thing at one time. Always pay everything at once.",
+          "zh": "一次把整笔赔出去。永远一次赔完。",
+          "audio_id": "d-pay-once"
+        },
+        {
+          "t": 474,
+          "en": "Grab more than what you need. Come out here, size in. Whatever you didn't use, bring back to your rack.",
+          "zh": "多拿一点。拿出来，size in。没用到的放回筹码槽。",
+          "audio_id": "d-size-in"
+        },
+        {
+          "t": 500,
+          "en": "If he's got all this red, you can pay it in green, so you still have red for other people.",
+          "zh": "如果他已经有很多红筹，你可以改赔绿筹，好把红筹留给别人。"
+        },
+        {
+          "t": 548,
+          "en": "If you want to pay a different color, you need to break it down, because we have to prove what we're doing.",
+          "zh": "如果要换一种颜色赔，必须把注拆开，因为我们做的每一步都要能被证明。"
+        },
+        {
+          "t": 581,
+          "en": "How high can we go with the red? Five.",
+          "zh": "红筹最高能叠多高来证明？五张。",
+          "audio_id": "d-how-high-five"
+        },
+        {
+          "t": 590,
+          "en": "And that's how we put down 12 red, which is how much? Sixty.",
+          "zh": "所以我们摆出 12 张红筹。是多少？Sixty。60 块。",
+          "audio_id": "d-twelve-red-sixty"
+        },
+        {
+          "t": 606,
+          "en": "Sixty.",
+          "zh": "Sixty。（听写稿写成了 Sixteen，这里按 12×$5 改正）"
+        },
+        {
+          "t": 610,
+          "en": "If it were the same color, we size in. A different color is not the same. There's no sizing, and it's not proved the same way.",
+          "zh": "如果是同一种颜色，就 size in。换了颜色就不一样：不能靠 size in，证明的方式也不同。"
+        }
+      ],
+      "glossary": [
+        {
+          "term_en": "scan your layout",
+          "term_zh": "发牌前扫台面",
+          "heard_as": "scan your layout",
+          "audio_id": "d-scan-layout"
+        },
+        {
+          "term_en": "no more bets",
+          "term_zh": "停止下注",
+          "heard_as": "no more bets",
+          "audio_id": "d-no-more-bets"
+        },
+        {
+          "term_en": "hand motions",
+          "term_zh": "摄像机要看见的手势",
+          "heard_as": "What do they see? Hand motions.",
+          "audio_id": "d-hand-motions"
+        },
+        {
+          "term_en": "biggest cheques on the bottom",
+          "term_zh": "大筹码在底下",
+          "heard_as": "Biggest checks have always got to be on bottom.",
+          "audio_id": "d-biggest-bottom"
+        },
+        {
+          "term_en": "dirty stack",
+          "term_zh": "不规矩、可能藏筹的一摞",
+          "heard_as": "dirty stack",
+          "audio_id": "d-dirty-stack"
+        },
+        {
+          "term_en": "prove the bet",
+          "term_zh": "把注拆开亮给摄像机",
+          "heard_as": "prove the bot（听写）",
+          "audio_id": "d-prove-bet"
+        },
+        {
+          "term_en": "the camera",
+          "term_zh": "证明是给摄像机看的",
+          "heard_as": "Who is it for? The camera.",
+          "audio_id": "d-prove-camera"
+        },
+        {
+          "term_en": "color for color",
+          "term_zh": "按颜色整笔赔",
+          "heard_as": "color for color",
+          "audio_id": "d-color-for-color"
+        },
+        {
+          "term_en": "partial payments",
+          "term_zh": "分次赔。不可以",
+          "heard_as": "No partial payments.",
+          "audio_id": "d-no-partial"
+        },
+        {
+          "term_en": "size in",
+          "term_zh": "按原注高度对齐，拿走多余的",
+          "heard_as": "size in",
+          "audio_id": "d-size-in"
+        },
+        {
+          "term_en": "working area",
+          "term_zh": "身前的工作区，不是筹码槽",
+          "heard_as": "working area",
+          "audio_id": "d-working-area"
+        },
+        {
+          "term_en": "sixty",
+          "term_zh": "12 张红筹是 60，不是 16",
+          "heard_as": "听写误作 Sixteen",
+          "audio_id": "d-twelve-red-sixty"
+        },
+        {
+          "term_en": "five high",
+          "term_zh": "红筹用来证明时最高五张",
+          "heard_as": "How high can we go? Five.",
+          "audio_id": "d-how-high-five"
+        }
+      ],
+      "dictation_lines": [
+        {
+          "en": "When you're dealing, it's important that you scan your layout.",
+          "zh": "发牌时要扫台面。",
+          "audio_id": "d-scan-layout"
+        },
+        {
+          "en": "What do they see? Hand motions.",
+          "zh": "摄像机看见的是手势。",
+          "audio_id": "d-hand-motions"
+        },
+        {
+          "en": "Make sure it's ten dollars. Make sure they're not playing five.",
+          "zh": "确认是 10 块，不要用 5 块玩。",
+          "audio_id": "dict-v03-minimum"
+        },
+        {
+          "en": "Biggest cheques have always got to be on the bottom.",
+          "zh": "大筹码永远在底下。",
+          "audio_id": "d-biggest-bottom"
+        },
+        {
+          "en": "Who is it for? The camera.",
+          "zh": "证明给摄像机看。",
+          "audio_id": "d-prove-camera"
+        },
+        {
+          "en": "We have to get that bet color for color.",
+          "zh": "要按颜色赔。",
+          "audio_id": "d-color-for-color"
+        },
+        {
+          "en": "No partial payments.",
+          "zh": "不能分次赔。",
+          "audio_id": "d-no-partial"
+        },
+        {
+          "en": "Pay everything at once.",
+          "zh": "一次赔完。",
+          "audio_id": "d-pay-once"
+        },
+        {
+          "en": "Twelve red is sixty.",
+          "zh": "12 张红筹是 60。",
+          "audio_id": "d-twelve-red-sixty"
+        },
+        {
+          "en": "Just card and move on.",
+          "zh": "给一张牌就继续走。",
+          "audio_id": "d-card-and-move"
+        }
+      ],
+      "listening_questions": [
+        {
+          "q_en": "What did the instructor say to do with the layout when you are dealing?",
+          "q_zh": "讲师说发牌时台面要怎么处理？",
+          "answer_en": "Scan your layout.",
+          "answer_zh": "扫台面。",
+          "choices": [
+            {
+              "en": "Scan your layout.",
+              "zh": "扫台面。"
+            },
+            {
+              "en": "Look only at your own hole card.",
+              "zh": "只看自己的底牌。"
+            },
+            {
+              "en": "Wait for the floor to count every bet.",
+              "zh": "等楼面来数每一注。"
+            },
+            {
+              "en": "Turn all the cheques face down.",
+              "zh": "把筹码全部翻过去。"
+            }
+          ]
+        },
+        {
+          "q_en": "What did the instructor say the camera sees if it cannot hear no more bets?",
+          "q_zh": "讲师说摄像机听不见 no more bets 时，它看见什么？",
+          "answer_en": "Hand motions.",
+          "answer_zh": "手势。",
+          "choices": [
+            {
+              "en": "Hand motions.",
+              "zh": "手势。"
+            },
+            {
+              "en": "The dealer's mouth.",
+              "zh": "荷官的嘴。"
+            },
+            {
+              "en": "Nothing. The call is enough.",
+              "zh": "什么都不用看，喊一声就够。"
+            },
+            {
+              "en": "The player's ID.",
+              "zh": "客人的证件。"
+            }
+          ]
+        },
+        {
+          "q_en": "What did the instructor say about the biggest cheques?",
+          "q_zh": "讲师说最大的筹码要放哪？",
+          "answer_en": "They have always got to be on the bottom.",
+          "answer_zh": "永远在底下。",
+          "choices": [
+            {
+              "en": "They have always got to be on the bottom.",
+              "zh": "永远在底下。"
+            },
+            {
+              "en": "They go on the top so the camera sees the color.",
+              "zh": "放在最上面，好让摄像机看见颜色。"
+            },
+            {
+              "en": "They stay in the rack until the payout.",
+              "zh": "赔付之前留在槽里。"
+            },
+            {
+              "en": "They are paid first, before the layout is scanned.",
+              "zh": "还没扫台面就先赔。"
+            }
+          ]
+        },
+        {
+          "q_en": "Who did the instructor say you prove a multi-color bet for?",
+          "q_zh": "讲师说多种颜色的注要证明给谁看？",
+          "answer_en": "The camera.",
+          "answer_zh": "摄像机。",
+          "choices": [
+            {
+              "en": "The camera.",
+              "zh": "摄像机。"
+            },
+            {
+              "en": "Only the player who asked.",
+              "zh": "只给问你的那个客人。"
+            },
+            {
+              "en": "The player on third base.",
+              "zh": "只给 third base 的客人。"
+            },
+            {
+              "en": "Nobody, if you already know the total.",
+              "zh": "你自己知道总数就不用证明。"
+            }
+          ]
+        },
+        {
+          "q_en": "On a spoken double, what did the instructor say about a hand signal and about proving the bet?",
+          "q_zh": "客人嘴里说了加倍。讲师说还要手势吗？要不要证明这笔注？",
+          "answer_en": "No hand signal. Yes, prove the new bet, then card and move on.",
+          "answer_zh": "不用再要手势。要证明新的注，然后给一张牌就走。",
+          "choices": [
+            {
+              "en": "No hand signal. Yes, prove the new bet, then card and move on.",
+              "zh": "不用手势，要证明，给牌就走。"
+            },
+            {
+              "en": "Yes, wait for a hand signal, and do not prove it.",
+              "zh": "要等手势，而且不用证明。"
+            },
+            {
+              "en": "Ignore the double and deal a hit.",
+              "zh": "当成要牌，再发一张。"
+            },
+            {
+              "en": "Pay the double before you deal the card.",
+              "zh": "发牌之前先把加倍赔掉。"
+            }
+          ]
+        },
+        {
+          "q_en": "What did the instructor say about partial payments?",
+          "q_zh": "讲师说赔付可以分几次给吗？",
+          "answer_en": "No partial payments. If you do not have enough, take everything back and pay it all at once.",
+          "answer_zh": "不能分次赔。不够就把拿出来的全部收回，一次赔完。",
+          "choices": [
+            {
+              "en": "No partial payments. If you do not have enough, take everything back and pay it all at once.",
+              "zh": "不能分次。不够就收回，一次赔完。"
+            },
+            {
+              "en": "Leave the short amount out and come back later.",
+              "zh": "先把不够的留在桌上，回头再补。"
+            },
+            {
+              "en": "Pay one color now and the other color next hand.",
+              "zh": "这种颜色现在赔，另一种下一局赔。"
+            },
+            {
+              "en": "Ask the player to take half.",
+              "zh": "请客人先拿一半。"
+            }
+          ]
+        },
+        {
+          "q_en": "The instructor put down 12 red cheques and asked how much. What number was confirmed?",
+          "q_zh": "讲师摆出 12 张红筹，问是多少。确认的数是？",
+          "answer_en": "Sixty. Twelve red cheques are $60.",
+          "answer_zh": "Sixty。12 张红筹是 $60。听写稿写成了 Sixteen，已改正。",
+          "choices": [
+            {
+              "en": "Sixty. Twelve red cheques are $60.",
+              "zh": "60。12 张红筹是 60 块。"
+            },
+            {
+              "en": "Sixteen.",
+              "zh": "16。"
+            },
+            {
+              "en": "Fifty.",
+              "zh": "50。"
+            },
+            {
+              "en": "Seventy-five.",
+              "zh": "75。"
+            }
+          ]
+        },
+        {
+          "q_en": "If the player already has a lot of red, what did the instructor say you can do?",
+          "q_zh": "客人手里已经有很多红筹。讲师说可以怎么赔？",
+          "answer_en": "Pay in green, but break the bet down and prove it. Red is only proved five high.",
+          "answer_zh": "可以改赔绿筹，但要把注拆开证明。红筹用来证明时最高五张。",
+          "choices": [
+            {
+              "en": "Pay in green, but break the bet down and prove it. Red is only proved five high.",
+              "zh": "改赔绿色，拆开证明。红筹证明最高五张。"
+            },
+            {
+              "en": "Keep paying red until the rack is empty.",
+              "zh": "继续赔红的，直到槽空了。"
+            },
+            {
+              "en": "Pay in orange without breaking the bet down.",
+              "zh": "直接赔橙色，不用拆开。"
+            },
+            {
+              "en": "Refuse the payout and call it a push.",
+              "zh": "拒绝赔付，当成平局。"
+            }
+          ]
+        }
+      ],
+      "overview": {
+        "summary_zh": "这条的主技能是赔付，也顺带讲了开局扫台面和分牌、加倍。先扫台面：大筹码在底，藏筹和超过桌限都要看出来。摄像机听不见 no more bets，要看见手势。多种颜色的注要拆开亮给摄像机。赔的时候按颜色、在工作区一次赔完，不能分次赔。不够就收回来。客人红筹已经很多时可以改赔绿筹，但必须拆开证明，因为红筹证明时最高五张。12 张红筹是 $60。",
+        "points": [
+          {
+            "t": 11,
+            "zh": "发牌时扫台面。"
+          },
+          {
+            "t": 29,
+            "zh": "摄像机看的是手势，不是那句 no more bets。"
+          },
+          {
+            "t": 73,
+            "zh": "大筹码永远在底下。"
+          },
+          {
+            "t": 221,
+            "zh": "证明给摄像机，不是只给旁边的人。"
+          },
+          {
+            "t": 316,
+            "zh": "口头加倍：不用再要手势，但要证明新注，然后 card and move on。"
+          },
+          {
+            "t": 351,
+            "zh": "按颜色赔，color for color。"
+          },
+          {
+            "t": 442,
+            "zh": "No partial payments。一次赔完。"
+          },
+          {
+            "t": 590,
+            "zh": "12 张红筹是 Sixty，不是 Sixteen。"
+          }
+        ],
+        "mistakes_zh": [
+          "只喊 no more bets，没有手势。摄像机听不见。",
+          "大筹码压在小筹码上面，或者底下藏了一枚。",
+          "多种颜色只用手指点一下，没有拆开亮给摄像机。",
+          "先丢出一部分筹码，不够再回槽里拿。讲师说这是 partial payment，不行。",
+          "把 12 张红筹听成 16。红筹是 $5，12 张是 $60。"
+        ]
+      },
+      "rules": [
+        {
+          "source_zh": "讲义 Cheque Rundown / Breaking Down",
+          "text_zh": "红筹 $5，按 5 拆，所以证明时最高 five high。绿筹 $25。3 张绿是 $75，3 张红是 $15，讲师说 75+15=90，和讲义面额一致。"
+        },
+        {
+          "source_zh": "这条视频补充的手法，讲义页上没有写成步骤",
+          "text_zh": "大筹码在底、dirty stack、向摄像机分色证明、color for color、禁止 partial payment、在工作区 size in。讲义未写这些句子，按这条课堂视频；现场以主管/学校为准。"
+        },
+        {
+          "source_zh": "培训桌毡，不是已确认的 Turning Stone 实地规则",
+          "text_zh": "这条视频的培训桌毡上写着 Dealer stands on all 17（笔记里的毡文是 DEALER MUST DRAW TO 16 AND STAND ON ALL 17s）。只说明这张培训桌。讲义没有写 S17。实地和考试是否一样：没记录。"
+        },
+        {
+          "source_zh": "这条视频里的桌限，讲义未写",
+          "text_zh": "讲师说确认是 $10，不要用 $5 玩。这是这张培训桌，不是讲义，也不是已确认的实地桌限。"
+        },
+        {
+          "source_zh": "和讲义分牌规则一起看",
+          "text_zh": "讲义：分牌要再放一份同额注；加倍筹码在原注右侧。视频是在教怎么向镜头证明这些注、然后怎么赔。口头加倍时讲师说不用再等手势，因为已经没有别的选择；不常见的加倍，讲义仍要求喊出来，例如 doubling down on a hard 12。"
+        }
+      ],
+      "rule_ids": [
+        "payouts-32",
+        "cheques",
+        "rundown",
+        "felt-s17",
+        "splits"
+      ]
+    }
+  ]
+}

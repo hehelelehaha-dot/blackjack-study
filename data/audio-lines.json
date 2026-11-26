@@ -1,0 +1,722 @@
+[
+  {
+    "id": "d-shuffle",
+    "text": "Shuffle!",
+    "role": "dealer"
+  },
+  {
+    "id": "d-announce-loud",
+    "text": "You have to announce it loud enough that your floor can hear you.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-not-permission",
+    "text": "You're not asking for permission.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-no-permission-needed",
+    "text": "You don't need permission.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-vocal-game",
+    "text": "This is a very vocal game.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-loud-in-charge",
+    "text": "We've got to be loud, loud and in charge.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-quiet-shuffle",
+    "text": "You can't be just like, shuffle.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-shuffle-loud",
+    "text": "It's Shuffle, nice and loud.",
+    "role": "dealer"
+  },
+  {
+    "id": "dict-v01-two-decks",
+    "text": "For right now, we're going to start with two decks.",
+    "role": "dealer"
+  },
+  {
+    "id": "dict-v01-cut-half",
+    "text": "We've got one deck and cut it in half.",
+    "role": "dealer"
+  },
+  {
+    "id": "dict-v02-pays",
+    "text": "Put all eight decks where it says pays, or right around that area.",
+    "role": "dealer"
+  },
+  {
+    "id": "dict-v02-rotate",
+    "text": "Rotate the deck on the right side 180 degrees with your finger.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-deck-and-half",
+    "text": "Ideally you want between a deck and a deck and a half.",
+    "role": "dealer"
+  },
+  {
+    "id": "dict-v02-jam",
+    "text": "If you have more than that, when you riffle it's going to jam up.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-riffle-pattern",
+    "text": "Riffle, riffle, strip, riffle.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-strip",
+    "text": "Strip: one, two, three, and on top, and then riffle.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-cut-card-middle",
+    "text": "Put the cards onto the cut card in the middle.",
+    "role": "dealer"
+  },
+  {
+    "id": "dict-v02-time",
+    "text": "You want to get this done in less than three and a half minutes.",
+    "role": "dealer"
+  },
+  {
+    "id": "dict-v02-audition",
+    "text": "That's by audition time.",
+    "role": "dealer"
+  },
+  {
+    "id": "dict-v02-punch",
+    "text": "You punch in and you automatically go to a table and do your eight-deck shuffle.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-wash",
+    "text": "Wash the cards.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-riffle",
+    "text": "Riffle.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-im-shuffling",
+    "text": "I'm shuffling.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-last-hand",
+    "text": "Last hand.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-would-you-cut",
+    "text": "Would you like to cut?",
+    "role": "dealer"
+  },
+  {
+    "id": "d-please-cut",
+    "text": "Please cut.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-thank-you",
+    "text": "Thank you.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-burning",
+    "text": "Burning.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-burn-card",
+    "text": "Burn card.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-cheques-play",
+    "text": "Cheques Play.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-black-action",
+    "text": "Black Action.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-purple-action",
+    "text": "Purple Action.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-orange-action",
+    "text": "Orange Action.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-no-more-bets",
+    "text": "No more bets.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-good-luck",
+    "text": "Good luck.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-insurance-open",
+    "text": "Insurance Open.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-even-money",
+    "text": "Even money?",
+    "role": "dealer"
+  },
+  {
+    "id": "d-blackjack",
+    "text": "Blackjack.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-double-less",
+    "text": "Doubling down for less.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-double-hard-12",
+    "text": "Doubling down on a hard 12.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-split-or-double",
+    "text": "Split or double down?",
+    "role": "dealer"
+  },
+  {
+    "id": "d-signal-please",
+    "text": "Can I get a signal, please?",
+    "role": "dealer"
+  },
+  {
+    "id": "d-one-card",
+    "text": "One card.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-dealer-16",
+    "text": "Dealer has sixteen.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-dealer-17",
+    "text": "Dealer has seventeen.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-dealer-soft-17",
+    "text": "Dealer has a soft seventeen.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-dealer-busts",
+    "text": "Dealer busts.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-dealer-bj",
+    "text": "Dealer has blackjack.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-change-100",
+    "text": "Change one hundred.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-cheque-change-100",
+    "text": "Cheque change one hundred.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-color-coming",
+    "text": "Color Coming In.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-color-up-100",
+    "text": "Color up one hundred.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-pays-32",
+    "text": "Blackjack pays three to two.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-push",
+    "text": "Push.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-floor",
+    "text": "Floor, please.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-supervisor",
+    "text": "Supervisor, please.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-ask-supervisor",
+    "text": "Good question. Let me ask my supervisor.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-never-argue",
+    "text": "Never argue with a guest.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-scan-layout",
+    "text": "When you're dealing, it's important that you scan your layout.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-hand-motions",
+    "text": "What do they see? Hand motions.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-biggest-bottom",
+    "text": "Biggest cheques have always got to be on the bottom.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-prove-camera",
+    "text": "Who is it for? The camera.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-color-for-color",
+    "text": "We have to get that bet color for color.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-no-partial",
+    "text": "No partial payments.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-pay-once",
+    "text": "Pay everything at once.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-twelve-red-sixty",
+    "text": "Twelve red is sixty.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-size-in",
+    "text": "Size in.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-card-and-move",
+    "text": "Just card and move on.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-prove-bet",
+    "text": "Now we have to prove the bet.",
+    "role": "dealer"
+  },
+  {
+    "id": "dict-v03-minimum",
+    "text": "Make sure it's ten dollars. Make sure they're not playing five.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-dirty-stack",
+    "text": "There's a dirty stack.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-working-area",
+    "text": "This is your working area.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-how-high-five",
+    "text": "How high can we go? Five.",
+    "role": "dealer"
+  },
+  {
+    "id": "p-split-please",
+    "text": "I would like to split, please.",
+    "role": "player"
+  },
+  {
+    "id": "p-double-please",
+    "text": "I'd like to double, please.",
+    "role": "player"
+  },
+  {
+    "id": "n-soft-hand",
+    "text": "Soft hand.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hard-hand",
+    "text": "Hard hand.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-bust",
+    "text": "Bust.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-ace",
+    "text": "Ace is one or eleven.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-soft-17",
+    "text": "This is a soft seventeen.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-soft-18",
+    "text": "This is a soft eighteen.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hard-14",
+    "text": "This is a hard fourteen.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hard-18",
+    "text": "This is a hard eighteen.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hard-19",
+    "text": "This is a hard nineteen.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hard-20",
+    "text": "This is a hard twenty.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-twenty-one",
+    "text": "Twenty-one.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-going-wash",
+    "text": "I'm going to wash the cards.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-going-riffle",
+    "text": "I'm going to riffle the cards.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-going-shuffle",
+    "text": "I'm going to shuffle the cards.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-would-play",
+    "text": "Would you like to play?",
+    "role": "narrator"
+  },
+  {
+    "id": "n-first-burn",
+    "text": "The first card is the burn card.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-ins-open",
+    "text": "Insurance is open.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-ins-closed",
+    "text": "Insurance is closed.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-even-20",
+    "text": "Even money on twenty.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-even-25",
+    "text": "Even money on twenty-five.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-even-50",
+    "text": "Even money on fifty.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-dd-12",
+    "text": "Doubling down on a hard twelve.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-dd-13",
+    "text": "Doubling down on a hard thirteen.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-dd-14",
+    "text": "Doubling down on a hard fourteen.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-dealer-18",
+    "text": "Dealer has eighteen.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-dealer-19",
+    "text": "Dealer has nineteen.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-dealer-20",
+    "text": "Dealer has twenty.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-dealer-21",
+    "text": "Dealer has twenty-one.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-dealer-stands",
+    "text": "Dealer stands.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-change-50",
+    "text": "Change fifty.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-change-200",
+    "text": "Change two hundred.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-color-200",
+    "text": "Color up two hundred.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-color-500",
+    "text": "Color up five hundred.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-thats-push",
+    "text": "That's a push.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-thats-bust",
+    "text": "That's a bust.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-thats-bj",
+    "text": "That's a blackjack.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-ask-floor",
+    "text": "Let me ask my floor.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-first-base",
+    "text": "First base.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-third-base",
+    "text": "Third base.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hole-card",
+    "text": "Hole card.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-penetration",
+    "text": "Penetration.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-discard",
+    "text": "Discard rack.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-cheque",
+    "text": "Cheque.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-color-up",
+    "text": "Color up.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-even-money",
+    "text": "Even money.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-insurance",
+    "text": "Insurance.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-strip-word",
+    "text": "Strip.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-floor",
+    "text": "The floor.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-shuffle-coming",
+    "text": "Shuffle coming.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-sorry",
+    "text": "Sorry.",
+    "role": "dealer"
+  },
+  {
+    "id": "n-hand-01",
+    "text": "Ace and six.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hand-02",
+    "text": "Ace, four, and a three.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hand-03",
+    "text": "Ace and a nine.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hand-04",
+    "text": "Ace, five, and a two.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hand-05",
+    "text": "Five, ace, and a three.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hand-06",
+    "text": "Three, three, ace, and a two.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hand-07",
+    "text": "Seven, six, ace, and a four.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hand-08",
+    "text": "Eight, five, ace, and an eight.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hand-09",
+    "text": "King, three, ace, and a six.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hand-10",
+    "text": "Seven, four, ace, four, and a five.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hand-11",
+    "text": "Ace, three, and a three.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hand-12",
+    "text": "Ace, two, three, and a five.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hand-13",
+    "text": "Four, four, four, and a five.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hand-14",
+    "text": "Ace, ace, and a nine.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hand-15",
+    "text": "Ace, four, ace, six, and an eight.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hand-16",
+    "text": "Four, four, two, and an ace.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hand-17",
+    "text": "Six, eight, and a seven.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hand-18",
+    "text": "Five, seven, and a nine.",
+    "role": "narrator"
+  },
+  {
+    "id": "n-hand-19",
+    "text": "Eight, three, and a ten.",
+    "role": "narrator"
+  }
+]
