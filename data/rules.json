@@ -1034,15 +1034,15 @@
       ]
     },
     {
-      "id": "felt-s17",
-      "title_zh": "荷官所有 17 都停",
-      "title_en": "Dealer stands on all 17s",
+      "id": "felt-h17",
+      "title_zh": "荷官软 17 要补",
+      "title_en": "Dealer hits soft 17",
       "source_zh": "培训桌毡，不是讲义，也不是已确认的 Turning Stone 实地规则",
       "blocks": [
         {
           "type": "callout",
           "tone": "felt",
-          "text": "培训桌毡上写着 Dealer stands on all 17。视频笔记里的毡文是：DEALER MUST DRAW TO 16 AND STAND ON ALL 17s。16 必须补。硬 17 停。软 17 也停。"
+          "text": "培训桌毡写的是 DRAW TO 16 AND SOFT 17：16 必须补，软 17 也要补，硬 17 停。这是 H17。更清楚的画面在收台 v03、v04 和开台 v11。早先读成 stand on all 17s 是误读。"
         },
         {
           "type": "p",
@@ -1050,7 +1050,7 @@
         },
         {
           "type": "p",
-          "text": "A+6 在这张培训桌上是软 17，停。A+6 再拿到 10，变成硬 17，也停。A+5 再拿到 10 是硬 16，必须再补。"
+          "text": "A+6 在这张培训桌上是软 17，要补。补到一张 10 变成硬 17，就停。A+5 再拿到 10 是硬 16，必须再补。硬 17 停。"
         },
         {
           "type": "calls",
@@ -1074,7 +1074,7 @@
         },
         {
           "type": "p",
-          "text": "实地是不是 S17、几副牌、有没有 6:5、烧几张、客人能不能碰牌、投降允不允许：讲义没写，也没有 Turning Stone 的确认。看到的只按出处标。培训桌毡上的 17 点规则见上一节。"
+          "text": "实地是不是也打软 17、几副牌、有没有 6:5、烧几张、客人能不能碰牌、投降允不允许：讲义没写，也没有 Turning Stone 的确认。看到的只按出处标。培训桌毡上的 17 点规则见上一节，那只是这张培训桌。"
         },
         {
           "type": "p",
