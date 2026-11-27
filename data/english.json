@@ -44,6 +44,11 @@
       "id": "guest",
       "title_zh": "客人会说的",
       "title_en": "Guest lines"
+    },
+    {
+      "id": "inventory",
+      "title_zh": "收台和开台",
+      "title_en": "Open and close"
     }
   ],
   "phrases": [
@@ -574,6 +579,1030 @@
       "zh": "这张培训桌最低 $10，不要用 $5。",
       "when_zh": "讲义没写桌限。不是已确认的实地桌限。",
       "source_zh": "视频 03"
+    },
+    {
+      "id": "d-v03-swap",
+      "cat": "inventory",
+      "audio_id": "d-v03-swap",
+      "zh": "用一摞你已经知道是对的去换。",
+      "when_zh": "收台前把筹码槽摆整齐：用直线看齐，用已经确认的满摞去换还没确认的摞，缺的只从零头补，零头放右侧（白筹除外），从下到上、从里到外填满，粉、绿、紫按 4，红、黑按 5，然后收台。",
+      "source_zh": "视频 v03"
+    },
+    {
+      "id": "d-v03-lammer",
+      "cat": "inventory",
+      "audio_id": "d-v03-lammer",
+      "zh": "拿一把 lammer，从这头划到那头。",
+      "when_zh": "收台前把筹码槽摆整齐：用直线看齐，用已经确认的满摞去换还没确认的摞，缺的只从零头补，零头放右侧（白筹除外），从下到上、从里到外填满，粉、绿、紫按 4，红、黑按 5，然后收台。",
+      "source_zh": "视频 v03"
+    },
+    {
+      "id": "d-v03-partial",
+      "cat": "inventory",
+      "audio_id": "d-v03-partial",
+      "zh": "从零头上拿。",
+      "when_zh": "收台前把筹码槽摆整齐：用直线看齐，用已经确认的满摞去换还没确认的摞，缺的只从零头补，零头放右侧（白筹除外），从下到上、从里到外填满，粉、绿、紫按 4，红、黑按 5，然后收台。",
+      "source_zh": "视频 v03"
+    },
+    {
+      "id": "d-v03-right",
+      "cat": "inventory",
+      "audio_id": "d-v03-right",
+      "zh": "零头放在右手边。",
+      "when_zh": "收台前把筹码槽摆整齐：用直线看齐，用已经确认的满摞去换还没确认的摞，缺的只从零头补，零头放右侧（白筹除外），从下到上、从里到外填满，粉、绿、紫按 4，红、黑按 5，然后收台。",
+      "source_zh": "视频 v03"
+    },
+    {
+      "id": "d-v03-white",
+      "cat": "inventory",
+      "audio_id": "d-v03-white",
+      "zh": "白筹除外，白筹就放在那边。",
+      "when_zh": "收台前把筹码槽摆整齐：用直线看齐，用已经确认的满摞去换还没确认的摞，缺的只从零头补，零头放右侧（白筹除外），从下到上、从里到外填满，粉、绿、紫按 4，红、黑按 5，然后收台。",
+      "source_zh": "视频 v03"
+    },
+    {
+      "id": "d-v03-inside",
+      "cat": "inventory",
+      "audio_id": "d-v03-inside",
+      "zh": "从下往上、从里往外把槽填满。",
+      "when_zh": "收台前把筹码槽摆整齐：用直线看齐，用已经确认的满摞去换还没确认的摞，缺的只从零头补，零头放右侧（白筹除外），从下到上、从里到外填满，粉、绿、紫按 4，红、黑按 5，然后收台。",
+      "source_zh": "视频 v03"
+    },
+    {
+      "id": "d-v03-by-fours",
+      "cat": "inventory",
+      "audio_id": "d-v03-by-fours",
+      "zh": "紫筹按四张拆。",
+      "when_zh": "收台前把筹码槽摆整齐：用直线看齐，用已经确认的满摞去换还没确认的摞，缺的只从零头补，零头放右侧（白筹除外），从下到上、从里到外填满，粉、绿、紫按 4，红、黑按 5，然后收台。",
+      "source_zh": "视频 v03"
+    },
+    {
+      "id": "d-v03-close",
+      "cat": "inventory",
+      "audio_id": "d-v03-close",
+      "zh": "现在我们要收台了。",
+      "when_zh": "收台前把筹码槽摆整齐：用直线看齐，用已经确认的满摞去换还没确认的摞，缺的只从零头补，零头放右侧（白筹除外），从下到上、从里到外填满，粉、绿、紫按 4，红、黑按 5，然后收台。",
+      "source_zh": "视频 v03"
+    },
+    {
+      "id": "d-v04-lid",
+      "cat": "inventory",
+      "audio_id": "d-v04-lid",
+      "zh": "把盖子盖上，但是先不锁。",
+      "when_zh": "楼面让你先盖上盖子但不锁，等他说 take your lid off，再从紫色起按颜色从大到小盘点，满垛放 incoming、零垛放 outgoing，禁止 patty-cake，最近的一摞按 4 拆给楼面证明。",
+      "source_zh": "视频 v04"
+    },
+    {
+      "id": "d-v04-lid-off",
+      "cat": "inventory",
+      "audio_id": "d-v04-lid-off",
+      "zh": "站在这里，直到楼面说把盖子拿开。",
+      "when_zh": "楼面让你先盖上盖子但不锁，等他说 take your lid off，再从紫色起按颜色从大到小盘点，满垛放 incoming、零垛放 outgoing，禁止 patty-cake，最近的一摞按 4 拆给楼面证明。",
+      "source_zh": "视频 v04"
+    },
+    {
+      "id": "d-v04-incoming",
+      "cat": "inventory",
+      "audio_id": "d-v04-incoming",
+      "zh": "满垛放在 incoming 这边。",
+      "when_zh": "楼面让你先盖上盖子但不锁，等他说 take your lid off，再从紫色起按颜色从大到小盘点，满垛放 incoming、零垛放 outgoing，禁止 patty-cake，最近的一摞按 4 拆给楼面证明。",
+      "source_zh": "视频 v04"
+    },
+    {
+      "id": "d-v04-outgoing",
+      "cat": "inventory",
+      "audio_id": "d-v04-outgoing",
+      "zh": "零垛放在 outgoing 这边。",
+      "when_zh": "楼面让你先盖上盖子但不锁，等他说 take your lid off，再从紫色起按颜色从大到小盘点，满垛放 incoming、零垛放 outgoing，禁止 patty-cake，最近的一摞按 4 拆给楼面证明。",
+      "source_zh": "视频 v04"
+    },
+    {
+      "id": "d-v04-patty",
+      "cat": "inventory",
+      "audio_id": "d-v04-patty",
+      "zh": "不能 patty-cake。",
+      "when_zh": "楼面让你先盖上盖子但不锁，等他说 take your lid off，再从紫色起按颜色从大到小盘点，满垛放 incoming、零垛放 outgoing，禁止 patty-cake，最近的一摞按 4 拆给楼面证明。",
+      "source_zh": "视频 v04"
+    },
+    {
+      "id": "d-v04-two-hands",
+      "cat": "inventory",
+      "audio_id": "d-v04-two-hands",
+      "zh": "一只手放下，另一只手再拿。",
+      "when_zh": "楼面让你先盖上盖子但不锁，等他说 take your lid off，再从紫色起按颜色从大到小盘点，满垛放 incoming、零垛放 outgoing，禁止 patty-cake，最近的一摞按 4 拆给楼面证明。",
+      "source_zh": "视频 v04"
+    },
+    {
+      "id": "d-v04-purple-four",
+      "cat": "inventory",
+      "audio_id": "d-v04-purple-four",
+      "zh": "紫筹按四张拆。",
+      "when_zh": "楼面让你先盖上盖子但不锁，等他说 take your lid off，再从紫色起按颜色从大到小盘点，满垛放 incoming、零垛放 outgoing，禁止 patty-cake，最近的一摞按 4 拆给楼面证明。",
+      "source_zh": "视频 v04"
+    },
+    {
+      "id": "d-v04-sign",
+      "cat": "inventory",
+      "audio_id": "d-v04-sign",
+      "zh": "你签了就要负责。",
+      "when_zh": "楼面让你先盖上盖子但不锁，等他说 take your lid off，再从紫色起按颜色从大到小盘点，满垛放 incoming、零垛放 outgoing，禁止 patty-cake，最近的一摞按 4 拆给楼面证明。",
+      "source_zh": "视频 v04"
+    },
+    {
+      "id": "d-v05-sign",
+      "cat": "inventory",
+      "audio_id": "d-v05-sign",
+      "zh": "你签的东西，都要再核对，确认是对的。",
+      "when_zh": "和楼面一起盘箱：签字前核对、别被催，双方同意金额再写上并喊 put it away，整摞在里、零头在外，拆离自己最近的一摞，收好后自动拿出下一种颜色。",
+      "source_zh": "视频 v05"
+    },
+    {
+      "id": "d-v05-pressure",
+      "cat": "inventory",
+      "audio_id": "d-v05-pressure",
+      "zh": "别让他们催你。",
+      "when_zh": "和楼面一起盘箱：签字前核对、别被催，双方同意金额再写上并喊 put it away，整摞在里、零头在外，拆离自己最近的一摞，收好后自动拿出下一种颜色。",
+      "source_zh": "视频 v05"
+    },
+    {
+      "id": "d-v05-button",
+      "cat": "inventory",
+      "audio_id": "d-v05-button",
+      "zh": "这是你的 button。",
+      "when_zh": "和楼面一起盘箱：签字前核对、别被催，双方同意金额再写上并喊 put it away，整摞在里、零头在外，拆离自己最近的一摞，收好后自动拿出下一种颜色。",
+      "source_zh": "视频 v05"
+    },
+    {
+      "id": "d-v05-put-away",
+      "cat": "inventory",
+      "audio_id": "d-v05-put-away",
+      "zh": "说 put it away：满垛、满垛，然后零垛。",
+      "when_zh": "和楼面一起盘箱：签字前核对、别被催，双方同意金额再写上并喊 put it away，整摞在里、零头在外，拆离自己最近的一摞，收好后自动拿出下一种颜色。",
+      "source_zh": "视频 v05"
+    },
+    {
+      "id": "d-v05-next",
+      "cat": "inventory",
+      "audio_id": "d-v05-next",
+      "zh": "自动拿出下一种颜色。",
+      "when_zh": "和楼面一起盘箱：签字前核对、别被催，双方同意金额再写上并喊 put it away，整摞在里、零头在外，拆离自己最近的一摞，收好后自动拿出下一种颜色。",
+      "source_zh": "视频 v05"
+    },
+    {
+      "id": "d-v05-black-five",
+      "cat": "inventory",
+      "audio_id": "d-v05-black-five",
+      "zh": "黑筹按五张拆。",
+      "when_zh": "和楼面一起盘箱：签字前核对、别被催，双方同意金额再写上并喊 put it away，整摞在里、零头在外，拆离自己最近的一摞，收好后自动拿出下一种颜色。",
+      "source_zh": "视频 v05"
+    },
+    {
+      "id": "d-v05-closest",
+      "cat": "inventory",
+      "audio_id": "d-v05-closest",
+      "zh": "拆离自己最近的那一摞。",
+      "when_zh": "和楼面一起盘箱：签字前核对、别被催，双方同意金额再写上并喊 put it away，整摞在里、零头在外，拆离自己最近的一摞，收好后自动拿出下一种颜色。",
+      "source_zh": "视频 v05"
+    },
+    {
+      "id": "d-v05-five-five-three",
+      "cat": "inventory",
+      "audio_id": "d-v05-five-five-three",
+      "zh": "13 张黑筹拆成五、五、三。",
+      "when_zh": "和楼面一起盘箱：签字前核对、别被催，双方同意金额再写上并喊 put it away，整摞在里、零头在外，拆离自己最近的一摞，收好后自动拿出下一种颜色。",
+      "source_zh": "视频 v05"
+    },
+    {
+      "id": "d-v06-five-row",
+      "cat": "inventory",
+      "audio_id": "d-v06-five-row",
+      "zh": "一排最多五摞。",
+      "when_zh": "盘绿筹时一排最多 5 摞，完整排靠自己，零头在外侧，按 4 拆离自己最近的一摞，楼面喊 stack up 后再报总数，一满排是 $2,500，下一种是红。",
+      "source_zh": "视频 v06"
+    },
+    {
+      "id": "d-v06-complete",
+      "cat": "inventory",
+      "audio_id": "d-v06-complete",
+      "zh": "完整的那一排靠自己。",
+      "when_zh": "盘绿筹时一排最多 5 摞，完整排靠自己，零头在外侧，按 4 拆离自己最近的一摞，楼面喊 stack up 后再报总数，一满排是 $2,500，下一种是红。",
+      "source_zh": "视频 v06"
+    },
+    {
+      "id": "d-v06-by-fours",
+      "cat": "inventory",
+      "audio_id": "d-v06-by-fours",
+      "zh": "按四张拆离自己最近的那一摞。",
+      "when_zh": "盘绿筹时一排最多 5 摞，完整排靠自己，零头在外侧，按 4 拆离自己最近的一摞，楼面喊 stack up 后再报总数，一满排是 $2,500，下一种是红。",
+      "source_zh": "视频 v06"
+    },
+    {
+      "id": "d-v06-stack-up",
+      "cat": "inventory",
+      "audio_id": "d-v06-stack-up",
+      "zh": "把绿筹摞回去。",
+      "when_zh": "盘绿筹时一排最多 5 摞，完整排靠自己，零头在外侧，按 4 拆离自己最近的一摞，楼面喊 stack up 后再报总数，一满排是 $2,500，下一种是红。",
+      "source_zh": "视频 v06"
+    },
+    {
+      "id": "d-v06-count",
+      "cat": "inventory",
+      "audio_id": "d-v06-count",
+      "zh": "连续数，免得数丢。",
+      "when_zh": "盘绿筹时一排最多 5 摞，完整排靠自己，零头在外侧，按 4 拆离自己最近的一摞，楼面喊 stack up 后再报总数，一满排是 $2,500，下一种是红。",
+      "source_zh": "视频 v06"
+    },
+    {
+      "id": "d-v06-full-row",
+      "cat": "inventory",
+      "audio_id": "d-v06-full-row",
+      "zh": "满满一排是两千五百美元。",
+      "when_zh": "盘绿筹时一排最多 5 摞，完整排靠自己，零头在外侧，按 4 拆离自己最近的一摞，楼面喊 stack up 后再报总数，一满排是 $2,500，下一种是红。",
+      "source_zh": "视频 v06"
+    },
+    {
+      "id": "d-v06-partial",
+      "cat": "inventory",
+      "audio_id": "d-v06-partial",
+      "zh": "右侧永远是零头。",
+      "when_zh": "盘绿筹时一排最多 5 摞，完整排靠自己，零头在外侧，按 4 拆离自己最近的一摞，楼面喊 stack up 后再报总数，一满排是 $2,500，下一种是红。",
+      "source_zh": "视频 v06"
+    },
+    {
+      "id": "d-v06-red",
+      "cat": "inventory",
+      "audio_id": "d-v06-red",
+      "zh": "下一种颜色是红。",
+      "when_zh": "盘绿筹时一排最多 5 摞，完整排靠自己，零头在外侧，按 4 拆离自己最近的一摞，楼面喊 stack up 后再报总数，一满排是 $2,500，下一种是红。",
+      "source_zh": "视频 v06"
+    },
+    {
+      "id": "d-v07-rows-of-five",
+      "cat": "inventory",
+      "audio_id": "d-v07-rows-of-five",
+      "zh": "只要排成一排五个，就可以。",
+      "when_zh": "拆红筹：靠近自己做、一排五个；整摞和外侧零头分开；红筹按 5 张一组，10 张红是两个 5 的小摞，要让镜头看清。",
+      "source_zh": "视频 v07"
+    },
+    {
+      "id": "d-v07-work-smarter",
+      "cat": "inventory",
+      "audio_id": "d-v07-work-smarter",
+      "zh": "聪明地做，别自己把事做难。",
+      "when_zh": "拆红筹：靠近自己做、一排五个；整摞和外侧零头分开；红筹按 5 张一组，10 张红是两个 5 的小摞，要让镜头看清。",
+      "source_zh": "视频 v07"
+    },
+    {
+      "id": "d-v07-make-easy",
+      "cat": "inventory",
+      "audio_id": "d-v07-make-easy",
+      "zh": "想办法把事情做简单。",
+      "when_zh": "拆红筹：靠近自己做、一排五个；整摞和外侧零头分开；红筹按 5 张一组，10 张红是两个 5 的小摞，要让镜头看清。",
+      "source_zh": "视频 v07"
+    },
+    {
+      "id": "d-v07-closest",
+      "cat": "inventory",
+      "audio_id": "d-v07-closest",
+      "zh": "拆离你最近的那一排。",
+      "when_zh": "拆红筹：靠近自己做、一排五个；整摞和外侧零头分开；红筹按 5 张一组，10 张红是两个 5 的小摞，要让镜头看清。",
+      "source_zh": "视频 v07"
+    },
+    {
+      "id": "d-v07-reds-by-five",
+      "cat": "inventory",
+      "audio_id": "d-v07-reds-by-five",
+      "zh": "红筹按五个一组拆。",
+      "when_zh": "拆红筹：靠近自己做、一排五个；整摞和外侧零头分开；红筹按 5 张一组，10 张红是两个 5 的小摞，要让镜头看清。",
+      "source_zh": "视频 v07"
+    },
+    {
+      "id": "d-v07-partials",
+      "cat": "inventory",
+      "audio_id": "d-v07-partials",
+      "zh": "零头放在外侧。",
+      "when_zh": "拆红筹：靠近自己做、一排五个；整摞和外侧零头分开；红筹按 5 张一组，10 张红是两个 5 的小摞，要让镜头看清。",
+      "source_zh": "视频 v07"
+    },
+    {
+      "id": "d-v07-ten-red",
+      "cat": "inventory",
+      "audio_id": "d-v07-ten-red",
+      "zh": "10 张红拆成五个和五个，两个小摞。",
+      "when_zh": "拆红筹：靠近自己做、一排五个；整摞和外侧零头分开；红筹按 5 张一组，10 张红是两个 5 的小摞，要让镜头看清。",
+      "source_zh": "视频 v07"
+    },
+    {
+      "id": "d-v07-camera",
+      "cat": "inventory",
+      "audio_id": "d-v07-camera",
+      "zh": "把红筹摞齐，让镜头看得见。",
+      "when_zh": "拆红筹：靠近自己做、一排五个；整摞和外侧零头分开；红筹按 5 张一组，10 张红是两个 5 的小摞，要让镜头看清。",
+      "source_zh": "视频 v07"
+    },
+    {
+      "id": "d-v08-row",
+      "cat": "inventory",
+      "audio_id": "d-v08-row",
+      "zh": "每一摞是一百的话，一整排按五百来数。",
+      "when_zh": "和楼面一起报数、双方看清并同意（本段 $1,150）、写下来再 put it away；整摞靠里、零头靠外。不要忘了写数。下一种颜色提到粉筹。",
+      "source_zh": "视频 v08"
+    },
+    {
+      "id": "d-v08-write-away",
+      "cat": "inventory",
+      "audio_id": "d-v08-write-away",
+      "zh": "同意一千一百五十，写下来，然后再说 put it away。",
+      "when_zh": "和楼面一起报数、双方看清并同意（本段 $1,150）、写下来再 put it away；整摞靠里、零头靠外。不要忘了写数。下一种颜色提到粉筹。",
+      "source_zh": "视频 v08"
+    },
+    {
+      "id": "d-v08-take-time",
+      "cat": "inventory",
+      "audio_id": "d-v08-take-time",
+      "zh": "收筹码的时候慢慢来。",
+      "when_zh": "和楼面一起报数、双方看清并同意（本段 $1,150）、写下来再 put it away；整摞靠里、零头靠外。不要忘了写数。下一种颜色提到粉筹。",
+      "source_zh": "视频 v08"
+    },
+    {
+      "id": "d-v08-cheques",
+      "cat": "inventory",
+      "audio_id": "d-v08-cheques",
+      "zh": "不要让筹码撒得到处都是。",
+      "when_zh": "和楼面一起报数、双方看清并同意（本段 $1,150）、写下来再 put it away；整摞靠里、零头靠外。不要忘了写数。下一种颜色提到粉筹。",
+      "source_zh": "视频 v08"
+    },
+    {
+      "id": "d-v08-write-down",
+      "cat": "inventory",
+      "audio_id": "d-v08-write-down",
+      "zh": "要故意提醒自己把数字写下来，因为太容易忘。",
+      "when_zh": "和楼面一起报数、双方看清并同意（本段 $1,150）、写下来再 put it away；整摞靠里、零头靠外。不要忘了写数。下一种颜色提到粉筹。",
+      "source_zh": "视频 v08"
+    },
+    {
+      "id": "d-v08-inside",
+      "cat": "inventory",
+      "audio_id": "d-v08-inside",
+      "zh": "整摞放里面，零头放外面，红筹按五个拆。",
+      "when_zh": "和楼面一起报数、双方看清并同意（本段 $1,150）、写下来再 put it away；整摞靠里、零头靠外。不要忘了写数。下一种颜色提到粉筹。",
+      "source_zh": "视频 v08"
+    },
+    {
+      "id": "d-v08-pink",
+      "cat": "inventory",
+      "audio_id": "d-v08-pink",
+      "zh": "接下来是粉筹，不要把它说成已经有一整摞。",
+      "when_zh": "和楼面一起报数、双方看清并同意（本段 $1,150）、写下来再 put it away；整摞靠里、零头靠外。不要忘了写数。下一种颜色提到粉筹。",
+      "source_zh": "视频 v08"
+    },
+    {
+      "id": "d-v08-touch",
+      "cat": "inventory",
+      "audio_id": "d-v08-touch",
+      "zh": "点数时碰到筹码，让大家都看见这个总数。",
+      "when_zh": "和楼面一起报数、双方看清并同意（本段 $1,150）、写下来再 put it away；整摞靠里、零头靠外。不要忘了写数。下一种颜色提到粉筹。",
+      "source_zh": "视频 v08"
+    },
+    {
+      "id": "d-v09-seven-pink",
+      "cat": "inventory",
+      "audio_id": "d-v09-seven-pink",
+      "zh": "七张粉拆成三、三、一。",
+      "when_zh": "盘粉筹、白筹和 25 分硬币。7 张粉要切成 3-3-1；考核时钱数对但切法错（切成 5-1）仍算错，$20 的 21 点赔 $30。粉筹按每层 $5 来数（两张粉=$5）。白筹按 5 拆，不到 5 高不用再拆。收台时 25 分币按整美元放，纸卷（$10）的包装交给楼面。",
+      "source_zh": "视频 v09"
+    },
+    {
+      "id": "d-v09-cut-closing",
+      "cat": "inventory",
+      "audio_id": "d-v09-cut-closing",
+      "zh": "就算在收台，筹码也要切对。",
+      "when_zh": "盘粉筹、白筹和 25 分硬币。7 张粉要切成 3-3-1；考核时钱数对但切法错（切成 5-1）仍算错，$20 的 21 点赔 $30。粉筹按每层 $5 来数（两张粉=$5）。白筹按 5 拆，不到 5 高不用再拆。收台时 25 分币按整美元放，纸卷（$10）的包装交给楼面。",
+      "source_zh": "视频 v09"
+    },
+    {
+      "id": "d-v09-pays-thirty",
+      "cat": "inventory",
+      "audio_id": "d-v09-pays-thirty",
+      "zh": "二十块的 blackjack 赔三十块。",
+      "when_zh": "盘粉筹、白筹和 25 分硬币。7 张粉要切成 3-3-1；考核时钱数对但切法错（切成 5-1）仍算错，$20 的 21 点赔 $30。粉筹按每层 $5 来数（两张粉=$5）。白筹按 5 拆，不到 5 高不用再拆。收台时 25 分币按整美元放，纸卷（$10）的包装交给楼面。",
+      "source_zh": "视频 v09"
+    },
+    {
+      "id": "d-v09-three-three",
+      "cat": "inventory",
+      "audio_id": "d-v09-three-three",
+      "zh": "要切成三和三，因为五和一仍然是错的切法。",
+      "when_zh": "盘粉筹、白筹和 25 分硬币。7 张粉要切成 3-3-1；考核时钱数对但切法错（切成 5-1）仍算错，$20 的 21 点赔 $30。粉筹按每层 $5 来数（两张粉=$5）。白筹按 5 拆，不到 5 高不用再拆。收台时 25 分币按整美元放，纸卷（$10）的包装交给楼面。",
+      "source_zh": "视频 v09"
+    },
+    {
+      "id": "d-v09-seventeen-fifty",
+      "cat": "inventory",
+      "audio_id": "d-v09-seventeen-fifty",
+      "zh": "粉筹按五块一层数到十七块五，同意，然后说 put it away。",
+      "when_zh": "盘粉筹、白筹和 25 分硬币。7 张粉要切成 3-3-1；考核时钱数对但切法错（切成 5-1）仍算错，$20 的 21 点赔 $30。粉筹按每层 $5 来数（两张粉=$5）。白筹按 5 拆，不到 5 高不用再拆。收台时 25 分币按整美元放，纸卷（$10）的包装交给楼面。",
+      "source_zh": "视频 v09"
+    },
+    {
+      "id": "d-v09-white",
+      "cat": "inventory",
+      "audio_id": "d-v09-white",
+      "zh": "白筹按五个拆，不到五张高的那摞不要再拆。",
+      "when_zh": "盘粉筹、白筹和 25 分硬币。7 张粉要切成 3-3-1；考核时钱数对但切法错（切成 5-1）仍算错，$20 的 21 点赔 $30。粉筹按每层 $5 来数（两张粉=$5）。白筹按 5 拆，不到 5 高不用再拆。收台时 25 分币按整美元放，纸卷（$10）的包装交给楼面。",
+      "source_zh": "视频 v09"
+    },
+    {
+      "id": "d-v09-quarters",
+      "cat": "inventory",
+      "audio_id": "d-v09-quarters",
+      "zh": "纸卷交给楼面；收台时，硬币按整美元分组。",
+      "when_zh": "盘粉筹、白筹和 25 分硬币。7 张粉要切成 3-3-1；考核时钱数对但切法错（切成 5-1）仍算错，$20 的 21 点赔 $30。粉筹按每层 $5 来数（两张粉=$5）。白筹按 5 拆，不到 5 高不用再拆。收台时 25 分币按整美元放，纸卷（$10）的包装交给楼面。",
+      "source_zh": "视频 v09"
+    },
+    {
+      "id": "d-v09-dealing",
+      "cat": "inventory",
+      "audio_id": "d-v09-dealing",
+      "zh": "正在发牌时，把硬币放在不挡手的地方，不要像收台那样摊开数。",
+      "when_zh": "盘粉筹、白筹和 25 分硬币。7 张粉要切成 3-3-1；考核时钱数对但切法错（切成 5-1）仍算错，$20 的 21 点赔 $30。粉筹按每层 $5 来数（两张粉=$5）。白筹按 5 拆，不到 5 高不用再拆。收台时 25 分币按整美元放，纸卷（$10）的包装交给楼面。",
+      "source_zh": "视频 v09"
+    },
+    {
+      "id": "d-v10-head",
+      "cat": "inventory",
+      "audio_id": "d-v10-head",
+      "zh": "在脑子里加，不要在单据上做记号。",
+      "when_zh": "收台文书：主管心算签字（姓名+工牌号），荷官也要自己验算再签在下面；单据压在白筹和红筹上，盖盖，等坑主。任何人不能把手伸进你负责的筹码槽（主管最多用笔指）。把 closer 放桌上递，不要塞进对方手里。坑主草签后盖盖、再核对，拍掌亮手，然后锁台下班。",
+      "source_zh": "视频 v10"
+    },
+    {
+      "id": "d-v10-check-math",
+      "cat": "inventory",
+      "audio_id": "d-v10-check-math",
+      "zh": "签字之前花时间把数学核对一遍。",
+      "when_zh": "收台文书：主管心算签字（姓名+工牌号），荷官也要自己验算再签在下面；单据压在白筹和红筹上，盖盖，等坑主。任何人不能把手伸进你负责的筹码槽（主管最多用笔指）。把 closer 放桌上递，不要塞进对方手里。坑主草签后盖盖、再核对，拍掌亮手，然后锁台下班。",
+      "source_zh": "视频 v10"
+    },
+    {
+      "id": "d-v10-badge",
+      "cat": "inventory",
+      "audio_id": "d-v10-badge",
+      "zh": "用荷官工牌号签字，不要用员工工号。",
+      "when_zh": "收台文书：主管心算签字（姓名+工牌号），荷官也要自己验算再签在下面；单据压在白筹和红筹上，盖盖，等坑主。任何人不能把手伸进你负责的筹码槽（主管最多用笔指）。把 closer 放桌上递，不要塞进对方手里。坑主草签后盖盖、再核对，拍掌亮手，然后锁台下班。",
+      "source_zh": "视频 v10"
+    },
+    {
+      "id": "d-v10-rack",
+      "cat": "inventory",
+      "audio_id": "d-v10-rack",
+      "zh": "只有你可以把手放进自己的筹码槽，主管只能用笔指。",
+      "when_zh": "收台文书：主管心算签字（姓名+工牌号），荷官也要自己验算再签在下面；单据压在白筹和红筹上，盖盖，等坑主。任何人不能把手伸进你负责的筹码槽（主管最多用笔指）。把 closer 放桌上递，不要塞进对方手里。坑主草签后盖盖、再核对，拍掌亮手，然后锁台下班。",
+      "source_zh": "视频 v10"
+    },
+    {
+      "id": "d-v10-table",
+      "cat": "inventory",
+      "audio_id": "d-v10-table",
+      "zh": "把 closer 放在桌上，不要递到他手里。",
+      "when_zh": "收台文书：主管心算签字（姓名+工牌号），荷官也要自己验算再签在下面；单据压在白筹和红筹上，盖盖，等坑主。任何人不能把手伸进你负责的筹码槽（主管最多用笔指）。把 closer 放桌上递，不要塞进对方手里。坑主草签后盖盖、再核对，拍掌亮手，然后锁台下班。",
+      "source_zh": "视频 v10"
+    },
+    {
+      "id": "d-v10-clap",
+      "cat": "inventory",
+      "audio_id": "d-v10-clap",
+      "zh": "拍掌，把手亮出来，然后锁台。",
+      "when_zh": "收台文书：主管心算签字（姓名+工牌号），荷官也要自己验算再签在下面；单据压在白筹和红筹上，盖盖，等坑主。任何人不能把手伸进你负责的筹码槽（主管最多用笔指）。把 closer 放桌上递，不要塞进对方手里。坑主草签后盖盖、再核对，拍掌亮手，然后锁台下班。",
+      "source_zh": "视频 v10"
+    },
+    {
+      "id": "d-v10-lid",
+      "cat": "inventory",
+      "audio_id": "d-v10-lid",
+      "zh": "把 closer 放在白筹和红筹上，盖上盖子，然后等。",
+      "when_zh": "收台文书：主管心算签字（姓名+工牌号），荷官也要自己验算再签在下面；单据压在白筹和红筹上，盖盖，等坑主。任何人不能把手伸进你负责的筹码槽（主管最多用笔指）。把 closer 放桌上递，不要塞进对方手里。坑主草签后盖盖、再核对，拍掌亮手，然后锁台下班。",
+      "source_zh": "视频 v10"
+    },
+    {
+      "id": "d-v10-supervisor-sign",
+      "cat": "inventory",
+      "audio_id": "d-v10-supervisor-sign",
+      "zh": "主管先签姓名和工牌号，荷官再签。",
+      "when_zh": "收台文书：主管心算签字（姓名+工牌号），荷官也要自己验算再签在下面；单据压在白筹和红筹上，盖盖，等坑主。任何人不能把手伸进你负责的筹码槽（主管最多用笔指）。把 closer 放桌上递，不要塞进对方手里。坑主草签后盖盖、再核对，拍掌亮手，然后锁台下班。",
+      "source_zh": "视频 v10"
+    },
+    {
+      "id": "d-v11-prove-camera",
+      "cat": "inventory",
+      "audio_id": "d-v11-prove-camera",
+      "zh": "每件事都要证明给摄像机。",
+      "when_zh": "开台盘点：先只拿满垛，最大面额靠近自己，拆最近一垛证明其余；报总额时不许再碰筹码。",
+      "source_zh": "视频 v11"
+    },
+    {
+      "id": "d-v11-full-stacks",
+      "cat": "inventory",
+      "audio_id": "d-v11-full-stacks",
+      "zh": "先不拿零头，只拿满垛。",
+      "when_zh": "开台盘点：先只拿满垛，最大面额靠近自己，拆最近一垛证明其余；报总额时不许再碰筹码。",
+      "source_zh": "视频 v11"
+    },
+    {
+      "id": "d-v11-biggest",
+      "cat": "inventory",
+      "audio_id": "d-v11-biggest",
+      "zh": "最大的筹码永远靠近自己。",
+      "when_zh": "开台盘点：先只拿满垛，最大面额靠近自己，拆最近一垛证明其余；报总额时不许再碰筹码。",
+      "source_zh": "视频 v11"
+    },
+    {
+      "id": "d-v11-by-four",
+      "cat": "inventory",
+      "audio_id": "d-v11-by-four",
+      "zh": "拆开，按四张一组切。",
+      "when_zh": "开台盘点：先只拿满垛，最大面额靠近自己，拆最近一垛证明其余；报总额时不许再碰筹码。",
+      "source_zh": "视频 v11"
+    },
+    {
+      "id": "d-v11-swap",
+      "cat": "inventory",
+      "audio_id": "d-v11-swap",
+      "zh": "和一垛已经证明的对调。",
+      "when_zh": "开台盘点：先只拿满垛，最大面额靠近自己，拆最近一垛证明其余；报总额时不许再碰筹码。",
+      "source_zh": "视频 v11"
+    },
+    {
+      "id": "d-v11-no-touch",
+      "cat": "inventory",
+      "audio_id": "d-v11-no-touch",
+      "zh": "不许碰着数。",
+      "when_zh": "开台盘点：先只拿满垛，最大面额靠近自己，拆最近一垛证明其余；报总额时不许再碰筹码。",
+      "source_zh": "视频 v11"
+    },
+    {
+      "id": "d-v11-purple-mini",
+      "cat": "inventory",
+      "audio_id": "d-v11-purple-mini",
+      "zh": "紫筹小垛是两千。",
+      "when_zh": "开台盘点：先只拿满垛，最大面额靠近自己，拆最近一垛证明其余；报总额时不许再碰筹码。",
+      "source_zh": "视频 v11"
+    },
+    {
+      "id": "d-v11-badge",
+      "cat": "inventory",
+      "audio_id": "d-v11-badge",
+      "zh": "我签字，并写上工号。",
+      "when_zh": "开台盘点：先只拿满垛，最大面额靠近自己，拆最近一垛证明其余；报总额时不许再碰筹码。",
+      "source_zh": "视频 v11"
+    },
+    {
+      "id": "d-v12-split",
+      "cat": "signals",
+      "audio_id": "d-v12-split",
+      "zh": "分牌是把一手分成完全独立的两手。",
+      "when_zh": "分牌：同点、同等注、先看两指 V；新注放右侧并向镜头证明；最多分 3 次，一共 4 手。",
+      "source_zh": "视频 v12"
+    },
+    {
+      "id": "d-v12-same-amount",
+      "cat": "signals",
+      "audio_id": "d-v12-same-amount",
+      "zh": "只能分同等的注。",
+      "when_zh": "分牌：同点、同等注、先看两指 V；新注放右侧并向镜头证明；最多分 3 次，一共 4 手。",
+      "source_zh": "视频 v12"
+    },
+    {
+      "id": "d-v12-point",
+      "cat": "signals",
+      "audio_id": "d-v12-point",
+      "zh": "两张牌必须点数相同。",
+      "when_zh": "分牌：同点、同等注、先看两指 V；新注放右侧并向镜头证明；最多分 3 次，一共 4 手。",
+      "source_zh": "视频 v12"
+    },
+    {
+      "id": "d-v12-signal",
+      "cat": "signals",
+      "audio_id": "d-v12-signal",
+      "zh": "分牌手势是两根手指。",
+      "when_zh": "分牌：同点、同等注、先看两指 V；新注放右侧并向镜头证明；最多分 3 次，一共 4 手。",
+      "source_zh": "视频 v12"
+    },
+    {
+      "id": "d-v12-ask",
+      "cat": "signals",
+      "audio_id": "d-v12-ask",
+      "zh": "先生，您想怎么打？",
+      "when_zh": "分牌：同点、同等注、先看两指 V；新注放右侧并向镜头证明；最多分 3 次，一共 4 手。",
+      "source_zh": "视频 v12"
+    },
+    {
+      "id": "d-v12-right",
+      "cat": "signals",
+      "audio_id": "d-v12-right",
+      "zh": "新注必须在右侧。",
+      "when_zh": "分牌：同点、同等注、先看两指 V；新注放右侧并向镜头证明；最多分 3 次，一共 4 手。",
+      "source_zh": "视频 v12"
+    },
+    {
+      "id": "d-v12-prove",
+      "cat": "signals",
+      "audio_id": "d-v12-prove",
+      "zh": "哪怕一张筹码，也要证明这笔注。",
+      "when_zh": "分牌：同点、同等注、先看两指 V；新注放右侧并向镜头证明；最多分 3 次，一共 4 手。",
+      "source_zh": "视频 v12"
+    },
+    {
+      "id": "d-v12-four",
+      "cat": "signals",
+      "audio_id": "d-v12-four",
+      "zh": "一共 4 手，也就是分 3 次。",
+      "when_zh": "分牌：同点、同等注、先看两指 V；新注放右侧并向镜头证明；最多分 3 次，一共 4 手。",
+      "source_zh": "视频 v12"
+    },
+    {
+      "id": "d-v13-readable",
+      "cat": "signals",
+      "audio_id": "d-v13-readable",
+      "zh": "牌要看得清，而且不能重叠。",
+      "when_zh": "最多一共 4 手；no more bets 且第一张牌出来后注锁定，客人不能碰牌或碰注；手势必须是 V。",
+      "source_zh": "视频 v13"
+    },
+    {
+      "id": "d-v13-four",
+      "cat": "signals",
+      "audio_id": "d-v13-four",
+      "zh": "一共只能分到四手。",
+      "when_zh": "最多一共 4 手；no more bets 且第一张牌出来后注锁定，客人不能碰牌或碰注；手势必须是 V。",
+      "source_zh": "视频 v13"
+    },
+    {
+      "id": "d-v13-broke",
+      "cat": "signals",
+      "audio_id": "d-v13-broke",
+      "zh": "别忘了已经爆掉的那一手，那就是第四手。",
+      "when_zh": "最多一共 4 手；no more bets 且第一张牌出来后注锁定，客人不能碰牌或碰注；手势必须是 V。",
+      "source_zh": "视频 v13"
+    },
+    {
+      "id": "d-v13-first-two",
+      "cat": "signals",
+      "audio_id": "d-v13-first-two",
+      "zh": "必须是前两张牌。",
+      "when_zh": "最多一共 4 手；no more bets 且第一张牌出来后注锁定，客人不能碰牌或碰注；手势必须是 V。",
+      "source_zh": "视频 v13"
+    },
+    {
+      "id": "d-v13-right",
+      "cat": "signals",
+      "audio_id": "d-v13-right",
+      "zh": "新注放右边，每一笔都要证明。",
+      "when_zh": "最多一共 4 手；no more bets 且第一张牌出来后注锁定，客人不能碰牌或碰注；手势必须是 V。",
+      "source_zh": "视频 v13"
+    },
+    {
+      "id": "d-v13-cards",
+      "cat": "signals",
+      "audio_id": "d-v13-cards",
+      "zh": "客人不能碰牌。",
+      "when_zh": "最多一共 4 手；no more bets 且第一张牌出来后注锁定，客人不能碰牌或碰注；手势必须是 V。",
+      "source_zh": "视频 v13"
+    },
+    {
+      "id": "d-v13-locked",
+      "cat": "signals",
+      "audio_id": "d-v13-locked",
+      "zh": "喊了 no more bets，第一张牌出来，注就锁定。",
+      "when_zh": "最多一共 4 手；no more bets 且第一张牌出来后注锁定，客人不能碰牌或碰注；手势必须是 V。",
+      "source_zh": "视频 v13"
+    },
+    {
+      "id": "d-v13-v",
+      "cat": "signals",
+      "audio_id": "d-v13-v",
+      "zh": "要看见 V，一根手指不是分牌手势。",
+      "when_zh": "最多一共 4 手；no more bets 且第一张牌出来后注锁定，客人不能碰牌或碰注；手势必须是 V。",
+      "source_zh": "视频 v13"
+    },
+    {
+      "id": "d-v14-once",
+      "cat": "signals",
+      "audio_id": "d-v14-once",
+      "zh": "A 只能分一次，而且只能再拿一张。",
+      "when_zh": "A 只能分一次，每手只给一张并且横放；A 加 10 是 21，不是 blackjack，不赔 3:2。",
+      "source_zh": "视频 v14"
+    },
+    {
+      "id": "d-v14-sideways",
+      "cat": "signals",
+      "audio_id": "d-v14-sideways",
+      "zh": "这张牌横着放，让摄像机看出只能一张。",
+      "when_zh": "A 只能分一次，每手只给一张并且横放；A 加 10 是 21，不是 blackjack，不赔 3:2。",
+      "source_zh": "视频 v14"
+    },
+    {
+      "id": "d-v14-no-wait",
+      "cat": "signals",
+      "audio_id": "d-v14-no-wait",
+      "zh": "不要等手势，因为他没有别的选择。",
+      "when_zh": "A 只能分一次，每手只给一张并且横放；A 加 10 是 21，不是 blackjack，不赔 3:2。",
+      "source_zh": "视频 v14"
+    },
+    {
+      "id": "d-v14-face",
+      "cat": "signals",
+      "audio_id": "d-v14-face",
+      "zh": "只有客人要求，下一张才扣着发。",
+      "when_zh": "A 只能分一次，每手只给一张并且横放；A 加 10 是 21，不是 blackjack，不赔 3:2。",
+      "source_zh": "视频 v14"
+    },
+    {
+      "id": "d-v14-not-bj",
+      "cat": "signals",
+      "audio_id": "d-v14-not-bj",
+      "zh": "这只是 21，不是 blackjack。",
+      "when_zh": "A 只能分一次，每手只给一张并且横放；A 加 10 是 21，不是 blackjack，不赔 3:2。",
+      "source_zh": "视频 v14"
+    },
+    {
+      "id": "d-v14-fifteen",
+      "cat": "signals",
+      "audio_id": "d-v14-fifteen",
+      "zh": "我们不赔那 15 块。",
+      "when_zh": "A 只能分一次，每手只给一张并且横放；A 加 10 是 21，不是 blackjack，不赔 3:2。",
+      "source_zh": "视频 v14"
+    },
+    {
+      "id": "d-v14-flip",
+      "cat": "signals",
+      "audio_id": "d-v14-flip",
+      "zh": "一次翻一手，先让客人看见。",
+      "when_zh": "A 只能分一次，每手只给一张并且横放；A 加 10 是 21，不是 blackjack，不赔 3:2。",
+      "source_zh": "视频 v14"
+    },
+    {
+      "id": "d-v14-prove",
+      "cat": "signals",
+      "audio_id": "d-v14-prove",
+      "zh": "把钱放到大家都看得见的地方，并且证明这笔注。",
+      "when_zh": "A 只能分一次，每手只给一张并且横放；A 加 10 是 21，不是 blackjack，不赔 3:2。",
+      "source_zh": "视频 v14"
+    },
+    {
+      "id": "d-v15-any-two",
+      "cat": "signals",
+      "audio_id": "d-v15-any-two",
+      "zh": "Turning Stone 允许用任意前两张加倍，而且只给一张牌。",
+      "when_zh": "任意前两张可加倍（21 除外），只给 1 张；可少于原注不可多于；新注放右侧并证明；非常规加倍（如 hard 12）要大声告知楼面。",
+      "source_zh": "视频 v15"
+    },
+    {
+      "id": "d-v15-for-less",
+      "cat": "signals",
+      "audio_id": "d-v15-for-less",
+      "zh": "可以少于原注加倍。",
+      "when_zh": "任意前两张可加倍（21 除外），只给 1 张；可少于原注不可多于；新注放右侧并证明；非常规加倍（如 hard 12）要大声告知楼面。",
+      "source_zh": "视频 v15"
+    },
+    {
+      "id": "d-v15-not-more",
+      "cat": "signals",
+      "audio_id": "d-v15-not-more",
+      "zh": "不能多于原注加倍。",
+      "when_zh": "任意前两张可加倍（21 除外），只给 1 张；可少于原注不可多于；新注放右侧并证明；非常规加倍（如 hard 12）要大声告知楼面。",
+      "source_zh": "视频 v15"
+    },
+    {
+      "id": "d-v15-signal",
+      "cat": "signals",
+      "audio_id": "d-v15-signal",
+      "zh": "客人还有选择的时候，要看到手势。",
+      "when_zh": "任意前两张可加倍（21 除外），只给 1 张；可少于原注不可多于；新注放右侧并证明；非常规加倍（如 hard 12）要大声告知楼面。",
+      "source_zh": "视频 v15"
+    },
+    {
+      "id": "d-v15-money-down",
+      "cat": "signals",
+      "audio_id": "d-v15-money-down",
+      "zh": "没有别的选择时，把钱放下就是信号。",
+      "when_zh": "任意前两张可加倍（21 除外），只给 1 张；可少于原注不可多于；新注放右侧并证明；非常规加倍（如 hard 12）要大声告知楼面。",
+      "source_zh": "视频 v15"
+    },
+    {
+      "id": "d-v15-right",
+      "cat": "signals",
+      "audio_id": "d-v15-right",
+      "zh": "新注必须放到右边。",
+      "when_zh": "任意前两张可加倍（21 除外），只给 1 张；可少于原注不可多于；新注放右侧并证明；非常规加倍（如 hard 12）要大声告知楼面。",
+      "source_zh": "视频 v15"
+    },
+    {
+      "id": "d-v15-size-in",
+      "cat": "signals",
+      "audio_id": "d-v15-size-in",
+      "zh": "新注要 size in，向镜头证明。",
+      "when_zh": "任意前两张可加倍（21 除外），只给 1 张；可少于原注不可多于；新注放右侧并证明；非常规加倍（如 hard 12）要大声告知楼面。",
+      "source_zh": "视频 v15"
+    },
+    {
+      "id": "d-v15-announce",
+      "cat": "signals",
+      "audio_id": "d-v15-announce",
+      "zh": "非常规加倍要大声说出来，因为这不是在请示许可。",
+      "when_zh": "任意前两张可加倍（21 除外），只给 1 张；可少于原注不可多于；新注放右侧并证明；非常规加倍（如 hard 12）要大声告知楼面。",
+      "source_zh": "视频 v15"
+    },
+    {
+      "id": "d-v17-not-size",
+      "cat": "pay",
+      "audio_id": "d-v17-not-size",
+      "zh": "换一种颜色赔的时候，不要对着原注做 size in。",
+      "when_zh": "同色赔付只需 size in；换色赔付必须先拆原注，再用 total look back 让镜头分清注和赔。",
+      "source_zh": "视频 v17"
+    },
+    {
+      "id": "d-v17-look-back",
+      "cat": "pay",
+      "audio_id": "d-v17-look-back",
+      "zh": "赔付颜色变了，就用 total look back。",
+      "when_zh": "同色赔付只需 size in；换色赔付必须先拆原注，再用 total look back 让镜头分清注和赔。",
+      "source_zh": "视频 v17"
+    },
+    {
+      "id": "d-v17-space",
+      "cat": "pay",
+      "audio_id": "d-v17-space",
+      "zh": "中间留空，这样才分得清哪边是注、哪边是赔。",
+      "when_zh": "同色赔付只需 size in；换色赔付必须先拆原注，再用 total look back 让镜头分清注和赔。",
+      "source_zh": "视频 v17"
+    },
+    {
+      "id": "d-v17-same-red",
+      "cat": "pay",
+      "audio_id": "d-v17-same-red",
+      "zh": "如果整笔都用红筹赔，就不必把原注拆开。",
+      "when_zh": "同色赔付只需 size in；换色赔付必须先拆原注，再用 total look back 让镜头分清注和赔。",
+      "source_zh": "视频 v17"
+    },
+    {
+      "id": "d-v17-size-in",
+      "cat": "pay",
+      "audio_id": "d-v17-size-in",
+      "zh": "颜色不变，直接 size in。",
+      "when_zh": "同色赔付只需 size in；换色赔付必须先拆原注，再用 total look back 让镜头分清注和赔。",
+      "source_zh": "视频 v17"
+    },
+    {
+      "id": "d-v17-green",
+      "cat": "pay",
+      "audio_id": "d-v17-green",
+      "zh": "客人要绿筹、颜色变了，就必须把原注拆开。",
+      "when_zh": "同色赔付只需 size in；换色赔付必须先拆原注，再用 total look back 让镜头分清注和赔。",
+      "source_zh": "视频 v17"
+    },
+    {
+      "id": "d-v17-different",
+      "cat": "pay",
+      "audio_id": "d-v17-different",
+      "zh": "换了颜色，就要把注 total 出来。",
+      "when_zh": "同色赔付只需 size in；换色赔付必须先拆原注，再用 total look back 让镜头分清注和赔。",
+      "source_zh": "视频 v17"
+    },
+    {
+      "id": "d-v17-difference",
+      "cat": "pay",
+      "audio_id": "d-v17-difference",
+      "zh": "同色用 size in，换色用 total。",
+      "when_zh": "同色赔付只需 size in；换色赔付必须先拆原注，再用 total look back 让镜头分清注和赔。",
+      "source_zh": "视频 v17"
+    },
+    {
+      "id": "d-v18-know",
+      "cat": "pay",
+      "audio_id": "d-v18-know",
+      "zh": "不知道赔多少，就把它拆成你已经会的金额。",
+      "when_zh": "现场按 3:2 赔付：单色 size in 再 drop half，多色或换色则 total；槽里两手不要交叉。",
+      "source_zh": "视频 v18"
+    },
+    {
+      "id": "d-v18-black",
+      "cat": "pay",
+      "audio_id": "d-v18-black",
+      "zh": "黑筹只拿你需要的张数。",
+      "when_zh": "现场按 3:2 赔付：单色 size in 再 drop half，多色或换色则 total；槽里两手不要交叉。",
+      "source_zh": "视频 v18"
+    },
+    {
+      "id": "d-v18-core",
+      "cat": "pay",
+      "audio_id": "d-v18-core",
+      "zh": "15 块赔 22.50，他管这个叫 core four。",
+      "when_zh": "现场按 3:2 赔付：单色 size in 再 drop half，多色或换色则 total；槽里两手不要交叉。",
+      "source_zh": "视频 v18"
+    },
+    {
+      "id": "d-v18-purple",
+      "cat": "pay",
+      "audio_id": "d-v18-purple",
+      "zh": "筹码槽里两手不要交叉，因为紫色是中线。",
+      "when_zh": "现场按 3:2 赔付：单色 size in 再 drop half，多色或换色则 total；槽里两手不要交叉。",
+      "source_zh": "视频 v18"
+    },
+    {
+      "id": "d-v18-one-color",
+      "cat": "pay",
+      "audio_id": "d-v18-one-color",
+      "zh": "原注只有一种颜色，就 size in，再 drop half。",
+      "when_zh": "现场按 3:2 赔付：单色 size in 再 drop half，多色或换色则 total；槽里两手不要交叉。",
+      "source_zh": "视频 v18"
+    },
+    {
+      "id": "d-v18-multi",
+      "cat": "pay",
+      "audio_id": "d-v18-multi",
+      "zh": "多色的注，用 total。",
+      "when_zh": "现场按 3:2 赔付：单色 size in 再 drop half，多色或换色则 total；槽里两手不要交叉。",
+      "source_zh": "视频 v18"
+    },
+    {
+      "id": "d-v18-diff-color",
+      "cat": "pay",
+      "audio_id": "d-v18-diff-color",
+      "zh": "你改用另一种颜色赔，就 total。",
+      "when_zh": "现场按 3:2 赔付：单色 size in 再 drop half，多色或换色则 total；槽里两手不要交叉。",
+      "source_zh": "视频 v18"
+    },
+    {
+      "id": "d-v18-prove",
+      "cat": "pay",
+      "audio_id": "d-v18-prove",
+      "zh": "先把原注模仿出来证明，然后再 drop half。",
+      "when_zh": "现场按 3:2 赔付：单色 size in 再 drop half，多色或换色则 total；槽里两手不要交叉。",
+      "source_zh": "视频 v18"
+    },
+    {
+      "id": "d-v19-forty",
+      "cat": "pay",
+      "audio_id": "d-v19-forty",
+      "zh": "40 块赔 60 块。",
+      "when_zh": "按 3:2 把不会的金额拆成会的（如 $55=$50+$5）；切的是赔额，不要把本金算进去。",
+      "source_zh": "视频 v19"
+    },
+    {
+      "id": "d-v19-break",
+      "cat": "pay",
+      "audio_id": "d-v19-break",
+      "zh": "如果不知道 55 赔多少，就拆成你已经会的金额。",
+      "when_zh": "按 3:2 把不会的金额拆成会的（如 $55=$50+$5）；切的是赔额，不要把本金算进去。",
+      "source_zh": "视频 v19"
+    },
+    {
+      "id": "d-v19-fifty",
+      "cat": "pay",
+      "audio_id": "d-v19-fifty",
+      "zh": "50 块赔 75 块。",
+      "when_zh": "按 3:2 把不会的金额拆成会的（如 $55=$50+$5）；切的是赔额，不要把本金算进去。",
+      "source_zh": "视频 v19"
+    },
+    {
+      "id": "d-v19-five",
+      "cat": "pay",
+      "audio_id": "d-v19-five",
+      "zh": "5 块赔 7 块 5 毛。",
+      "when_zh": "按 3:2 把不会的金额拆成会的（如 $55=$50+$5）；切的是赔额，不要把本金算进去。",
+      "source_zh": "视频 v19"
+    },
+    {
+      "id": "d-v19-sixty",
+      "cat": "pay",
+      "audio_id": "d-v19-sixty",
+      "zh": "60 块赔 90 块。",
+      "when_zh": "按 3:2 把不会的金额拆成会的（如 $55=$50+$5）；切的是赔额，不要把本金算进去。",
+      "source_zh": "视频 v19"
+    },
+    {
+      "id": "d-v19-cut",
+      "cat": "pay",
+      "audio_id": "d-v19-cut",
+      "zh": "50 块赔的 75 块才是要切出来的，不要把本金切进去。",
+      "when_zh": "按 3:2 把不会的金额拆成会的（如 $55=$50+$5）；切的是赔额，不要把本金算进去。",
+      "source_zh": "视频 v19"
+    },
+    {
+      "id": "d-v19-fifteen",
+      "cat": "pay",
+      "audio_id": "d-v19-fifteen",
+      "zh": "15 块赔 22.50，因为你把它拆成了已经会的金额。",
+      "when_zh": "按 3:2 把不会的金额拆成会的（如 $55=$50+$5）；切的是赔额，不要把本金算进去。",
+      "source_zh": "视频 v19"
+    },
+    {
+      "id": "d-v19-cheques",
+      "cat": "pay",
+      "audio_id": "d-v19-cheques",
+      "zh": "用拇指把筹码搓开，大面额朝那边。",
+      "when_zh": "按 3:2 把不会的金额拆成会的（如 $55=$50+$5）；切的是赔额，不要把本金算进去。",
+      "source_zh": "视频 v19"
     }
   ],
   "patterns": [

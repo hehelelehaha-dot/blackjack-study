@@ -32,12 +32,13 @@
         parsed.notes = parsed.notes || {};
         parsed.drills = parsed.drills || {};
         parsed.ui = parsed.ui || {};
+        parsed.youtube = parsed.youtube || {};
         return parsed;
       }
     } catch (err) {
       /* ignore broken storage */
     }
-    return { videos: {}, notes: {}, drills: {}, ui: {}, last: null };
+    return { videos: {}, notes: {}, drills: {}, ui: {}, youtube: {}, last: null };
   }
 
   function save() {
@@ -86,9 +87,11 @@
 
   function isUnlocked(video) {
     const list = videosInModule(video.module_id);
-    const index = list.findIndex((item) => item.id === video.id);
-    if (index <= 0) return true;
-    return !!vstat(list[index - 1].id).passed;
+    for (const prev of list) {
+      if (prev.id === video.id) return true;
+      if (!vstat(prev.id).passed) return false;
+    }
+    return true;
   }
 
   function nextInModule(video) {
@@ -129,6 +132,7 @@
       return parts[1] ? { name: "drill", id: decodeURIComponent(parts[1]) } : { name: "practice" };
     }
     if (parts[0] === "settings") return { name: "settings" };
+    if (parts[0] === "yt") return { name: "youtube", id: decodeURIComponent(parts[1] || "") };
     return { name: "home" };
   }
 
@@ -140,6 +144,7 @@
       video: "class",
       quiz: "class",
       locked: "class",
+      youtube: "class",
       english: "english",
       rules: "rules",
       rule: "rules",
@@ -172,8 +177,12 @@
   const LOCK = '<svg class="lock" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 10V8a5 5 0 0 1 10 0v2h1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h1zm2 0h6V8a3 3 0 0 0-6 0v2z"/></svg>';
 
   function pill(video) {
-    if (!isUnlocked(video)) return '<span class="pill">未解锁</span>';
     const st = vstat(video.id);
+    if (!isUnlocked(video)) {
+      return st.passed
+        ? '<span class="pill ok">已过关 · 待解锁</span>'
+        : '<span class="pill">未解锁</span>';
+    }
     if (st.passed) return '<span class="pill ok">已过关</span>';
     if (st.maxRatio >= watchLine()) return '<span class="pill wait">待听懂题</span>';
     if (st.maxRatio > 0.02) return '<span class="pill">在看</span>';
@@ -183,8 +192,8 @@
   function videoRow(video) {
     const locked = !isUnlocked(video);
     if (locked) {
-      const prev = videosInModule(video.module_id).find((item) => item.order < video.order);
-      const msg = prev ? `先通过上一条的听懂题：${prev.title}` : "还没解锁";
+      const blocker = videosInModule(video.module_id).find((item) => item.order < video.order && !vstat(item.id).passed);
+      const msg = blocker ? `先按本模块顺序通过：${blocker.title}` : "还没解锁";
       return `<button type="button" class="vrow is-locked" data-video="${esc(video.id)}" data-locked="true" data-lock-msg="${esc(msg)}">${LOCK}<span class="vmeta"><span lang="en">${esc(video.title)}</span> <span class="muted">${esc(video.duration || "")}</span><br><span class="muted">${esc(video.note)}</span></span>${pill(video)}</button>`;
     }
     return `<a class="vrow" href="#/v/${encodeURIComponent(video.id)}" data-video="${esc(video.id)}" data-locked="false"><span class="vmeta"><span lang="en">${esc(video.title)}</span> <span class="muted">${esc(video.duration || "")}</span><br><span class="muted">${esc(video.note)}</span></span>${pill(video)}</a>`;
@@ -225,6 +234,7 @@
     if (route.name === "practice") return practiceView();
     if (route.name === "drill") return drillView(route.id);
     if (route.name === "settings") return settingsView();
+    if (route.name === "youtube") return youtubeView(route.id);
     return homeView();
   }
 
@@ -277,17 +287,52 @@
     </div>`;
   }
 
+  function ytFor(moduleId) {
+    return ((DB.youtube && DB.youtube.picks) || [])
+      .filter((pick) => pick.module === moduleId)
+      .sort((a, b) => a.order - b.order);
+  }
+
+  function ytWatched(id) {
+    return !!(state.youtube[id] && state.youtube[id].watched);
+  }
+
+  function ytRow(pick) {
+    const warn = pick.warn ? '<span class="pill wait">桌规不同</span>' : "";
+    const seen = ytWatched(pick.video_id) ? '<span class="pill ok">已看</span>' : '<span class="pill">补充课</span>';
+    return `<a class="vrow" href="#/yt/${encodeURIComponent(pick.video_id)}" data-youtube="${esc(pick.video_id)}"><span class="vmeta"><span class="muted">补充课</span> <span lang="en">${esc(pick.title)}</span><br><span class="muted">${esc(pick.note_zh)}</span></span>${warn}${seen}</a>`;
+  }
+
+  function extraBlock(moduleId) {
+    const picks = ytFor(moduleId);
+    if (!picks.length) return "";
+    return `<p class="vrow extra-label"><span>补充课</span></p>${picks.map(ytRow).join("")}`;
+  }
+
+  function playlistBlock() {
+    const lists = (DB.youtube && DB.youtube.playlists) || [];
+    if (!lists.length) return "";
+    const rows = lists.map((list) => `<a class="hit" href="${esc(list.url)}" target="_blank" rel="noopener noreferrer"><span lang="en">${esc(list.title)}</span><div class="muted">${esc(list.channel)} · ${esc(String(list.video_count))} 集 · 在 YouTube 打开</div><div class="small">${esc(list.note_zh)}</div></a>`).join("");
+    return `<h2 class="sec">更多</h2><div class="card">${rows}</div>`;
+  }
+
   function classView() {
     const mods = DB.videos.modules.slice().sort((a, b) => a.order - b.order);
     const blocks = mods.map((mod) => {
       const vids = videosInModule(mod.id);
-      const rows = vids.length
-        ? vids.map(videoRow).join("")
-        : '<p class="vrow"><span>视频即将到来</span></p>';
-      return `<article class="mod">
+      const extra = extraBlock(mod.id);
+      let rows = "";
+      if (vids.length) rows = vids.map(videoRow).join("") + extra;
+      else if (extra) rows = extra;
+      else rows = '<p class="vrow"><span>视频即将到来</span></p>';
+      const extraCount = ytFor(mod.id).length;
+      const count = vids.length
+        ? `${vids.length} 条视频${extraCount ? " · " + extraCount + " 条补充课" : ""}`
+        : (extraCount ? extraCount + " 条补充课" : "还没有视频");
+      return `<article class="mod" data-module="${esc(mod.id)}">
         <a class="mod-head" href="#/m/${esc(mod.id)}">
           <strong><span class="ord">${String(mod.order).padStart(2, "0")}</span> ${esc(mod.title_zh)}</strong>
-          <div class="muted" lang="en">${esc(mod.title_en)} · ${vids.length ? vids.length + " 条视频" : "还没有视频"}</div>
+          <div class="muted" lang="en">${esc(mod.title_en)} · ${count}</div>
         </a>
         ${rows}
       </article>`;
@@ -297,6 +342,7 @@
       <div class="page">
         <p class="callout">${esc(DB.videos.gate_zh)}</p>
         ${blocks}
+        ${playlistBlock()}
       </div>
     </div>`;
   }
@@ -306,9 +352,11 @@
     if (!mod) return missing("没有这个模块");
     const cur = (DB.curriculum.modules && DB.curriculum.modules[id]) || {};
     const vids = videosInModule(id);
-    const videoBlock = vids.length
-      ? vids.map(videoRow).join("")
-      : '<div class="card"><strong>视频即将到来</strong><p class="muted">这个步骤先按下面的讲义和家中练习走。视频到了会排在这一模块里。</p></div>';
+    const extra = extraBlock(id);
+    let videoBlock = "";
+    if (vids.length) videoBlock = vids.map(videoRow).join("") + extra;
+    else if (extra) videoBlock = `<p class="vrow"><span class="muted">学校视频还没有。下面是补充课，不挡进度。</span></p>${extra}`;
+    else videoBlock = '<div class="card"><strong>视频即将到来</strong><p class="muted">这个步骤先按下面的讲义和家中练习走。视频到了会排在这一模块里。</p></div>';
     const sections = (cur.sections || []).map((section) => `<h2 class="sec">${esc(section.h)}</h2><p>${esc(section.body)}</p>`).join("");
     const phrases = (cur.phrase_ids || []).map((pid) => {
       const phrase = DB.english.phrases.find((item) => item.audio_id === pid);
@@ -410,6 +458,37 @@
       <div class="quiz-bar">
         <p id="watch-note" class="small muted"></p>
         <a class="btn primary" id="quiz-link" href="#/v/${encodeURIComponent(video.id)}/quiz">做听懂题</a>
+      </div>
+    </div>`;
+  }
+
+  function youtubeView(id) {
+    const pick = ((DB.youtube && DB.youtube.picks) || []).find((item) => item.video_id === id);
+    if (!pick) return missing("没有这条补充课");
+    const online = navigator.onLine;
+    const start = pick.start ? "&start=" + Number(pick.start) : "";
+    const src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(pick.video_id) + "?playsinline=1&rel=0" + start;
+    const player = online
+      ? `<div class="yt-frame"><iframe src="${src}" title="${esc(pick.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`
+      : `<div class="card" data-offline="youtube"><p>需要联网才能播放这条补充课。</p><p lang="en">needs internet</p></div>`;
+    const warning = pick.warn
+      ? `<div class="callout" data-warn="rule">与你们桌规不同，跳过此段</div><p class="small">${esc(pick.house_rule_differences)}</p>`
+      : (pick.house_rule_differences ? `<p class="small muted">${esc(pick.house_rule_differences)}</p>` : "");
+    const watched = ytWatched(pick.video_id);
+    const level = pick.english_difficulty === "easy" ? "英语 easy" : "英语 medium";
+    return `<div data-screen="youtube">
+      ${bar("补充课", "#/m/" + esc(pick.module))}
+      ${pick.warn ? `<div class="page" style="padding-bottom:0">${warning}</div>` : ""}
+      ${player}
+      <div class="page">
+        <p class="muted">补充课 · 不计入过关，也不锁别的视频</p>
+        <h2 lang="en">${esc(pick.title)}</h2>
+        <p class="small muted">${esc(pick.channel)} · ${esc(pick.duration)} · ${level}</p>
+        <p>${esc(pick.note_zh)}</p>
+        ${pick.start ? `<p class="small">这条从 ${fmt(pick.start)} 开始播。前面是另一种发牌，先看鞋台这一段。</p>` : ""}
+        ${pick.warn ? "" : warning}
+        <button type="button" class="btn" data-yt-toggle="${esc(pick.video_id)}">${watched ? "取消已看" : "标为已看"}</button>
+        <a class="btn" href="${esc(pick.url)}" target="_blank" rel="noopener noreferrer">在 YouTube 打开</a>
       </div>
     </div>`;
   }
@@ -931,7 +1010,7 @@
         </div>
         <div class="card">
           <h2>规则从哪来</h2>
-          <p>讲义是权威。讲义没写的步骤标成「讲义未写，按常见做法；现场以主管/学校为准」。培训桌毡上的 S17 只代表那张培训桌，不是已确认的 Turning Stone 实地规则。考试日期和形式：没记录。</p>
+          <p>讲义是权威。讲义没写的步骤标成「讲义未写，按常见做法；现场以主管/学校为准」。培训桌毡是 H17：软 17 要补，硬 17 停。只代表那张培训桌，不是已确认的 Turning Stone 实地规则。考试日期和形式：没记录。</p>
         </div>
         <p class="muted small">Blackjack 学习app</p>
         <button type="button" class="quiet" id="reset-progress">重置本机学习记录</button>
@@ -1162,6 +1241,15 @@
       choice.parentElement.querySelectorAll("[data-choice]").forEach((item) => item.classList.toggle("on", item === choice));
       return;
     }
+    const toggle = event.target.closest("[data-yt-toggle]");
+    if (toggle) {
+      const id = toggle.dataset.ytToggle;
+      if (!state.youtube[id]) state.youtube[id] = {};
+      state.youtube[id].watched = !state.youtube[id].watched;
+      save();
+      render();
+      return;
+    }
     const shot = event.target.closest("[data-full]");
     if (shot) {
       const box = document.getElementById("lightbox");
@@ -1188,6 +1276,12 @@
     };
     parts[5].forEach((line) => { audioById[line.id] = line; });
     try {
+      const yt = await fetch("./data/youtube.json");
+      DB.youtube = yt.ok ? await yt.json() : { picks: [], playlists: [] };
+    } catch (err) {
+      DB.youtube = { picks: [], playlists: [] };
+    }
+    try {
       const res = await fetch("./audio/index.json");
       if (res.ok) {
         const index = await res.json();
@@ -1205,6 +1299,8 @@
     });
     window.addEventListener("hashchange", render);
     window.addEventListener("pagehide", save);
+    window.addEventListener("online", () => { if (parseRoute().name === "youtube") render(); });
+    window.addEventListener("offline", () => { if (parseRoute().name === "youtube") render(); });
     render();
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("./sw.js").catch(() => {});

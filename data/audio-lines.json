@@ -718,5 +718,755 @@
     "id": "n-hand-19",
     "text": "Eight, three, and a ten.",
     "role": "narrator"
+  },
+  {
+    "id": "d-v03-lammer",
+    "text": "Take a lammer and go all the way across.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v03-swap",
+    "text": "Swap it with a stack that you know is correct.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v03-partial",
+    "text": "Take it off your partial.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v03-right",
+    "text": "Keep partial stacks on the right-hand side.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v03-white",
+    "text": "White is the exception, because that's where they live.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v03-inside",
+    "text": "Fill the rack from bottom to top, inside out.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v03-floor",
+    "text": "If any floor looks at your rack, he can see a complete straight line.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v03-cheques",
+    "text": "How do we break down cheques?",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v03-left",
+    "text": "Four, and whatever's left.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v03-by-fours",
+    "text": "Purple we break down by fours.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v03-close",
+    "text": "Now we're going to close the game.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v04-lid",
+    "text": "Put the lid on, but do not lock it.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v04-lid-off",
+    "text": "Stand here until your floor says take your lid off.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v04-incoming",
+    "text": "Full stacks go on the incoming side.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v04-outgoing",
+    "text": "Partial stacks go on the outgoing side.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v04-peeker",
+    "text": "Nothing goes in the peeker.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v04-patty",
+    "text": "You can't patty-cake.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v04-two-hands",
+    "text": "Set it down with one hand and grab it with the other.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v04-purple-four",
+    "text": "Purple, we break down by four.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v04-wait",
+    "text": "Wait until your floor comes over.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v04-sign",
+    "text": "If you sign something, you're responsible for it.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v04-lammer",
+    "text": "A quarter used as a lammer put the count off by twenty-five cents.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v04-bj",
+    "text": "Initials for this game is BJ.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v05-sign",
+    "text": "Whatever you sign, double check to make sure it's correct.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v05-button",
+    "text": "It's your button.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v05-put-away",
+    "text": "Put it away, full stack, full stack, and partial.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v05-next",
+    "text": "Automatically bring out the next color.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v05-black-five",
+    "text": "Black is broken down by five.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v05-closest",
+    "text": "Break down the stack closest to you.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v05-five-five-three",
+    "text": "Cut thirteen black into five, five, and three.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v05-bottom",
+    "text": "Fill it from bottom to top.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v05-pancake",
+    "text": "I did not pancake.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v05-pressure",
+    "text": "Don't let them pressure you.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v06-five-row",
+    "text": "We can only go five in a row.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v06-complete",
+    "text": "Keep the complete row closest to you.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v06-tight",
+    "text": "Keep it nice and tight so the camera sees it even.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v06-by-fours",
+    "text": "Break down the one closest to you by fours.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v06-stack-up",
+    "text": "Stack up your green.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v06-count",
+    "text": "Continue to count so you don't lose track.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v06-full-row",
+    "text": "A full row is twenty-five hundred dollars.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v06-partial",
+    "text": "Your right side is always partial.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v06-red",
+    "text": "The next color is red.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v06-cheques",
+    "text": "Take your time so the cheques don't roll.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v07-rows-of-five",
+    "text": "As long as you got rows of five, that's all right.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v07-work-smarter",
+    "text": "Work smarter, not harder.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v07-make-easy",
+    "text": "Look for ways to make things easy.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v07-closest",
+    "text": "Break down the row closest to you.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v07-reds-by-five",
+    "text": "Break the reds down by five.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v07-partials",
+    "text": "Put the partials on the outgoing side.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v07-ten-red",
+    "text": "Break ten red into five and five, two mini stacks.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v07-camera",
+    "text": "Stack the red so the camera can see it.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v07-full-stacks",
+    "text": "These are all full stacks.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v07-stack-up",
+    "text": "Stack up your red.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v08-row",
+    "text": "If each one is a hundred, count one whole row as five hundred.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v08-write-away",
+    "text": "Agree on one thousand one hundred and fifty, write it down, and then say put it away.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v08-take-time",
+    "text": "Take your time when you put the cheques away.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v08-cheques",
+    "text": "You don't want cheques going all over the place.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v08-write-down",
+    "text": "Make a conscious effort to write it down, because it is easy to forget.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v08-inside",
+    "text": "Put full stacks inside, put partials outside, and break the reds by five.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v08-pink",
+    "text": "Go to pink next, and do not call it a full stack.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v08-touch",
+    "text": "Touch the cheques as you count so everyone can see the total.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v08-no-panic",
+    "text": "Do not panic while you put the cheques away.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v09-seven-pink",
+    "text": "Break down seven pink as three, three, one.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v09-cut-closing",
+    "text": "Even when you are closing, you still have to cut the cheques properly.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v09-pays-thirty",
+    "text": "A twenty-dollar blackjack pays thirty.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v09-three-three",
+    "text": "Cut three and three, because five and one is still the wrong answer.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v09-seventeen-fifty",
+    "text": "Count the pink in five-dollar layers to seventeen fifty, agree, and say put it away.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v09-white",
+    "text": "Break the white cheques down by five, and do not break a stack that is under five high.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v09-quarters",
+    "text": "Give the wrapper to the floor, and when you close, group the quarters by dollars.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v09-dealing",
+    "text": "While you are dealing, keep the quarters out of the way and do not count them down as you do at the close.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v09-bet-plus-half",
+    "text": "Thirty dollars is the bet plus half.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v09-five-high",
+    "text": "You can go up to five high on the white.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v10-head",
+    "text": "Add it in your head, and do not make marks on the paper.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v10-check-math",
+    "text": "Take the time to check the math before you sign.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v10-badge",
+    "text": "Sign with your dealer badge number, not your employee ID.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v10-rack",
+    "text": "Only you may put your hands in your rack, and a supervisor may only point with a pen.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v10-table",
+    "text": "Set the closer on the table, and do not hand it into his hands.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v10-clap",
+    "text": "Clap, play your hands, and then lock off the game.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v10-lid",
+    "text": "Put the closer over the white and the red, put the lid on, and wait.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v10-supervisor-sign",
+    "text": "The supervisor signs a name and a badge number before the dealer signs.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v10-initials",
+    "text": "After the pit boss initials the closer, put the lid on and double-check.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v11-prove-camera",
+    "text": "We have to prove everything to the camera.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v11-full-stacks",
+    "text": "I'm not bringing out partial stacks, just the full stacks.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v11-biggest",
+    "text": "Always have the biggest cheques closest to you.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v11-by-four",
+    "text": "We're going to break it down and cut it down by four.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v11-swap",
+    "text": "Swap this one with a stack that is already proved.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v11-no-touch",
+    "text": "Count this without touching it.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v11-purple-mini",
+    "text": "A mini stack of purple is two thousand.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v11-badge",
+    "text": "I will sign it and I will put my badge number on it.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v11-pit",
+    "text": "What matters is the pit and the table number.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v12-split",
+    "text": "A split takes one hand and makes two complete separate hands.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v12-same-amount",
+    "text": "You can only split for the same amount.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v12-point",
+    "text": "The cards have to be the same point value.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v12-signal",
+    "text": "A signal for a split is two fingers.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v12-ask",
+    "text": "Sir, what would you like to do?",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v12-right",
+    "text": "The new bet has to be on the right-hand side.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v12-prove",
+    "text": "Even if it's one cheque, you've got to prove the bet.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v12-four",
+    "text": "We can split for a total of four hands, which means we split three times.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v12-original",
+    "text": "The original card goes with the original bet.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v12-pips",
+    "text": "On your first two cards, you have to see the pips.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v12-money",
+    "text": "Take the money first and put it on top of the rack.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v13-readable",
+    "text": "Make sure everything is readable and you are not overlapping cards.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v13-four",
+    "text": "You can only split for a total of four hands.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v13-broke",
+    "text": "Don't forget the hand he broke on, because that was the fourth hand.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v13-first-two",
+    "text": "It has to be on your first two cards.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v13-right",
+    "text": "Always make sure the new bet is on the right, and always prove every bet.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v13-cards",
+    "text": "Players are not allowed to touch the cards.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v13-locked",
+    "text": "Once you say no more bets and the first card comes out, the bets are locked in.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v13-v",
+    "text": "Find a V, because one finger is not the split signal.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v14-once",
+    "text": "You are only allowed to split aces one time, and you only get one card.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v14-sideways",
+    "text": "Put that card sideways so the camera can see you only get one card.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v14-no-wait",
+    "text": "Do not wait for a hand signal, because he does not have a choice.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v14-face",
+    "text": "Only put the next card face down if the player asks.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v14-not-bj",
+    "text": "This is just 21, not a blackjack.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v14-fifteen",
+    "text": "We are not going to pay that fifteen dollars.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v14-flip",
+    "text": "Flip one hand at a time so the player sees it first.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v14-one-bet",
+    "text": "Take care of one bet at a time.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v14-prove",
+    "text": "Set the money down where everyone can see it, and prove the bet.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v15-any-two",
+    "text": "Turning Stone allows a double down on any first two cards, and you get only one card.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v15-for-less",
+    "text": "You can double down for less.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v15-not-more",
+    "text": "You cannot double down for more.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v15-signal",
+    "text": "You need a signal when the player still has a choice.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v15-money-down",
+    "text": "If there is no other choice, putting the money down is the signal.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v15-right",
+    "text": "The new bet has got to go to the right.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v15-size-in",
+    "text": "Size into the new bet and prove it.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v15-announce",
+    "text": "Announce an irregular double out loud, because you are not asking for permission.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v17-not-size",
+    "text": "Do not size it to the bet when you are paying a different color.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v17-look-back",
+    "text": "Use total look back when the payout color changes.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v17-space",
+    "text": "Leave a space so you can tell the bet from the payout.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v17-same-red",
+    "text": "If you pay them all in red, there is no need to break it down.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v17-size-in",
+    "text": "If the color stays the same, just size it in.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v17-green",
+    "text": "If the player asks for green, you have to break the bet down.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v17-different",
+    "text": "A different color means you total the bet.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v17-difference",
+    "text": "Same color is size in, and a different color is total.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v18-know",
+    "text": "Break the bet down to what you know if you do not know what it pays.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v18-black",
+    "text": "With black cheques, take exactly what you need.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v18-core",
+    "text": "Fifteen dollars pays twenty-two fifty, and that is the core four.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v18-purple",
+    "text": "Do not cross your hands in the rack, because purple is the middle.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v18-one-color",
+    "text": "If the bet is one color, size in and drop half.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v18-multi",
+    "text": "On a multi-colored bet, total the bet.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v18-diff-color",
+    "text": "If you are paying a different color, total the bet.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v18-prove",
+    "text": "Prove the bet by mimicking it, and then drop half.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v19-forty",
+    "text": "Forty dollars pays sixty dollars.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v19-break",
+    "text": "If you do not know what fifty-five pays, break it down to what you know.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v19-fifty",
+    "text": "Fifty dollars pays seventy-five dollars.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v19-five",
+    "text": "Five dollars pays seven dollars and fifty cents.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v19-sixty",
+    "text": "Sixty dollars pays ninety dollars.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v19-cut",
+    "text": "Cut out the seventy-five dollars that fifty dollars pays, not the original bet.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v19-fifteen",
+    "text": "Fifteen dollars pays twenty-two fifty because you broke it down to what you know.",
+    "role": "dealer"
+  },
+  {
+    "id": "d-v19-cheques",
+    "text": "Thumb-roll the cheques, and put the biggest cheques that way.",
+    "role": "dealer"
   }
 ]

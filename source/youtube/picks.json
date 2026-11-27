@@ -1,0 +1,407 @@
+{
+  "generated_at": "2026-11-26 19:45 America/New_York",
+  "purpose": "YouTube dealing (not playing-strategy) videos to fill missing Blackjack dealer-school modules for Nova's Turning Stone training app. Her existing 19 school videos already cover shuffle, splits/doubles, close/open chip inventory, and payouts.",
+  "house_rules_to_match": {
+    "dealer_hand": "H17 — dealer hits soft 17",
+    "blackjack_payout": "3:2",
+    "insurance_payout": "2:1",
+    "preferred_game": "shoe, not pitch"
+  },
+  "method": "TubeAlfred MCP was not available (needsAuth). Used WebSearch plus yt-dlp metadata (no video downloads). Verified each URL is public. Checked auto-captions and/or descriptions so each pick actually teaches its module. Captions were rate-limited on a few House of Wolves / Vegas Aces clips; those are noted in evidence.",
+  "playlists": [
+    {
+      "title": "Blackjack Dealing Masterclass",
+      "channel": "House of Wolves Academy",
+      "url": "https://www.youtube.com/playlist?list=PLVgn61x3swoPPl2iiLPRXkrTZnA_h35To",
+      "video_count": 34,
+      "note_zh": "拉斯维加斯发牌员系列课，覆盖切牌、发牌摆位、保险、庄家手牌（H17）、收牌、进出台亮手等，和你缺的步骤最配套。",
+      "house_rule_differences": "片单里有单独一集《Understanding the 6 to 5 Pay Ratio》（wWTPtjFOFPE），跳过即可；3:2 请看同系列 pD7Wh1sV3B0。另有单副牌、No-Peek 等变体，规则可能和学校不同。"
+    },
+    {
+      "title": "How to Deal Blackjack",
+      "channel": "Vegas Aces",
+      "url": "https://www.youtube.com/playlist?list=PLYwrMs-FkflN3JQbjeJ_4YVSUVjRH54Rf",
+      "video_count": 78,
+      "note_zh": "前拉斯维加斯发牌员 Heather Ferris 的发牌流程短片合集，切牌、烧牌、鞋内发牌、偷看、保险、收注、收牌、亮手都有对应小课。",
+      "house_rule_differences": "片单里有 6:5 赔付教学（如 me86c1pEFlI、E8HzTR1woGQ、SCq2U41nrEg），不要跟那些练。许多单集只有几十秒，适合查某个动作，不适合当唯一教材。"
+    }
+  ],
+  "picks": [
+    {
+      "module": "primer",
+      "order": 1,
+      "title": "Blackjack Table Explained: A Dealer's Guide to Layout & Terminology",
+      "channel": "Vegas Aces",
+      "url": "https://www.youtube.com/watch?v=_pJAskKqdD8",
+      "video_id": "_pJAskKqdD8",
+      "duration": "2:26",
+      "note_zh": "从发牌员视角讲台面各部分：围裙、下注圈、保险线、筹码槽、废牌架、牌靴零件。",
+      "english_difficulty": "easy",
+      "house_rule_differences": "未发现 6:5 或 S17。不讲筹码颜色面额，也不演示完整一局。",
+      "evidence": "auto-captions + description/chapters"
+    },
+    {
+      "module": "primer",
+      "order": 2,
+      "title": "Blackjack Basics: The Object of the Game Explained",
+      "channel": "House of Wolves Academy",
+      "url": "https://www.youtube.com/watch?v=ZTppy8kCZSA",
+      "video_id": "ZTppy8kCZSA",
+      "duration": "6:18",
+      "note_zh": "用几手牌讲清胜负：比庄家更接近 21、爆牌、平赔 even money，以及收牌扫台。",
+      "english_difficulty": "easy",
+      "house_rule_differences": "片中示范的是普通胜负平赔，没有专门讲 Blackjack 的 3:2；简介也写明本集没覆盖双方都是 Blackjack 的情况。",
+      "evidence": "auto-captions + description"
+    },
+    {
+      "module": "primer",
+      "order": 3,
+      "title": "How Is Blackjack Dealt? Shuffle, Cut Card, Burn and the Deal",
+      "channel": "TableExplained",
+      "url": "https://www.youtube.com/watch?v=dKVVJtp2cAc",
+      "video_id": "dKVVJtp2cAc",
+      "duration": "5:46",
+      "note_zh": "一整局流程概述：洗牌、切牌、烧牌、鞋内/手持发牌、偷看、亮手、按顺序收牌。不是发牌学校，但是从发牌员步骤讲的。",
+      "english_difficulty": "easy",
+      "house_rule_differences": "讲的是“常见做法”，并提到连续洗牌机没有切牌、有的赌场会应要求亮出烧牌。未在字幕里写死 H17/S17 或 3:2/6:5。",
+      "evidence": "auto-captions + description"
+    },
+    {
+      "module": "cut",
+      "order": 1,
+      "title": "Blackjack Dealer Tips: How to Offer the Cut Card to the Player - 12",
+      "channel": "Vegas Aces",
+      "url": "https://www.youtube.com/watch?v=tQe3BLJtNgA",
+      "video_id": "tQe3BLJtNgA",
+      "duration": "2:20",
+      "note_zh": "洗牌后如何递切牌：鞋台和手持牌都有；玩家不能刷牌边，切得不好要重切，没人切就喊 Dealer's cut。",
+      "english_difficulty": "easy",
+      "house_rule_differences": "同时演示手持牌切法，你这边优先看鞋台那一段（约 1:36 起）。未发现 6:5 或 S17。",
+      "evidence": "description/chapters; captions were rate-limited so wording was not re-checked from transcript"
+    },
+    {
+      "module": "cut",
+      "order": 2,
+      "title": "How to Perform a Shoe Shuffle in Blackjack: A Complete Guide",
+      "channel": "House of Wolves Academy",
+      "url": "https://www.youtube.com/watch?v=jeFwHsbopU0",
+      "video_id": "jeFwHsbopU0",
+      "duration": "11:00",
+      "note_zh": "完整鞋内洗牌后的切牌：轮流让不同玩家切、两端各留约 1 副不能切、没人切要喊 Dealer Cut!；结尾提醒千万别忘烧牌。",
+      "english_difficulty": "medium",
+      "house_rule_differences": "洗牌手法是通用课堂版（Riffle-Riffle-Strip-Riffle），简介写明和各赌场规定可能不同。你已有学校洗牌视频，本集主要用来补切牌和烧牌提醒。",
+      "evidence": "detailed description; captions were rate-limited"
+    },
+    {
+      "module": "burn",
+      "order": 1,
+      "title": "Blackjack Dealer Tips: Burning a Card - 14",
+      "channel": "Vegas Aces",
+      "url": "https://www.youtube.com/watch?v=bpkF1IKX3sg",
+      "video_id": "bpkF1IKX3sg",
+      "duration": "0:19",
+      "note_zh": "新鞋开始时把第一张牌不亮面直接丢进废牌架，这就是烧牌。",
+      "english_difficulty": "easy",
+      "house_rule_differences": "只有 19 秒，没有字幕。专门烧牌演示很少，请和切牌模块的鞋内洗牌、入门概述里的烧牌段落一起看。",
+      "evidence": "description only; no captions available"
+    },
+    {
+      "module": "deal",
+      "order": 1,
+      "title": "Blackjack Dealer Tips: From Shoe to Table! - 17",
+      "channel": "Vegas Aces",
+      "url": "https://www.youtube.com/watch?v=ZaLjJaRCMRQ",
+      "video_id": "ZaLjJaRCMRQ",
+      "duration": "1:39",
+      "note_zh": "从牌靴抽牌、翻开、摆在注前；第二张不要盖住点数，先给玩家再给自己，暗牌要藏好不能露。",
+      "english_difficulty": "easy",
+      "house_rule_differences": "未发现 6:5 或 S17。",
+      "evidence": "auto-captions + description"
+    },
+    {
+      "module": "deal",
+      "order": 2,
+      "title": "Mastering Card Placement in Blackjack: Part 1",
+      "channel": "House of Wolves Academy",
+      "url": "https://www.youtube.com/watch?v=_3g3RNioS2M",
+      "video_id": "_3g3RNioS2M",
+      "duration": "8:25",
+      "note_zh": "发牌摆位基础课（同系列第 2、3 集是加倍和分牌，你学校视频已经有，可先只看第 1 集）。",
+      "english_difficulty": "medium",
+      "house_rule_differences": "简介提到 Blackjack 可能按 3:2 或 6:5 赔，取决于台面赔率，要看毡上怎么写；不是在教你改用 6:5。",
+      "evidence": "description and series context; captions were rate-limited"
+    },
+    {
+      "module": "deal",
+      "order": 3,
+      "title": "Holding & Pitching Cards in Double-Deck Blackjack: Pro Techniques",
+      "channel": "House of Wolves Academy",
+      "url": "https://www.youtube.com/watch?v=BfF4QEIO2Hg",
+      "video_id": "BfF4QEIO2Hg",
+      "duration": "8:59",
+      "note_zh": "双手持牌和甩牌（pitch）手法，补鞋内发牌之外的手持牌技巧。",
+      "english_difficulty": "medium",
+      "house_rule_differences": "这是双副手持牌，不是鞋台。若学校或考试主要用牌靴，先把前两集练熟，本集当补充。",
+      "evidence": "description + channel series"
+    },
+    {
+      "module": "peek",
+      "order": 1,
+      "title": "Blackjack Insurance Explained: When and How to Do It",
+      "channel": "House of Wolves Academy",
+      "url": "https://www.youtube.com/watch?v=i0SzmoJWfeg",
+      "video_id": "i0SzmoJWfeg",
+      "duration": "14:51",
+      "note_zh": "庄家明 Ace 时如何开保险、关保险、赔保险 2:1，以及玩家是 Blackjack 时的 even money。",
+      "english_difficulty": "medium",
+      "house_rule_differences": "保险赔付按 2:1 教，和你的目标一致。中间用 6:5 对比“为什么 6:5 台很少给 even money”，那一段跳过，不要按 6:5 来记。",
+      "evidence": "auto-captions + description"
+    },
+    {
+      "module": "peek",
+      "order": 2,
+      "title": "Blackjack Dealer Tips: How the Dealer Checks their Cards for a Blackjack - 21",
+      "channel": "Vegas Aces",
+      "url": "https://www.youtube.com/watch?v=IjkIUSlpaoc",
+      "video_id": "IjkIUSlpaoc",
+      "duration": "1:11",
+      "note_zh": "明牌是 10 或 Ace 时怎么看有没有 Blackjack：有镜子/偷看器怎么用，没有时用手看。",
+      "english_difficulty": "easy",
+      "house_rule_differences": "各赌场偷看工具不同（镜子、偷看器或手看）。建议对照学校或 Turning Stone 现场怎么做，面试时才不会慌。",
+      "evidence": "auto-captions + description"
+    },
+    {
+      "module": "peek",
+      "order": 3,
+      "title": "Blackjack Dealer Tips: Insurance and Even Money - 37",
+      "channel": "Vegas Aces",
+      "url": "https://www.youtube.com/watch?v=J2cKgr5QRh8",
+      "video_id": "J2cKgr5QRh8",
+      "duration": "1:16",
+      "note_zh": "短流程：横放 Ace、手扫保险线、喊 Insurance / Insurance closed、保险不能超过原注一半、even money 先按 1:1 赔再看底牌。",
+      "english_difficulty": "easy",
+      "house_rule_differences": "自动字幕里把保险程序和 even money（1:1）讲清楚了，但没有明确说出保险赔 2:1；2:1 以上一集 House of Wolves 保险课为准。",
+      "evidence": "auto-captions + description"
+    },
+    {
+      "module": "dealer-hand",
+      "order": 1,
+      "title": "The Casino Dealer's Blackjack Hand: Tips for Pros!",
+      "channel": "House of Wolves Academy",
+      "url": "https://www.youtube.com/watch?v=UIHENTLBrG8",
+      "video_id": "UIHENTLBrG8",
+      "duration": "5:11",
+      "note_zh": "按毡上规则打庄家牌：硬 17 停，软 17 要牌（H17），并演示几手软/硬牌。",
+      "english_difficulty": "medium",
+      "house_rule_differences": "本集按 H17 教，和你学校一致。同时提醒有的高额台是 S17（所有 17 都停），要先读毡，不要学成 S17。",
+      "evidence": "auto-captions + description"
+    },
+    {
+      "module": "dealer-hand",
+      "order": 2,
+      "title": "Blackjack Dealer Tips: Hitting the Dealer's Hand - 27",
+      "channel": "Vegas Aces",
+      "url": "https://www.youtube.com/watch?v=LmY56W2N8Yg",
+      "video_id": "LmY56W2N8Yg",
+      "duration": "0:42",
+      "note_zh": "翻开底牌、补牌一律放在右侧排齐；硬 17 及以上停，软 17 及以下要牌；建议先报点再开始收付。",
+      "english_difficulty": "easy",
+      "house_rule_differences": "明确是 H17，和你的房屋规则一致。未发现 6:5。",
+      "evidence": "auto-captions + description"
+    },
+    {
+      "module": "take",
+      "order": 1,
+      "title": "Blackjack Dealer Tips: Taking and Paying Wagers - 28",
+      "channel": "Vegas Aces",
+      "url": "https://www.youtube.com/watch?v=MXEEgXpOl2I",
+      "video_id": "MXEEgXpOl2I",
+      "duration": "3:14",
+      "note_zh": "玩家输了先收筹（take the money first），再放回槽；赢了用同色对赔，讲脏筹/净筹，不要分次赔。",
+      "english_difficulty": "easy",
+      "house_rule_differences": "未发现 6:5 或 S17。21 点是按座位从右到左依次处理，不是先收完全场再赔。",
+      "evidence": "auto-captions + description/chapters"
+    },
+    {
+      "module": "clear-cards",
+      "order": 1,
+      "title": "How a Blackjack Dealer Sweeps Up Cards || Deal like a PRO",
+      "channel": "House of Wolves Academy",
+      "url": "https://www.youtube.com/watch?v=GOJ8vEHTa0E",
+      "video_id": "GOJ8vEHTa0E",
+      "duration": "7:44",
+      "note_zh": "专业单手收牌；无论先收庄家还是先收玩家，庄家牌都要留在最上面，方便楼面回放争议手。",
+      "english_difficulty": "medium",
+      "house_rule_differences": "简介写明有的地方允许双手收牌，课堂建议练单手。收牌顺序以学校规定为准。",
+      "evidence": "detailed description; captions were rate-limited"
+    },
+    {
+      "module": "clear-cards",
+      "order": 2,
+      "title": "Blackjack Dealer Tips: Picking Up Cards at the End of a Hand - 30",
+      "channel": "Vegas Aces",
+      "url": "https://www.youtube.com/watch?v=S9fq5PwnHJo",
+      "video_id": "S9fq5PwnHJo",
+      "duration": "0:52",
+      "note_zh": "先拿庄家牌放在最上面，再从最右边一手往左收，斜向 sweep 进废牌架；发牌员自己不能回放牌。",
+      "english_difficulty": "easy",
+      "house_rule_differences": "有的赌场要求庄家牌在最下面。片中明确说要先弄清房屋规定，不要默认只有一种顺序。",
+      "evidence": "auto-captions + description"
+    },
+    {
+      "module": "palms",
+      "order": 1,
+      "title": "How Does a Casino Dealer Enter & Exit a Blackjack Game?",
+      "channel": "House of Wolves Academy",
+      "url": "https://www.youtube.com/watch?v=xpXkTOZv938",
+      "video_id": "xpXkTOZv938",
+      "duration": "4:34",
+      "note_zh": "交接班：打完当前手、牌靴移到中间、拍手后掌心向上给镜头看，从右侧下台；不要把台面留给空档。",
+      "english_difficulty": "medium",
+      "house_rule_differences": "有的赌场换人时要烧一张牌，有的不用。拍手亮掌是通用要求，烧牌跟学校规定走。",
+      "evidence": "auto-captions + description"
+    },
+    {
+      "module": "palms",
+      "order": 2,
+      "title": "Blackjack Dealer Tips: Breaks and Clearing Your Hands - 53",
+      "channel": "Vegas Aces",
+      "url": "https://www.youtube.com/watch?v=_J3lwPxrXAw",
+      "video_id": "_J3lwPxrXAw",
+      "duration": "2:42",
+      "note_zh": "休息和顶班时如何 clap out：拍一次、掌心平翻给镜头；摸身体或捂嘴前也要先亮手。",
+      "english_difficulty": "easy",
+      "house_rule_differences": "提到多数顶班发牌员进台后会烧一张牌，但不是每家都这样。",
+      "evidence": "auto-captions + description"
+    },
+    {
+      "module": "full-round",
+      "order": 1,
+      "title": "Dealing Blackjack demo",
+      "channel": "PCI Dealer School, Inc.",
+      "url": "https://www.youtube.com/watch?v=ziM357927Zo",
+      "video_id": "ziM357927Zo",
+      "duration": "7:14",
+      "note_zh": "发牌学校现场演示：洗牌后用镜子看有没有 Blackjack，按手势要牌/停牌，先收输注再收牌，并演示加倍。",
+      "english_difficulty": "medium",
+      "house_rule_differences": "字幕里“soft 17 this guy's going to hit”说的是玩家软 17，不是在规定庄家 H17。没有清楚标注 3:2 或 6:5。语速偏现场讲解，适合看完整动作，规则仍以学校为准。",
+      "evidence": "auto-captions"
+    },
+    {
+      "module": "full-round",
+      "order": 2,
+      "title": "HOW TO BECOME A BLACKJACK DEALER - Blackjack Dealer Skills",
+      "channel": "CEG Dealer School",
+      "url": "https://www.youtube.com/watch?v=WZlMO2SFpm4",
+      "video_id": "WZlMO2SFpm4",
+      "duration": "11:53",
+      "note_zh": "拉斯维加斯 CEG 学校的发牌技能总览：摆牌、收牌 sweep、开/关保险并按 2:1 赔保险、分牌等，不是一镜到底的一局，但步骤连得起来。",
+      "english_difficulty": "medium",
+      "house_rule_differences": "保险明确按 2:1 教。字幕中未清楚规定 H17 或 S17，也未对比 3:2/6:5。片头说明这不能替代完整培训。",
+      "evidence": "auto-captions + description"
+    },
+    {
+      "module": "mock",
+      "order": 1,
+      "title": "How To Pass A Dealing Audition",
+      "channel": "Vegas Aces",
+      "url": "https://www.youtube.com/watch?v=hmhwxR4wIW8",
+      "video_id": "hmhwxR4wIW8",
+      "duration": "21:55",
+      "note_zh": "怎么获得并通过发牌面试：着装（盐胡椒配色）、态度、和客人说话，以及经理看重什么。是直播讲解，不是逐项打分的模拟考。",
+      "english_difficulty": "medium",
+      "house_rule_differences": "偏求职和现场表现，不是完整 Blackjack 流程演示，也未讲 6:5/S17。",
+      "evidence": "auto-captions + description"
+    },
+    {
+      "module": "mock",
+      "order": 2,
+      "title": "What Do Casinos Look for During an Audition feat. Bennie Mancino",
+      "channel": "Vegas Aces",
+      "url": "https://www.youtube.com/watch?v=PZ9sUx3o6Ms",
+      "video_id": "PZ9sUx3o6Ms",
+      "duration": "20:02",
+      "note_zh": "和行业人士聊赌场面试看的三件事（章节：2:27、11:12、14:21），用来准备口试和台风。",
+      "english_difficulty": "medium",
+      "house_rule_differences": "访谈为主，不是桌上模拟考核。未用字幕复核具体规则。",
+      "evidence": "description/chapters; captions not downloaded"
+    }
+  ],
+  "modules_thin_or_empty": [
+    {
+      "module": "burn",
+      "status": "thin",
+      "note": "Only one dedicated public clip (19 seconds, no captions). Also covered inside the shoe-shuffle video (cut #2) and the TableExplained overview (primer #3)."
+    },
+    {
+      "module": "take",
+      "status": "thin",
+      "note": "Only one clear dedicated take-and-pay lesson. The PCI full-round demo also shows taking losing money before picking up cards, but is not a standalone take lesson."
+    },
+    {
+      "module": "full-round",
+      "status": "thin",
+      "note": "No clean, labeled, start-to-finish shoe round that explicitly follows H17 and 3:2 all the way from cut through pickup. Best available: PCI live demo + CEG skills montage."
+    },
+    {
+      "module": "mock",
+      "status": "thin",
+      "note": "No good filmed mock blackjack dealer exam with scoring. CEG's 'Real Casino Audition' (y0UjdGqUdHo) is mostly a craps/stick audition, so it was not included. The two picks are audition advice, not a practice exam."
+    }
+  ],
+  "optional_extras_not_in_main_list": [
+    {
+      "title": "Casino Cheque Stack Values: Essential Dealer Knowledge",
+      "channel": "House of Wolves Academy",
+      "url": "https://www.youtube.com/watch?v=9Q2Jk7SBpJc",
+      "duration": "6:29",
+      "why_not_primary": "Useful for chip colors/values in a primer, but her school videos already cover a lot of chip inventory. Kept as an optional extra so the primer module stays at 3."
+    },
+    {
+      "title": "Understanding the 3 to 2 Pay Ratio in Blackjack: A Dealer's Guide",
+      "channel": "House of Wolves Academy",
+      "url": "https://www.youtube.com/watch?v=pD7Wh1sV3B0",
+      "duration": "21:46",
+      "why_not_primary": "Matches her 3:2 rule, but payouts are already covered by her school videos."
+    },
+    {
+      "title": "Blackjack Dealer Training: From Beginner to Pro in One Masterclass",
+      "channel": "Vegas Aces",
+      "url": "https://www.youtube.com/watch?v=kmM3CjMPuz8",
+      "duration": "1:17:10",
+      "why_not_primary": "A long compilation of the Vegas Aces course; already represented by the How to Deal Blackjack playlist."
+    }
+  ],
+  "not_recommended": [
+    {
+      "title": "Mastering No-Peek Blackjack Procedures",
+      "url": "https://www.youtube.com/watch?v=JETjYXtd8VQ",
+      "reason": "Teaches no-peek blackjack (do not check for dealer blackjack / do not offer insurance the usual way) and mentions 6:5 as common on single-deck in that setup."
+    },
+    {
+      "title": "Understanding the 6 to 5 Pay Ratio in Blackjack",
+      "url": "https://www.youtube.com/watch?v=wWTPtjFOFPE",
+      "reason": "Dedicated 6:5 payout lesson; conflicts with her 3:2 house rule."
+    },
+    {
+      "title": "Blackjack Training Video...formerly known as the BJ training video",
+      "url": "https://www.youtube.com/watch?v=dgi6K9xPPIA",
+      "reason": "Mixes player strategy (advises finding S17 tables) with some dealer insurance talk; not a clean dealing course."
+    },
+    {
+      "title": "Blackjack Dealer Training Exercise",
+      "url": "https://www.youtube.com/watch?v=NnM6TQfEwf8",
+      "reason": "Speed-counting drill for private-party dealing; presenter says it is not the preferred casino method and treats 17 as a stand number without teaching H17."
+    },
+    {
+      "title": "Real Casino Audition",
+      "url": "https://www.youtube.com/watch?v=y0UjdGqUdHo",
+      "reason": "CEG vlog of a Gold Coast audition that is mostly craps/stick, not a blackjack dealer exam."
+    },
+    {
+      "title": "CEG Dealer School Raw Blackjack - Day 1 Student",
+      "url": "https://www.youtube.com/watch?v=FwapWIFewTI",
+      "reason": "Day-1 riffle/shuffle drill, not a full-round dealing demo. She already has shuffle videos."
+    }
+  ]
+}

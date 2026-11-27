@@ -1,7 +1,7 @@
 /* Blackjack 学习app service worker.
    Shell is precached. Videos and Fish Audio mp3s are cached on first request.
    Range requests are answered from the cached full file so iOS can seek. */
-const VERSION = "bj-v3";
+const VERSION = "bj-v4";
 const SHELL = "bj-shell-" + VERSION;
 const MEDIA = "bj-media-" + VERSION;
 
@@ -21,6 +21,7 @@ const SHELL_URLS = [
   "./data/english.json",
   "./data/drills.json",
   "./data/audio-lines.json",
+  "./data/youtube.json",
   "./audio/index.json",
   "./assets/handouts/card-values.jpg",
   "./assets/handouts/whiteboard.jpg",
