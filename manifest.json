@@ -1,7 +1,7 @@
 {
   "name": "Blackjack 学习app",
   "short_name": "Blackjack",
-  "description": "Nova 的二十一点荷官课堂：听懂讲师，按讲义练发牌。",
+  "description": "二十一点荷官课堂：听懂讲师，按讲义练发牌。",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
