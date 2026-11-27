@@ -2,7 +2,7 @@
    GET only, same origin. Shell is precached. Videos and mp3s are cached on first request.
    Study records are never sent. YouTube stays on youtube-nocookie and is not cached.
    Range requests are answered from the cached full file so iOS can seek. */
-const VERSION = "bj-v7";
+const VERSION = "bj-v8";
 const SHELL = "bj-shell-" + VERSION;
 const MEDIA = "bj-media-" + VERSION;
 
