@@ -148,7 +148,13 @@
   function buildVtt(video, mode) {
     const cues = video.cues || [];
     const limit = Number(video.duration_sec) || 0;
-    const body = ["WEBVTT", ""];
+    const body = [
+      "WEBVTT",
+      "",
+      "STYLE",
+      "::cue { background: transparent; background-color: transparent; color: #fff; text-shadow: 0 1px 2px #000, 0 0 2px #000, 1px 1px 0 #000, -1px -1px 0 #000; font-size: 16px; }",
+      ""
+    ];
     cues.forEach((cue, index) => {
       const start = Number(cue.t) || 0;
       let end = cues[index + 1] ? Number(cues[index + 1].t) : (limit || start + 4);
@@ -160,7 +166,7 @@
       if (mode === "both" && cue.zh) lines.push(vttEscape(cue.zh));
       if (!lines.length) return;
       body.push(String(index + 1));
-      body.push(vttStamp(start) + " --> " + vttStamp(end));
+      body.push(vttStamp(start) + " --> " + vttStamp(end) + " line:-1 align:center size:92%");
       body.push(lines.join("\n"));
       body.push("");
     });
@@ -174,17 +180,26 @@
     subsUrls = [];
   }
 
-  function nativeFullscreen(player) {
+  function fullscreenElement() {
+    return document.fullscreenElement || document.webkitFullscreenElement || null;
+  }
+
+  function wrapFullscreen() {
+    const wrap = document.getElementById("player-wrap");
+    return !!(wrap && fullscreenElement() === wrap);
+  }
+
+  function nativeVideoFullscreen(player) {
     if (!player) return false;
     if (player.webkitDisplayingFullscreen) return true;
-    const el = document.fullscreenElement || document.webkitFullscreenElement;
-    return el === player;
+    return fullscreenElement() === player;
   }
 
   function applyCaptionTracks(player, force) {
     if (!player) return;
     const mode = subsMode();
-    const show = mode !== "off" && (force === true || (force !== false && nativeFullscreen(player)));
+    const native = force === true || (force !== false && nativeVideoFullscreen(player));
+    const show = mode !== "off" && native && !wrapFullscreen();
     const want = mode === "en" ? "en" : "both";
     player.querySelectorAll("track[data-subs]").forEach((el) => {
       if (!el.track) return;
@@ -210,25 +225,76 @@
     });
   }
 
-  function paintSubs(time, video) {
-    const box = document.getElementById("subs");
-    if (!box) return;
-    const mode = subsMode();
-    if (mode === "off") {
-      box.hidden = true;
-      box.innerHTML = "";
-      return;
-    }
-    const cue = cueAt(video, time);
-    if (!cue || !(cue.en || cue.zh)) {
-      box.hidden = true;
-      box.innerHTML = "";
-      return;
-    }
+  function captionHtml(cue, mode) {
+    if (!cue) return "";
     const en = cue.en ? `<span class="sub-en" lang="en">${esc(cue.en)}</span>` : "";
     const zh = mode === "both" && cue.zh ? `<span class="sub-zh">${esc(cue.zh)}</span>` : "";
-    box.hidden = !(en || zh);
-    box.innerHTML = en + zh;
+    return en + zh;
+  }
+
+  function paintSubs(time, video) {
+    const box = document.getElementById("subs");
+    const mode = subsMode();
+    if (box) {
+      if (mode === "off") {
+        box.hidden = true;
+        box.innerHTML = "";
+      } else {
+        box.hidden = false;
+        box.innerHTML = captionHtml(cueAt(video, time), mode);
+      }
+    }
+    paintFs(time, video);
+  }
+
+  function paintFs(time, video) {
+    const box = document.getElementById("fs-subs");
+    if (!box) return;
+    const mode = subsMode();
+    if (!wrapFullscreen() || mode === "off") {
+      box.hidden = true;
+      box.innerHTML = "";
+      return;
+    }
+    box.hidden = false;
+    box.innerHTML = captionHtml(cueAt(video, time), mode);
+  }
+
+  function syncFullscreen() {
+    const player = document.getElementById("player");
+    if (!player) return;
+    applyCaptionTracks(player);
+    const route = parseRoute();
+    if (route.name === "video") {
+      const video = videoById(route.id);
+      if (video) paintSubs(player.currentTime || 0, video);
+    }
+  }
+
+  async function toggleWrapFullscreen() {
+    const wrap = document.getElementById("player-wrap");
+    const player = document.getElementById("player");
+    if (!wrap || !player) return;
+    if (fullscreenElement()) {
+      const exit = document.exitFullscreen || document.webkitExitFullscreen;
+      if (exit) {
+        try { await exit.call(document); } catch (err) { /* already leaving */ }
+      }
+      return;
+    }
+    const req = wrap.requestFullscreen || wrap.webkitRequestFullscreen;
+    if (req) {
+      try {
+        await req.call(wrap);
+        return;
+      } catch (err) { /* iPhone may only fullscreen the video element */ }
+    }
+    if (typeof player.webkitEnterFullscreen === "function") {
+      applyCaptionTracks(player, true);
+      player.webkitEnterFullscreen();
+      return;
+    }
+    toast("这台浏览器不能全屏");
   }
 
   function markSubsButtons() {
@@ -568,10 +634,12 @@
     return `<div data-screen="video">
       <header class="bar"><a class="back" href="#/m/${esc(video.module_id)}">返回</a><h1 lang="en">${esc(video.title)}</h1></header>
       <div class="stage">
-        <div class="player-wrap">
+        <div class="player-wrap" id="player-wrap">
           <video id="player" class="player" playsinline webkit-playsinline controls preload="metadata" src="${esc(srcOf(video))}"></video>
-          <div id="subs" class="subs" aria-live="polite"></div>
+          <div id="fs-subs" class="fs-subs" hidden></div>
+          <button type="button" id="fs-exit" class="fs-exit">退出全屏</button>
         </div>
+        <div id="subs" class="subs" aria-live="polite"></div>
         <div class="subs-toggle" role="group" aria-label="字幕">
           ${subsButton("both", "中英双语")}
           ${subsButton("en", "纯英文")}
@@ -582,6 +650,7 @@
           <button type="button" data-rate="1" class="on">1×</button>
           <button type="button" data-rate="1.25">1.25×</button>
           <button type="button" id="loop-btn">单句循环</button>
+          <button type="button" id="fs-btn">全屏</button>
         </div>
       </div>
       <div class="vtitle">
@@ -822,6 +891,10 @@
         applyCaptionTracks(player);
       });
     });
+    const fsBtn = document.getElementById("fs-btn");
+    if (fsBtn) fsBtn.addEventListener("click", () => { toggleWrapFullscreen(); });
+    const fsExit = document.getElementById("fs-exit");
+    if (fsExit) fsExit.addEventListener("click", () => { toggleWrapFullscreen(); });
     document.querySelectorAll("[data-rate]").forEach((button) => {
       button.addEventListener("click", () => {
         player.playbackRate = Number(button.dataset.rate);
@@ -1664,10 +1737,7 @@
       document.getElementById("lightbox").hidden = true;
     });
     window.addEventListener("hashchange", render);
-    const onFullscreen = () => {
-      const player = document.getElementById("player");
-      if (player) applyCaptionTracks(player);
-    };
+    const onFullscreen = () => { syncFullscreen(); };
     document.addEventListener("fullscreenchange", onFullscreen);
     document.addEventListener("webkitfullscreenchange", onFullscreen);
     window.addEventListener("pagehide", save);
