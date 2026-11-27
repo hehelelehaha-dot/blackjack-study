@@ -113,6 +113,133 @@
     return "./videos/" + video.path;
   }
 
+  function subsMode() {
+    const mode = state.ui && state.ui.subs;
+    return mode === "en" || mode === "off" ? mode : "both";
+  }
+
+  function cueAt(video, time) {
+    const cues = video.cues || [];
+    let current = null;
+    cues.forEach((cue) => {
+      if (Number(cue.t) <= time + 0.05) current = cue;
+    });
+    return current;
+  }
+
+  function subsButton(mode, label) {
+    const on = subsMode() === mode;
+    return `<button type="button" data-subs="${mode}" aria-pressed="${on ? "true" : "false"}" class="${on ? "on" : ""}">${label}</button>`;
+  }
+
+  function vttStamp(sec) {
+    const ms = Math.max(0, Math.round((Number(sec) || 0) * 1000));
+    const h = Math.floor(ms / 3600000);
+    const m = Math.floor((ms % 3600000) / 60000);
+    const s = Math.floor((ms % 60000) / 1000);
+    const milli = ms % 1000;
+    return String(h).padStart(2, "0") + ":" + String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0") + "." + String(milli).padStart(3, "0");
+  }
+
+  function vttEscape(text) {
+    return String(text || "").replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  }
+
+  function buildVtt(video, mode) {
+    const cues = video.cues || [];
+    const limit = Number(video.duration_sec) || 0;
+    const body = ["WEBVTT", ""];
+    cues.forEach((cue, index) => {
+      const start = Number(cue.t) || 0;
+      let end = cues[index + 1] ? Number(cues[index + 1].t) : (limit || start + 4);
+      if (limit && end > limit) end = limit;
+      if (!(end > start)) end = start + 0.4;
+      if (cues[index + 1] && end - start > 0.12) end -= 0.05;
+      const lines = [];
+      if (cue.en) lines.push(vttEscape(cue.en));
+      if (mode === "both" && cue.zh) lines.push(vttEscape(cue.zh));
+      if (!lines.length) return;
+      body.push(String(index + 1));
+      body.push(vttStamp(start) + " --> " + vttStamp(end));
+      body.push(lines.join("\n"));
+      body.push("");
+    });
+    return body.join("\n");
+  }
+
+  let subsUrls = [];
+
+  function revokeSubs() {
+    subsUrls.forEach((url) => URL.revokeObjectURL(url));
+    subsUrls = [];
+  }
+
+  function nativeFullscreen(player) {
+    if (!player) return false;
+    if (player.webkitDisplayingFullscreen) return true;
+    const el = document.fullscreenElement || document.webkitFullscreenElement;
+    return el === player;
+  }
+
+  function applyCaptionTracks(player, force) {
+    if (!player) return;
+    const mode = subsMode();
+    const show = mode !== "off" && (force === true || (force !== false && nativeFullscreen(player)));
+    const want = mode === "en" ? "en" : "both";
+    player.querySelectorAll("track[data-subs]").forEach((el) => {
+      if (!el.track) return;
+      el.track.mode = show && el.dataset.subs === want ? "showing" : "hidden";
+    });
+  }
+
+  function mountCaptionTracks(player, video) {
+    revokeSubs();
+    ["both", "en"].forEach((mode) => {
+      const blob = new Blob([buildVtt(video, mode)], { type: "text/vtt" });
+      const url = URL.createObjectURL(blob);
+      subsUrls.push(url);
+      const track = document.createElement("track");
+      track.kind = "subtitles";
+      track.srclang = mode === "en" ? "en" : "zh";
+      track.label = mode === "en" ? "English" : "中英双语";
+      track.dataset.subs = mode;
+      track.src = url;
+      track.addEventListener("load", () => applyCaptionTracks(player));
+      player.appendChild(track);
+      if (track.track) track.track.mode = "hidden";
+    });
+  }
+
+  function paintSubs(time, video) {
+    const box = document.getElementById("subs");
+    if (!box) return;
+    const mode = subsMode();
+    if (mode === "off") {
+      box.hidden = true;
+      box.innerHTML = "";
+      return;
+    }
+    const cue = cueAt(video, time);
+    if (!cue || !(cue.en || cue.zh)) {
+      box.hidden = true;
+      box.innerHTML = "";
+      return;
+    }
+    const en = cue.en ? `<span class="sub-en" lang="en">${esc(cue.en)}</span>` : "";
+    const zh = mode === "both" && cue.zh ? `<span class="sub-zh">${esc(cue.zh)}</span>` : "";
+    box.hidden = !(en || zh);
+    box.innerHTML = en + zh;
+  }
+
+  function markSubsButtons() {
+    const mode = subsMode();
+    document.querySelectorAll(".subs-toggle [data-subs]").forEach((button) => {
+      const on = button.dataset.subs === mode;
+      button.classList.toggle("on", on);
+      button.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  }
+
   function parseRoute() {
     const parts = (location.hash.replace(/^#/, "") || "/").split("/").filter(Boolean);
     if (!parts.length) return { name: "home" };
@@ -211,6 +338,7 @@
       return;
     }
     stopYt();
+    revokeSubs();
     mountedVideo = route.name === "video" ? route.id : null;
     if (route.name !== "quiz") quizRun = null;
     if (route.name !== "drill") session = null;
@@ -440,7 +568,15 @@
     return `<div data-screen="video">
       <header class="bar"><a class="back" href="#/m/${esc(video.module_id)}">返回</a><h1 lang="en">${esc(video.title)}</h1></header>
       <div class="stage">
-        <video id="player" class="player" playsinline webkit-playsinline controls preload="metadata" src="${esc(srcOf(video))}"></video>
+        <div class="player-wrap">
+          <video id="player" class="player" playsinline webkit-playsinline controls preload="metadata" src="${esc(srcOf(video))}"></video>
+          <div id="subs" class="subs" aria-live="polite"></div>
+        </div>
+        <div class="subs-toggle" role="group" aria-label="字幕">
+          ${subsButton("both", "中英双语")}
+          ${subsButton("en", "纯英文")}
+          ${subsButton("off", "关")}
+        </div>
         <div class="transport">
           <button type="button" data-rate="0.75">0.75×</button>
           <button type="button" data-rate="1" class="on">1×</button>
@@ -491,6 +627,7 @@
       ${player}
       <div class="page">
         <p class="muted">补充课 · 不计入过关，也不锁别的视频</p>
+        <p class="small" data-yt-subs>中英双语字幕只在学校视频上。补充课请开英文字幕；YouTube 自己的设置里可以自动翻译。</p>
         <h2 lang="en">${esc(pick.title)}</h2>
         <p class="small muted">${esc(pick.channel)} · ${esc(pick.duration)} · ${level}</p>
         <p>${esc(pick.note_zh)}</p>
@@ -559,6 +696,8 @@
         playerVars: {
           playsinline: 1,
           rel: 0,
+          cc_load_policy: 1,
+          cc_lang_pref: "en",
           start: pick.start || 0,
           origin: location.origin
         },
@@ -571,7 +710,7 @@
       const mount = document.getElementById("yt-mount");
       if (!mount) return;
       const start = pick.start ? "&start=" + Number(pick.start) : "";
-      mount.outerHTML = `<iframe title="${esc(pick.title)}" src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(pick.video_id)}?playsinline=1&rel=0${start}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+      mount.outerHTML = `<iframe title="${esc(pick.title)}" src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(pick.video_id)}?playsinline=1&rel=0&cc_load_policy=1&cc_lang_pref=en${start}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
     });
   }
 
@@ -651,6 +790,7 @@
       saveSoon();
       updateWatchUI(video);
       highlightCue(player.currentTime, video);
+      paintSubs(player.currentTime, video);
       if (loopOn && loopEnd && player.currentTime >= loopEnd - 0.08) player.currentTime = loopStart;
     };
     player.addEventListener("timeupdate", mark);
@@ -663,6 +803,24 @@
     player.addEventListener("loadedmetadata", () => {
       if (st.lastTime > 1 && st.lastTime < player.duration - 0.5) player.currentTime = st.lastTime;
       updateWatchUI(video);
+      paintSubs(player.currentTime || 0, video);
+    });
+    player.addEventListener("webkitbeginfullscreen", () => applyCaptionTracks(player, true));
+    player.addEventListener("webkitendfullscreen", () => {
+      applyCaptionTracks(player, false);
+      paintSubs(player.currentTime || 0, video);
+    });
+    mountCaptionTracks(player, video);
+    paintSubs(player.currentTime || 0, video);
+    markSubsButtons();
+    document.querySelectorAll(".subs-toggle [data-subs]").forEach((button) => {
+      button.addEventListener("click", () => {
+        state.ui.subs = button.dataset.subs;
+        save();
+        markSubsButtons();
+        paintSubs(player.currentTime || 0, video);
+        applyCaptionTracks(player);
+      });
     });
     document.querySelectorAll("[data-rate]").forEach((button) => {
       button.addEventListener("click", () => {
@@ -1506,6 +1664,12 @@
       document.getElementById("lightbox").hidden = true;
     });
     window.addEventListener("hashchange", render);
+    const onFullscreen = () => {
+      const player = document.getElementById("player");
+      if (player) applyCaptionTracks(player);
+    };
+    document.addEventListener("fullscreenchange", onFullscreen);
+    document.addEventListener("webkitfullscreenchange", onFullscreen);
     window.addEventListener("pagehide", save);
     window.addEventListener("online", () => { if (parseRoute().name === "youtube") render(); });
     window.addEventListener("offline", () => { if (parseRoute().name === "youtube") render(); });
