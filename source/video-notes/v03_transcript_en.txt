@@ -1,0 +1,44 @@
+# transcript /workspace/dealer-exam-videos/raw/audio/611.wav
+# model=medium language=en vad_filter=false
+
+[00:00] Now let's swap it with this one, and look, it lines up, so now I know what, that these two are correct, right?
+[00:10] Now we're going to work off from there. So all you're going to do is take a lamer and just go all the way across.
+[00:20] Oops, that's supposed to be a lamer here.
+[00:24] So we're going to put a lamer here, and then we're going to put a lamer here.
+[00:29] I'm going to take this one out because it doesn't belong here, right? See how it's a nice, even, straight line?
+[00:35] We want a nice, even, straight line. This looks good. It's one short, so I'm going to make it right.
+[00:42] So now I can go all the way across here, straight, and they're all on full stacks.
+[00:50] Over here it looks like I'm going to go a short, so I'm going to grab from this partial stack and I'm going to make it right.
+[00:56] Nope, one too many. So now I know this is right. This is right.
+[01:01] I'm going to come across here. Now I know my whole bottom row is totally correct.
+[01:08] I also know, I'm going to continue to go this way. That looks good.
+[01:15] That looks good. Now I know all these are correct, but I don't know if these top ones are correct.
+[01:21] So what you're going to do is just switch it with the bottom one.
+[01:31] And it looks like it's correct. It'll go all the way across. So that means all three stacks of black are correct.
+[01:38] So now I don't have to do any more swapping. I just got to make sure they're all even.
+[01:42] I take this lamer out, and it looks like I'm going short. Take it off your partial.
+[01:47] Don't just keep taking it off this, because then you're going to make this wrong.
+[01:50] Take it off your partial.
+[01:53] So now it looks like this whole side is full stacked. I got to continue over here.
+[01:58] I know the bottom is correct, right?
+[02:01] Okay, well, I want to make sure this one's correct. So what am I going to do? I'm going to swap it.
+[02:07] That's even. That's good. So now I know all three of these are correct.
+[02:12] But I don't know if this one's correct yet. So what am I going to do? Swap it.
+[02:17] Swap it with a stack that you know is correct.
+[02:21] Now I know these are all full stacks. I forgot my black. So I'm going to take this lamer out, and I'm going to run it across.
+[02:30] Now I'm going to make sure it's even.
+[02:33] Now, when we close our game and stuff, we always want to make sure that the partial stacks on the right-hand side.
+[02:41] We're never going to have partial stacks on the left-hand side, with the exception of white, because that's where the place is likely to be.
+[02:49] But if we have partial black, green, or red, it's always going to be on the right-hand side.
+[02:54] And we're going to fill up the rack from bottom to top, inside out.
+[03:01] The reason being is so that way if any four looks at your rack, he can see one complete straight line, and then he can see another complete straight line.
+[03:10] But I got to move this up. So I want to complete from bottom to top. I'm going to move this up, and I'm going to take this outside one, and set it here.
+[03:18] Now I have two complete full rows.
+[03:23] Now, how do we break down checks? Well, pink we break down by fours, right? So I have four and whatever's lefttalk.
+[03:32] Red we break down by what? Five. So now it's five and five. Perfect. Green is by what? Four, right? Four, four, and whatever's left.
+[03:46] Black we break down by what? Five. Five, five, and whatever's left over. Four we break down by purples, which is good.
+[03:57] These are all full stacks.
+[04:02] Now this is a full stack of whatever's left over. Now this is how your rack would look like if it were to close again.
+[04:11] This is how they want it. All full stacks, fill it from bottom to top, outside to in.
+[04:21] So now, do you understand how we did that by swapping stacks?
+[04:27] Now we're going to close the gate.
