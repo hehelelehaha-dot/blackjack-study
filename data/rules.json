@@ -1,103 +1,397 @@
 {
   "sections": [
     {
-      "id": "values",
-      "title_zh": "牌点",
-      "title_en": "Card values",
-      "source_zh": "讲义 Card Values",
+      "id": "guidelines",
+      "title_zh": "课堂纪律",
+      "title_en": "Class Guidelines",
+      "source_zh": "编辑后的讲义 Blackjack Training",
       "blocks": [
         {
-          "type": "image",
-          "src": "assets/handouts/card-values.jpg",
-          "alt": "讲义 Card Values"
+          "type": "p",
+          "text": "上课要守时、得体、参与。在 YBR 或 PPC 上课、人在钟点上，不能打老虎机。手机留到休息。烟只在指定员工区，不要在客人看得到的地方。"
+        },
+        {
+          "type": "quote",
+          "en": "When on property for class at YBR or PPC, dealer school students may not play slot machines while on the clock.",
+          "zh": "在 YBR 或 PPC 上课、在钟点内，不能打老虎机。"
         },
         {
           "type": "p",
-          "text": "2 到 9 按点数。10、J、Q、K 都是 10。A 是 1 或 11。"
+          "text": "其余几条：尊重别人；准时；按形象规定着装；定目标；参加课堂活动；有问题就问；毒品和酒精不能带进物业。"
+        }
+      ]
+    },
+    {
+      "id": "policies",
+      "title_zh": "总政策",
+      "title_en": "General Policies",
+      "source_zh": "编辑后的讲义 Blackjack Training",
+      "blocks": [
+        {
+          "type": "quote",
+          "en": "Never argue with a guest.",
+          "zh": "永远不要跟客人争。"
         },
         {
-          "type": "table",
-          "headers": [
-            "牌",
-            "点数"
-          ],
-          "rows": [
-            [
-              "2–9",
-              "面值"
-            ],
-            [
-              "10 / J / Q / K",
-              "10"
-            ],
-            [
-              "Ace",
-              "1 或 11"
-            ]
+          "type": "quote",
+          "en": "You are never to correct your own mistakes. Call a supervisor for all corrections and problems.",
+          "zh": "自己的错自己改，是不允许的。改正和出问题都叫主管。"
+        },
+        {
+          "type": "quote",
+          "en": "Exhibit an impartial position concerning the outcome of a hand.",
+          "zh": "对这一手的输赢保持中立。"
+        },
+        {
+          "type": "p",
+          "text": "客人问规则可以解释，不要教他怎么下注、怎么打。楼面主管在特殊情况下可以让荷官偏离一般政策。附近有异常，马上告诉主管。"
+        },
+        {
+          "type": "quote",
+          "en": "Cross firing is not permitted. Conversation between dealers during a live game is not permitted unless it concerns the transfer of information pertinent to the game.",
+          "zh": "禁止 cross firing。直播时荷官之间不能闲聊，除非是这局要交接的信息。"
+        },
+        {
+          "type": "p",
+          "text": "喊 change、color up 等，声音要清楚，让主管听得见。讲义原文写的是 on or near you game，按印出的句子保留。"
+        },
+        {
+          "type": "calls",
+          "audio_ids": [
+            "d-never-argue",
+            "d-supervisor",
+            "d-floor",
+            "d-ask-supervisor"
           ]
         }
       ]
     },
     {
-      "id": "soft-hard",
-      "title_zh": "软牌和硬牌",
-      "title_en": "Soft and hard hands",
-      "source_zh": "讲义 Card Values，白板 19 手",
+      "id": "guest",
+      "title_zh": "客人服务",
+      "title_en": "Guest Service",
+      "source_zh": "编辑后的讲义 Blackjack Training",
       "blocks": [
         {
-          "type": "image",
-          "src": "assets/handouts/whiteboard.jpg",
-          "alt": "白板点数练习"
+          "type": "p",
+          "text": "客人上来和离开都要口头招呼，有眼神和微笑。买筹时说 good luck。离开时说谢谢。聊天是工作的一部分，但不能影响节奏和发牌准确。"
         },
         {
           "type": "quote",
-          "en": "When an ace in the dealers/players hand can be counted as 11 or 1.",
-          "zh": "软牌：这手牌里的 A 可以算 11，也可以算 1。"
+          "en": "Conversation with players is encouraged and is part of your duties.",
+          "zh": "鼓励和客人交谈，这是职责的一部分。"
         },
         {
           "type": "p",
-          "text": "讲义例子：Ace and a 4；Ace, 4 and a 3；Ace and a 9。软牌再补一张不会马上爆，因为 A 可以改算 1。"
+          "text": "语气、用词、表情和身体语言都在被观察。要对场地和正在举行的活动有所了解。"
         },
         {
-          "type": "quote",
-          "en": "Hard hands have no varying Ace value.",
-          "zh": "硬牌：A 的点数不能再变。"
-        },
-        {
-          "type": "p",
-          "text": "两种情况：没有 A；或者 A 算 11 会爆，所以只能算 1。例子：Ace, 5 and an 8 是硬 14；10 and a 7 是硬 17；Ace, 3 and a Jack 是硬 14。"
-        },
-        {
-          "type": "callout",
-          "tone": "gap",
-          "text": "两张牌的 A+10 才是 blackjack。分牌之后拿到的 A+10 只是 21，不按 3 to 2。"
+          "type": "calls",
+          "audio_ids": [
+            "d-good-luck",
+            "d-thank-you"
+          ]
         }
       ]
     },
     {
-      "id": "payouts-32",
-      "title_zh": "Blackjack 赔 3 to 2",
-      "title_en": "Blackjack pays 3 to 2",
-      "source_zh": "讲义 Blackjack Payouts",
+      "id": "terminology",
+      "title_zh": "荷官术语",
+      "title_en": "Blackjack Terminology",
+      "source_zh": "编辑后的讲义 Blackjack Training",
       "blocks": [
         {
-          "type": "image",
-          "src": "assets/handouts/payouts.jpg",
-          "alt": "讲义 3 to 2"
+          "type": "quote",
+          "en": "Change $100",
+          "zh": "现金换筹。切出筹码后喊出来。$100 及以上等批准。"
+        },
+        {
+          "type": "p",
+          "text": "讲义例子：客人交一张 $100 钞票要筹码。荷官切出 $100 筹码，说 Change $100，然后等批准。"
         },
         {
           "type": "quote",
-          "en": "Blackjack pays 3 to 2. Knowing how to pay 1 - 10 will help you pay any bet.",
-          "zh": "记住 1 到 10 的赔法，就能赔任何注。"
+          "en": "Cheque change $100",
+          "zh": "大筹换小筹。大筹放工作区左边，小筹在右边切出。$100 及以上等批准。"
+        },
+        {
+          "type": "p",
+          "text": "讲义例子：客人交 $100 绿筹，要换成红筹。"
+        },
+        {
+          "type": "quote",
+          "en": "Cheques Play",
+          "zh": "客人下注 $100 或以上。喊完再继续发牌。"
+        },
+        {
+          "type": "p",
+          "text": "黑筹、紫筹或橙筹下注，喊 Black Action、Purple Action 或 Orange Action，然后继续。"
+        },
+        {
+          "type": "quote",
+          "en": "Color Coming In",
+          "zh": "客人要换成更大面额再离开。先喊，等批准，才能把筹码拿进来。"
+        },
+        {
+          "type": "p",
+          "text": "拿进来以后，左边拆客人的筹码，右边切出要换成的金额，再喊 Color up 加金额，再等楼面主管批准。"
+        },
+        {
+          "type": "calls",
+          "audio_ids": [
+            "d-change-100",
+            "d-cheque-change-100",
+            "d-cheques-play",
+            "d-black-action",
+            "d-purple-action",
+            "d-orange-action",
+            "d-color-coming",
+            "d-color-up-100"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cheques",
+      "title_zh": "筹码颜色",
+      "title_en": "Breaking Down Cheques",
+      "source_zh": "编辑后的讲义 Blackjack Training",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "一摞标准 20 张。粉、绿、紫、灰按 4 拆。白、红、黑、橙按 5 拆。"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "颜色",
+            "面额",
+            "20 张",
+            "拆法"
+          ],
+          "rows": [
+            [
+              "白 White",
+              "$1",
+              "$20",
+              "5"
+            ],
+            [
+              "粉 Pink",
+              "$2.50",
+              "$50",
+              "4"
+            ],
+            [
+              "红 Red",
+              "$5",
+              "$100",
+              "5"
+            ],
+            [
+              "绿 Green",
+              "$25",
+              "$500",
+              "4"
+            ],
+            [
+              "黑 Black",
+              "$100",
+              "$2,000",
+              "5"
+            ],
+            [
+              "紫 Purple",
+              "$500",
+              "$10,000",
+              "4"
+            ],
+            [
+              "橙 Orange",
+              "$1,000",
+              "$20,000",
+              "5"
+            ],
+            [
+              "灰 Grey",
+              "$5,000",
+              "$100,000",
+              "4"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "橙，讲义上带星号：1 and 1, stack, size in, drop 1, stack。灰，也带星号：1 and 1, stack and size in。按印出的手法做。"
+        }
+      ]
+    },
+    {
+      "id": "rundown",
+      "title_zh": "切筹口诀",
+      "title_en": "Cheque Rundown",
+      "source_zh": "编辑后的讲义 Blackjack Training",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "白、红、黑、橙，按 5：5=5，6=3-3，7=3-3-1，8=4-4，9=4-4-1，10=5-5。"
+        },
+        {
+          "type": "p",
+          "text": "粉、绿、紫，按 4：5=4-1，6=3-3，7=3-3-1，8=4-4，9=4-4-1，10=4-4-2。5 张绿是 4-1，不是一摞 5。"
         },
         {
           "type": "callout",
           "tone": "gap",
-          "text": "这套讲义只印了 3 to 2。不要把 6 to 5 当成这里的赔付。"
+          "text": "这页没有印灰筹的 1 到 10 切法。灰只在 Breaking Down Cheques 里写明按 4 拆。不要自己补一张灰的口诀表。"
+        }
+      ]
+    },
+    {
+      "id": "insurance",
+      "title_zh": "保险",
+      "title_en": "Insurance",
+      "source_zh": "编辑后的讲义 Blackjack Training",
+      "blocks": [
+        {
+          "type": "quote",
+          "en": "After the dealer settles any Match the Dealer or Kings Bounty side bets, the dealer will announce “Insurance Open” in a clear voice and with a hand motion along the insurance line.",
+          "zh": "先结两个边注，再清楚喊 Insurance Open，并沿保险线做手势。"
         },
         {
           "type": "p",
-          "text": "$1 到 $10。赔的是赢钱，原注留在桌上。"
+          "text": "只有荷官第一张是 A 才开。保险赢：荷官是 blackjack。否则保险输。客人放在保险线上的注，等于原注的一半或更少。客人自己有 blackjack，可以选择 even money。"
+        },
+        {
+          "type": "p",
+          "text": "讲义这张表印的是满额保险要下多少，没有另印赔付列。"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "原注",
+            "满额保险"
+          ],
+          "rows": [
+            [
+              "$5",
+              "$2.50"
+            ],
+            [
+              "$10",
+              "$5"
+            ],
+            [
+              "$15",
+              "$7.50"
+            ],
+            [
+              "$20",
+              "$10"
+            ],
+            [
+              "$25",
+              "$12.50"
+            ],
+            [
+              "$30",
+              "$15"
+            ],
+            [
+              "$35",
+              "$17.50"
+            ],
+            [
+              "$37.50",
+              "$18.75"
+            ],
+            [
+              "$40",
+              "$20"
+            ],
+            [
+              "$45",
+              "$22.50"
+            ],
+            [
+              "$50",
+              "$25"
+            ],
+            [
+              "$55",
+              "$27.50"
+            ],
+            [
+              "$60",
+              "$30"
+            ],
+            [
+              "$65",
+              "$32.50"
+            ],
+            [
+              "$70",
+              "$35"
+            ],
+            [
+              "$75",
+              "$37.50"
+            ],
+            [
+              "$80",
+              "$40"
+            ],
+            [
+              "$85",
+              "$42.50"
+            ],
+            [
+              "$90",
+              "$45"
+            ],
+            [
+              "$95",
+              "$47.50"
+            ],
+            [
+              "$100",
+              "$50"
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "felt",
+          "text": "培训桌毡上能看到 insurance pays 2 to 1。这不是这版讲义表格里的一列，也不是已确认的 Turning Stone 实地规则。Even money 是讲义里的选项；按 1 to 1 理解，不是 3 to 2。"
+        },
+        {
+          "type": "calls",
+          "audio_ids": [
+            "d-insurance-open",
+            "d-even-money"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "payouts",
+      "title_zh": "Blackjack 赔付",
+      "title_en": "Blackjack Payouts",
+      "source_zh": "编辑后的讲义 Blackjack Training",
+      "blocks": [
+        {
+          "type": "quote",
+          "en": "Blackjack pays 3 to 2. Knowing how to pay 1 - 10 will help you pay any bet.",
+          "zh": "Blackjack 赔 3 to 2。记住 1 到 10，就能赔任何注。"
+        },
+        {
+          "type": "callout",
+          "tone": "gap",
+          "text": "这版讲义只印了 3 to 2。不要把 6 to 5 当成这里的赔付。"
+        },
+        {
+          "type": "p",
+          "text": "$1 到 $10。赔的是赢的钱，原注留在桌上。"
         },
         {
           "type": "table",
@@ -150,11 +444,7 @@
         },
         {
           "type": "p",
-          "text": "$25 = $20 + $5 → $30 + $7.50 = $37.50。$35 = $30 + $5 → $45 + $7.50 = $52.50。"
-        },
-        {
-          "type": "p",
-          "text": "讲义 Common Blackjacks 表。"
+          "text": "Common Blackjacks。讲义上 $5 那格写成 $5 = 7.50，赔的数没有再加一个 $ 符号，金额是 7.50。"
         },
         {
           "type": "table",
@@ -340,151 +630,56 @@
               "$1,500"
             ]
           ]
-        }
-      ]
-    },
-    {
-      "id": "insurance",
-      "title_zh": "保险",
-      "title_en": "Insurance",
-      "source_zh": "讲义 Insurance",
-      "blocks": [
-        {
-          "type": "image",
-          "src": "assets/handouts/insurance.jpg",
-          "alt": "讲义 Insurance"
-        },
-        {
-          "type": "quote",
-          "en": "After the dealer settles any Match the Dealer or Kings Bounty side bets, the dealer will announce “Insurance Open.”",
-          "zh": "先结两个边注，再喊 Insurance Open。"
-        },
-        {
-          "type": "p",
-          "text": "只有荷官第一张是 A 才开。声音要清楚，并沿保险线做手势。保险等于原注的一半或更少。客人自己有 blackjack，可以选择 even money。"
-        },
-        {
-          "type": "p",
-          "text": "保险赢：荷官是 blackjack。否则保险输。满额保险的下注额："
-        },
-        {
-          "type": "table",
-          "headers": [
-            "原注",
-            "满额保险"
-          ],
-          "rows": [
-            [
-              "$5",
-              "$2.50"
-            ],
-            [
-              "$10",
-              "$5"
-            ],
-            [
-              "$15",
-              "$7.50"
-            ],
-            [
-              "$20",
-              "$10"
-            ],
-            [
-              "$25",
-              "$12.50"
-            ],
-            [
-              "$30",
-              "$15"
-            ],
-            [
-              "$35",
-              "$17.50"
-            ],
-            [
-              "$37.50",
-              "$18.75"
-            ],
-            [
-              "$40",
-              "$20"
-            ],
-            [
-              "$45",
-              "$22.50"
-            ],
-            [
-              "$50",
-              "$25"
-            ],
-            [
-              "$55",
-              "$27.50"
-            ],
-            [
-              "$60",
-              "$30"
-            ],
-            [
-              "$65",
-              "$32.50"
-            ],
-            [
-              "$70",
-              "$35"
-            ],
-            [
-              "$75",
-              "$37.50"
-            ],
-            [
-              "$80",
-              "$40"
-            ],
-            [
-              "$85",
-              "$42.50"
-            ],
-            [
-              "$90",
-              "$45"
-            ],
-            [
-              "$95",
-              "$47.50"
-            ],
-            [
-              "$100",
-              "$50"
-            ]
-          ]
-        },
-        {
-          "type": "callout",
-          "tone": "felt",
-          "text": "讲义这张表只印了保险下多少，没有另印赔付列。培训桌毡上能看到 insurance pays 2 to 1（视频笔记）。2 to 1 标为培训桌毡，不是讲义上的赔付栏，也不是已确认的 Turning Stone 实地规则。Even money 是 1 to 1，不是 3 to 2。"
         },
         {
           "type": "calls",
           "audio_ids": [
-            "d-insurance-open",
-            "d-even-money"
+            "d-pays-32"
           ]
+        }
+      ]
+    },
+    {
+      "id": "values",
+      "title_zh": "牌点",
+      "title_en": "Card Values",
+      "source_zh": "编辑后的讲义 Blackjack Training",
+      "blocks": [
+        {
+          "type": "image",
+          "src": "assets/cards_clean.png",
+          "alt": "讲义牌点图：2 到 9 按面值，10、J、Q、K 是 10，A 是 1 或 11"
+        },
+        {
+          "type": "p",
+          "text": "2 到 9 按点数。10、J、Q、K 都是 10。A 是 1 或 11。"
+        },
+        {
+          "type": "quote",
+          "en": "Soft Hands: When an ace in the dealers/players hand can be counted as 11 or 1.",
+          "zh": "软牌：这手牌里的 A 可以算 11，也可以算 1。"
+        },
+        {
+          "type": "p",
+          "text": "例子：Ace and a 4；Ace, 4 and a 3；Ace and a 9。软牌再补一张不会马上爆，因为 A 可以改算 1。"
+        },
+        {
+          "type": "quote",
+          "en": "Hard hands have no varying Ace value.",
+          "zh": "硬牌：A 的点数不能再变。"
+        },
+        {
+          "type": "p",
+          "text": "没有 A，或者 A 算 11 会爆所以只能算 1。例子：Ace, 5 and an 8；10 and a 7；Ace, 3 and a Jack。"
         }
       ]
     },
     {
       "id": "splits",
-      "title_zh": "分牌和加倍",
-      "title_en": "Splits and doubling down",
-      "source_zh": "讲义 Splits and Doubling Down",
+      "title_zh": "分牌",
+      "title_en": "Splits",
+      "source_zh": "编辑后的讲义 Blackjack Training",
       "blocks": [
-        {
-          "type": "image",
-          "src": "assets/handouts/splits.jpg",
-          "alt": "讲义分牌和加倍"
-        },
         {
           "type": "quote",
           "en": "A player can split their first two cards that are of equal value.",
@@ -495,18 +690,29 @@
           "text": "必须再放一份和原注相同的注。最多分 3 次，一共 4 手。A 只能分一次，每手只给 1 张。分牌后可以加倍，但分开的 A 不能加倍。"
         },
         {
-          "type": "p",
-          "text": "任意两张都可以加倍，blackjack 除外。加倍金额可以到原注为止，不能超过。少于原注要喊 doubling down for less。不常见的加倍要喊出来，例子是 doubling down on a hard 12。对子要先问是 split 还是 double。"
-        },
-        {
           "type": "quote",
-          "en": "The double down bet must be moved to the right side of the original bet.",
-          "zh": "加倍的筹码放到原注右侧。"
+          "en": "All double down bets must be moved to the right side of the original bet.",
+          "zh": "讲义把这句话印在分牌这一节：所有加倍的注都要挪到原注的右侧。"
         },
         {
-          "type": "callout",
-          "tone": "check",
-          "text": "分牌那段也印着 All double down bets must be moved to the right side of the original bet。照原文留着，标成待确认。不要用网上的规则改掉它。"
+          "type": "p",
+          "text": "这句按这版讲义执行。加倍那一节也写：加倍的筹码放在原注右侧。"
+        }
+      ]
+    },
+    {
+      "id": "doubles",
+      "title_zh": "加倍",
+      "title_en": "Doubling Down",
+      "source_zh": "编辑后的讲义 Blackjack Training",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "任意两张都可以加倍，blackjack 除外。加倍的筹码放到原注右侧。金额可以到原注为止，不能超过。少于原注时，要向客人确认：doubling down for less。"
+        },
+        {
+          "type": "p",
+          "text": "不常见的加倍要喊出来。讲义的例子是 doubling down on a hard 12。两张是对子、既可能分也可能加倍时，先问是 split 还是 double down。"
         },
         {
           "type": "calls",
@@ -522,29 +728,24 @@
       "id": "match",
       "title_zh": "Match the Dealer",
       "title_en": "Match the Dealer",
-      "source_zh": "讲义 Match the Dealer。有 A 时，先于 Insurance Open 结算。",
+      "source_zh": "编辑后的讲义 Blackjack Training。有 A 时，先于 Insurance Open 结算。",
       "blocks": [
         {
-          "type": "image",
-          "src": "assets/handouts/match.jpg",
-          "alt": "讲义 Match the Dealer"
-        },
-        {
           "type": "p",
-          "text": "下面是讲义印的赔付额，不含客人原来的边注。"
+          "text": "下面是讲义印的赔付额，不含原来的边注。中文是讲义上的手写笔记。"
         },
         {
           "type": "table",
           "headers": [
             "结果",
             "赔率",
-            "笔记"
+            "手写"
           ],
           "rows": [
             [
               "1 Unsuited Match",
               "3 to 1",
-              "1 对不同花"
+              "1 对不同花配对"
             ],
             [
               "2 Unsuited Matches",
@@ -557,9 +758,9 @@
               "1 对同花"
             ],
             [
-              "1 Suited and 1 Unsuited",
+              "1 Suited Match and 1 Unsuited Match",
               "17 to 1",
-              "1 对同花加 1 对不同花"
+              "1 对同花、1 对不同花"
             ],
             [
               "2 Suited Matches",
@@ -572,7 +773,7 @@
           "type": "paycards",
           "cards": [
             {
-              "title": "$5  边注",
+              "title": "$5",
               "lines": [
                 "1 Unsuited · 3 to 1 · $15",
                 "2 Unsuited · 6 to 1 · $30",
@@ -582,7 +783,7 @@
               ]
             },
             {
-              "title": "$10  边注",
+              "title": "$10",
               "lines": [
                 "1 Unsuited · 3 to 1 · $30",
                 "2 Unsuited · 6 to 1 · $60",
@@ -592,7 +793,7 @@
               ]
             },
             {
-              "title": "$15  边注",
+              "title": "$15",
               "lines": [
                 "1 Unsuited · 3 to 1 · $45",
                 "2 Unsuited · 6 to 1 · $90",
@@ -602,7 +803,7 @@
               ]
             },
             {
-              "title": "$20  边注",
+              "title": "$20",
               "lines": [
                 "1 Unsuited · 3 to 1 · $60",
                 "2 Unsuited · 6 to 1 · $120",
@@ -612,7 +813,7 @@
               ]
             },
             {
-              "title": "$25  边注",
+              "title": "$25",
               "lines": [
                 "1 Unsuited · 3 to 1 · $75",
                 "2 Unsuited · 6 to 1 · $150",
@@ -622,7 +823,7 @@
               ]
             },
             {
-              "title": "$50  边注",
+              "title": "$50",
               "lines": [
                 "1 Unsuited · 3 to 1 · $150",
                 "2 Unsuited · 6 to 1 · $300",
@@ -632,7 +833,7 @@
               ]
             },
             {
-              "title": "$75  边注",
+              "title": "$75",
               "lines": [
                 "1 Unsuited · 3 to 1 · $225",
                 "2 Unsuited · 6 to 1 · $450",
@@ -642,7 +843,7 @@
               ]
             },
             {
-              "title": "$100  边注",
+              "title": "$100",
               "lines": [
                 "1 Unsuited · 3 to 1 · $300",
                 "2 Unsuited · 6 to 1 · $600",
@@ -659,13 +860,8 @@
       "id": "kings",
       "title_zh": "Kings Bounty",
       "title_en": "Kings Bounty",
-      "source_zh": "讲义 Kings Bounty。有 A 时，先于 Insurance Open 结算。",
+      "source_zh": "编辑后的讲义 Blackjack Training。有 A 时，先于 Insurance Open 结算。",
       "blocks": [
-        {
-          "type": "image",
-          "src": "assets/handouts/kings.jpg",
-          "alt": "讲义 Kings Bounty"
-        },
         {
           "type": "p",
           "text": "最低 $1，最高 $100。累计最高赔 $25,000。表上的星号就是这个封顶。"
@@ -675,7 +871,7 @@
           "headers": [
             "结果",
             "赔率",
-            "笔记"
+            "手写"
           ],
           "rows": [
             [
@@ -696,22 +892,22 @@
             [
               "Two suited queens, jacks or 10s",
               "20-1",
-              "讲义这一行没有中文笔记"
+              "这一行讲义没有手写"
             ],
             [
               "Two suited kings",
               "30-1",
-              "2 张同花色 K"
+              "2 张同花色"
             ],
             [
-              "Pair of kings, spades",
+              "Pair of kings (spades)",
               "100-1",
               "一对黑桃 K"
             ],
             [
-              "Pair of spade kings and dealer blackjack",
+              "Pair of kings (spades and dealer blackjack)",
               "1000-1",
-              "一对黑桃 K，而且荷官 blackjack"
+              "一对黑桃 K，而且荷官是 21 点"
             ]
           ]
         },
@@ -719,316 +915,125 @@
           "type": "paycards",
           "cards": [
             {
-              "title": "$1  边注",
+              "title": "$1",
               "lines": [
-                "Unsuited 20 · 4-1 · $4",
-                "Two off-suit kings · 6-1 · $6",
-                "Suited 20 · 9-1 · $9",
-                "Two suited queens, jacks or 10s · 20-1 · $20",
-                "Two suited kings · 30-1 · $30",
-                "Pair of kings, spades · 100-1 · $100",
-                "Pair of spade kings and dealer blackjack · 1000-1 · $1,000"
+                "4-1 · $4",
+                "6-1 · $6",
+                "9-1 · $9",
+                "20-1 · $20",
+                "30-1 · $30",
+                "100-1 · $100",
+                "1000-1 · $1,000"
               ]
             },
             {
-              "title": "$2.50  边注",
+              "title": "$2.50",
               "lines": [
-                "Unsuited 20 · 4-1 · $10",
-                "Two off-suit kings · 6-1 · $15",
-                "Suited 20 · 9-1 · $22.50",
-                "Two suited queens, jacks or 10s · 20-1 · $50",
-                "Two suited kings · 30-1 · $75",
-                "Pair of kings, spades · 100-1 · $250",
-                "Pair of spade kings and dealer blackjack · 1000-1 · $2,500"
+                "4-1 · $10",
+                "6-1 · $15",
+                "9-1 · $22.50",
+                "20-1 · $50",
+                "30-1 · $75",
+                "100-1 · $250",
+                "1000-1 · $2,500"
               ]
             },
             {
-              "title": "$5  边注",
+              "title": "$5",
               "lines": [
-                "Unsuited 20 · 4-1 · $20",
-                "Two off-suit kings · 6-1 · $30",
-                "Suited 20 · 9-1 · $45",
-                "Two suited queens, jacks or 10s · 20-1 · $100",
-                "Two suited kings · 30-1 · $150",
-                "Pair of kings, spades · 100-1 · $500",
-                "Pair of spade kings and dealer blackjack · 1000-1 · $5,000"
+                "4-1 · $20",
+                "6-1 · $30",
+                "9-1 · $45",
+                "20-1 · $100",
+                "30-1 · $150",
+                "100-1 · $500",
+                "1000-1 · $5,000"
               ]
             },
             {
-              "title": "$10  边注",
+              "title": "$10",
               "lines": [
-                "Unsuited 20 · 4-1 · $40",
-                "Two off-suit kings · 6-1 · $60",
-                "Suited 20 · 9-1 · $90",
-                "Two suited queens, jacks or 10s · 20-1 · $200",
-                "Two suited kings · 30-1 · $300",
-                "Pair of kings, spades · 100-1 · $1,000",
-                "Pair of spade kings and dealer blackjack · 1000-1 · $10,000"
+                "4-1 · $40",
+                "6-1 · $60",
+                "9-1 · $90",
+                "20-1 · $200",
+                "30-1 · $300",
+                "100-1 · $1,000",
+                "1000-1 · $10,000"
               ]
             },
             {
-              "title": "$15  边注",
+              "title": "$15",
               "lines": [
-                "Unsuited 20 · 4-1 · $60",
-                "Two off-suit kings · 6-1 · $90",
-                "Suited 20 · 9-1 · $135",
-                "Two suited queens, jacks or 10s · 20-1 · $300",
-                "Two suited kings · 30-1 · $450",
-                "Pair of kings, spades · 100-1 · $1,500",
-                "Pair of spade kings and dealer blackjack · 1000-1 · $15,000"
+                "4-1 · $60",
+                "6-1 · $90",
+                "9-1 · $135",
+                "20-1 · $300",
+                "30-1 · $450",
+                "100-1 · $1,500",
+                "1000-1 · $15,000"
               ]
             },
             {
-              "title": "$20  边注",
+              "title": "$20",
               "lines": [
-                "Unsuited 20 · 4-1 · $80",
-                "Two off-suit kings · 6-1 · $120",
-                "Suited 20 · 9-1 · $180",
-                "Two suited queens, jacks or 10s · 20-1 · $400",
-                "Two suited kings · 30-1 · $600",
-                "Pair of kings, spades · 100-1 · $2,000",
-                "Pair of spade kings and dealer blackjack · 1000-1 · $20,000"
+                "4-1 · $80",
+                "6-1 · $120",
+                "9-1 · $180",
+                "20-1 · $400",
+                "30-1 · $600",
+                "100-1 · $2,000",
+                "1000-1 · $20,000"
               ]
             },
             {
-              "title": "$25  边注",
+              "title": "$25",
               "lines": [
-                "Unsuited 20 · 4-1 · $100",
-                "Two off-suit kings · 6-1 · $150",
-                "Suited 20 · 9-1 · $225",
-                "Two suited queens, jacks or 10s · 20-1 · $500",
-                "Two suited kings · 30-1 · $750",
-                "Pair of kings, spades · 100-1 · $2,500",
-                "Pair of spade kings and dealer blackjack · 1000-1 · $25,000"
+                "4-1 · $100",
+                "6-1 · $150",
+                "9-1 · $225",
+                "20-1 · $500",
+                "30-1 · $750",
+                "100-1 · $2,500",
+                "1000-1 · $25,000*"
               ]
             },
             {
-              "title": "$50  边注",
+              "title": "$50",
               "lines": [
-                "Unsuited 20 · 4-1 · $200",
-                "Two off-suit kings · 6-1 · $300",
-                "Suited 20 · 9-1 · $450",
-                "Two suited queens, jacks or 10s · 20-1 · $1,000",
-                "Two suited kings · 30-1 · $1,500",
-                "Pair of kings, spades · 100-1 · $5,000",
-                "Pair of spade kings and dealer blackjack · 1000-1 · $25,000 封顶（未封顶是 $50,000）"
+                "4-1 · $200",
+                "6-1 · $300",
+                "9-1 · $450",
+                "20-1 · $1,000",
+                "30-1 · $1,500",
+                "100-1 · $5,000",
+                "1000-1 · $25,000 封顶（未封顶是 $50,000）"
               ]
             },
             {
-              "title": "$75  边注",
+              "title": "$75",
               "lines": [
-                "Unsuited 20 · 4-1 · $300",
-                "Two off-suit kings · 6-1 · $450",
-                "Suited 20 · 9-1 · $675",
-                "Two suited queens, jacks or 10s · 20-1 · $1,500",
-                "Two suited kings · 30-1 · $2,250",
-                "Pair of kings, spades · 100-1 · $7,500",
-                "Pair of spade kings and dealer blackjack · 1000-1 · $25,000 封顶（未封顶是 $75,000）"
+                "4-1 · $300",
+                "6-1 · $450",
+                "9-1 · $675",
+                "20-1 · $1,500",
+                "30-1 · $2,250",
+                "100-1 · $7,500",
+                "1000-1 · $25,000 封顶（未封顶是 $75,000）"
               ]
             },
             {
-              "title": "$100  边注",
+              "title": "$100",
               "lines": [
-                "Unsuited 20 · 4-1 · $400",
-                "Two off-suit kings · 6-1 · $600",
-                "Suited 20 · 9-1 · $900",
-                "Two suited queens, jacks or 10s · 20-1 · $2,000",
-                "Two suited kings · 30-1 · $3,000",
-                "Pair of kings, spades · 100-1 · $10,000",
-                "Pair of spade kings and dealer blackjack · 1000-1 · $25,000 封顶（未封顶是 $100,000）"
+                "4-1 · $400",
+                "6-1 · $600",
+                "9-1 · $900",
+                "20-1 · $2,000",
+                "30-1 · $3,000",
+                "100-1 · $10,000",
+                "1000-1 · $25,000 封顶（未封顶是 $100,000）"
               ]
             }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "cheques",
-      "title_zh": "筹码颜色",
-      "title_en": "Cheque colors",
-      "source_zh": "讲义 Breaking Down Cheques",
-      "blocks": [
-        {
-          "type": "image",
-          "src": "assets/handouts/breaking.jpg",
-          "alt": "讲义 Breaking Down Cheques"
-        },
-        {
-          "type": "p",
-          "text": "一摞标准 20 张。粉、绿、紫、灰按 4 拆。白、红、黑、橙按 5 拆。"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "颜色",
-            "面额",
-            "20 张",
-            "拆法"
-          ],
-          "rows": [
-            [
-              "白 White",
-              "$1",
-              "$20",
-              "5"
-            ],
-            [
-              "粉 Pink",
-              "$2.50",
-              "$50",
-              "4"
-            ],
-            [
-              "红 Red",
-              "$5",
-              "$100",
-              "5"
-            ],
-            [
-              "绿 Green",
-              "$25",
-              "$500",
-              "4"
-            ],
-            [
-              "黑 Black",
-              "$100",
-              "$2,000",
-              "5"
-            ],
-            [
-              "紫 Purple",
-              "$500",
-              "$10,000",
-              "4"
-            ],
-            [
-              "橙 Orange",
-              "$1,000",
-              "$20,000",
-              "5"
-            ],
-            [
-              "灰 Grey",
-              "$5,000",
-              "$100,000",
-              "4"
-            ]
-          ]
-        },
-        {
-          "type": "p",
-          "text": "橙的讲义手法：1 and 1, stack, size in, drop 1, stack。灰：1 and 1, stack and size in。照字面练，不要改成别的赌场的切法。"
-        }
-      ]
-    },
-    {
-      "id": "rundown",
-      "title_zh": "Cheque Rundown",
-      "title_en": "Cheque rundown",
-      "source_zh": "讲义 Cheque Rundown",
-      "blocks": [
-        {
-          "type": "image",
-          "src": "assets/handouts/rundown.jpg",
-          "alt": "讲义 Cheque Rundown"
-        },
-        {
-          "type": "p",
-          "text": "白、红、黑、橙，按 5：5=5，6=3-3，7=3-3-1，8=4-4，9=4-4-1，10=5-5。"
-        },
-        {
-          "type": "p",
-          "text": "粉、绿、紫，按 4：5=4-1，6=3-3，7=3-3-1，8=4-4，9=4-4-1，10=4-4-2。5 张绿不是一摞 5。"
-        },
-        {
-          "type": "callout",
-          "tone": "gap",
-          "text": "灰筹的 1 到 10 切法，Rundown 这页没有印。Breaking Down 只说灰按 4 拆。不要自己补一张 1 到 10 的灰表。"
-        }
-      ]
-    },
-    {
-      "id": "calls",
-      "title_zh": "换筹和颜色喊话",
-      "title_en": "Change and color calls",
-      "source_zh": "讲义 Guest Service and Blackjack Terminology",
-      "blocks": [
-        {
-          "type": "image",
-          "src": "assets/handouts/terminology.jpg",
-          "alt": "讲义术语"
-        },
-        {
-          "type": "p",
-          "text": "现金换筹：切出筹码，喊 Change 加金额。$100 及以上等批准。买筹成功说 good luck。客人离开要道谢。"
-        },
-        {
-          "type": "p",
-          "text": "大筹换小筹：大筹在工作区左边，小筹在右边切出，喊 Cheque change 加金额。$100 及以上等批准。"
-        },
-        {
-          "type": "p",
-          "text": "下注 $100 或以上：Cheques Play，然后继续。黑、紫、橙筹下注：Black Action、Purple Action、Orange Action。"
-        },
-        {
-          "type": "p",
-          "text": "客人要换成大面额离开：先喊 Color Coming In，等批准才能把筹码拿进来。左边拆，右边切出，再喊 Color up 加金额，再等主管批准。"
-        },
-        {
-          "type": "quote",
-          "en": "Ex. A guest hands the dealer $100 in GREEN cheques and would like $100 in RED cheques.",
-          "zh": "讲义例子：客人交 $100 绿筹，要换成红筹。喊 Cheque change $100。"
-        },
-        {
-          "type": "calls",
-          "audio_ids": [
-            "d-change-100",
-            "d-cheque-change-100",
-            "d-cheques-play",
-            "d-black-action",
-            "d-color-coming",
-            "d-color-up-100",
-            "d-good-luck"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "policies",
-      "title_zh": "课堂纪律和总政策",
-      "title_en": "Policies",
-      "source_zh": "讲义 Class Guidelines and General Policies",
-      "blocks": [
-        {
-          "type": "image",
-          "src": "assets/handouts/policies.jpg",
-          "alt": "讲义总政策"
-        },
-        {
-          "type": "p",
-          "text": "永远不要跟客人争。出错了自己改是不允许的，叫主管。对这一手的输赢保持中立。客人问规则可以解释，不要教他怎么下注、怎么打。"
-        },
-        {
-          "type": "p",
-          "text": "Cross firing 禁止：直播时荷官之间不能闲聊，除非是这局要交接的事。喊 change、color up，声音要让主管听见。"
-        },
-        {
-          "type": "p",
-          "text": "上课在 YBR 或 PPC、人在钟点上，不能打老虎机。手机留到休息时。烟只在指定员工区，不要在客人看得到的地方。"
-        },
-        {
-          "type": "quote",
-          "en": "You are never to correct your own mistakes. Call a supervisor for all corrections and problems.",
-          "zh": "自己的错自己改，是不允许的。"
-        },
-        {
-          "type": "calls",
-          "audio_ids": [
-            "d-never-argue",
-            "d-supervisor",
-            "d-floor",
-            "d-ask-supervisor"
           ]
         }
       ]

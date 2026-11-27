@@ -1,13 +1,14 @@
 # HANDOFF：Blackjack 学习app
 
-给接手维护的 bot（水球泡）和下一位写代码的人。这是 Nova 的二十一点荷官课堂，静态 PWA，iPhone Safari 优先，仓库：[hehelelehaha-dot/blackjack-study](https://github.com/hehelelehaha-dot/blackjack-study)。线上地址是 GitHub Pages：https://hehelelehaha-dot.github.io/blackjack-study/ 。不要改 Nova 现有的 `/workspace/bj` 或英语 app。
+给接手维护的人。这是二十一点荷官课堂，静态 PWA，iPhone Safari 优先。GitHub Pages 从仓库根目录公开提供文件。学习记录只存在使用者自己的浏览器里，不要上传。
 
 ## 仓库结构
 
 ```
 index.html, styles.css, app.js, sw.js, manifest.json   应用本体（路径都是相对的）
 icons/                                                 PWA 图标
-assets/handouts/                                       讲义图，给规则页用
+assets/cards_clean.png                                讲义牌点图
+handouts/Blackjack_Training_Exact.pdf                  现行讲义 PDF
 data/
   videos.json          视频清单、模块表、过关线
   curriculum.json      五个模块页用的课堂提纲
@@ -20,7 +21,6 @@ audio/
   <id>.mp3             Fish Audio 预生成朗读
   <id>.json            逐词时间戳 {words:[{w,start,end}]}
 videos/blackjack/      压缩后的课堂视频
-source/                蓝图、讲义、视频笔记和原始资料索引
 scripts/
   compress_video.sh    压缩（或按分钟切开）一条视频
   gen_audio.py         按 audio-lines.json 生成 mp3 和时间戳
@@ -116,7 +116,7 @@ scripts/
 
 2. 把文件放到 `videos/blackjack/`，文件名与 `path` 一致。
 3. 在 `data/videos.json` 里加一条，填好转写、cues、听懂题、overview。`duration` / `duration_sec` 用 `ffprobe` 核对。
-4. 笔记和逐字稿放到 `source/`（见下方）。规则以讲义为准，和视频冲突时在 `transcript_note` 和 `rules[].source_zh` 里写清楚。
+4. 逐字稿写进 `data/videos.json`。规则以 `handouts/Blackjack_Training_Exact.pdf` 为准。和视频冲突时在 `transcript_note` 和 `rules[].source_zh` 里写清楚。
 5. 如果有新的要朗读的句子，先加进 `data/audio-lines.json`，再跑 `scripts/gen_audio.py`。
 6. 需要的话同步改 `data/curriculum.json`、`data/english.json`、`data/rules.json`、`data/drills.json`。
 7. 把 `sw.js` 里的 `VERSION` 往上加一档（现在是 `bj-v3`），否则手机还会用旧缓存。
@@ -144,7 +144,7 @@ scripts/
   - `narrator` → Narrator（`0327fdb5da9e4fd782899a8058c8ae2b`）
 - 生成脚本：`scripts/gen_audio.py`。它只补缺失的 id，然后用 faster-whisper `base.en` 对齐单词，并重写 `audio/index.json`。
 - App 只给写进 `audio/index.json` 的 `ids` 播 `audio/<id>.mp3`；写进 `timings` 的才会去读 `audio/<id>.json` 做点读高亮。缺文件时会暂时落到 iPhone / 浏览器的 en-US 声音。
-- Fish key **只写路径，永远不要把 key 的值写进仓库、日志或聊天**。默认路径是 `/workspace/nova/podcast/.fish_key`。也可以设环境变量 `FISH_KEY_PATH` 指向同一个或另一份 key 文件。脚本会读这个文件，但不会打印它。
+- Fish key 只从环境变量 `FISH_KEY_PATH` 读取。不要把 key 的值写进仓库、日志或聊天。
 - API：`POST https://api.fish.audio/v1/tts`，模型 `s2.1-pro-free`，输出再压成单声道 24 kHz 64 kbps mp3，省空间。
 
 ```bash
@@ -162,7 +162,7 @@ GitHub Pages 从 **main 的仓库根目录** 打开。不要直接在 main 上�
 2. 提交改动：新视频、数据文件、音频、`sw.js` 的 `VERSION`。
 3. 打开 Pull Request，检查预览或本地 `python3 -m http.server`（不要用 `file://`）。
 4. 合并到 `main`。Pages 大约 1–2 分钟后更新。
-5. 务必提高 `sw.js` 的 `VERSION`（例如 `bj-v3` → `bj-v4`）。手机端的 shell 缓存靠这个换掉。让 Nova 完全关掉再打开 App，或到设置里刷新，才能拿到新版本。
+5. 务必提高 `sw.js` 的 `VERSION`。手机端的 shell 缓存靠这个换掉。更新后要关掉再打开已安装的 App。
 
 音频和视频都不要用 Git LFS：Pages 不会按普通文件去提供 LFS 指针。
 
@@ -173,20 +173,16 @@ GitHub Pages 从 **main 的仓库根目录** 打开。不要直接在 main 上�
 - 计划：这个主仓库接近 **800 MB** 时，把多出来的视频拆到额外的 repo，再在 App 里按路径或绝对 URL 去播。拆之前先在 PR 里说清楚，不要等撑满了再拆。
 - 音频是短句 mp3，体积远小于视频，但仍要算进 1 GB。不要把未压缩的 raw 文件或 TTS 缓存提交进来。
 
-## 源材料 `source/`
+## 讲义
 
-- `source/BLUEPRINT.md`：14 个模块、按牌桌顺序排的课堂蓝图。
-- `source/handouts/HANDOUTS.md` 和同目录的讲义图：**讲义是规则权威**。视频或口述和讲义不一致时，规则页、overview 和 checks 以讲义为准，并在笔记里标明。例如只赔 3:2；边注在保险之前结算；S17（桌布上写 stand on all 17s）来自训练桌，也要按讲义/桌布来源标好。
-- `source/VIDEO_ORDER.md`、`source/manifest.json`：视频顺序和清单。
-- `source/v01_notes.md`、`source/v02_notes.md`、`source/video-notes/`：各条视频的笔记和转写。
+规则以 `handouts/Blackjack_Training_Exact.pdf` 和 `data/rules.json` 为准。Blackjack 只赔 3 to 2。边注在 Insurance Open 之前结算。培训桌毡是 H17（软 17 要补），不是已确认的实地规则。不要把照片讲义或简历截图放回站点。
 
-加新视频时，把笔记和转写一并放进 `source/`，不要只改 `videos.json`。
+加新视频时，把逐字稿写进 `data/videos.json`。不要把网盘编号、人名或申请材料放进仓库。
 
 ## 不要做的事
 
-- **不要**把 Nova 的简历截图、真实姓名以外的个人资料、电话、地址或其他隐私放进 App 或仓库。这个 App 保持课堂内容，不要变成档案夹。
-- **永远不要**把 Fish key 的值提交、打印、写进聊天或放进任何仓库文件。只使用 `/workspace/nova/podcast/.fish_key`（或 `FISH_KEY_PATH`）。提交前用 `git grep` / 检查 diff，确认 key 没有被带上。
-- **不要**修改 `/workspace/nova/` 里的文件。
+- 不要把人名、邮箱、电话、简历或网盘文件编号放进站点能打开的文件。
+- 永远不要把 Fish key 的值提交、打印或写进仓库。只用环境变量 `FISH_KEY_PATH`。
 - **不要**在 App 运行时在线调用 Fish TTS。
 - **不要**把未压缩的原始视频推进这个 repo。
 - GitHub Pages 站点是公开的。知道链接的人就能打开视频和讲义。不要把这个仓库当成私密保险柜，也不要主动传播链接。

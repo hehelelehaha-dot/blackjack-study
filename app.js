@@ -210,6 +210,7 @@
       paintNav(route.name);
       return;
     }
+    stopYt();
     mountedVideo = route.name === "video" ? route.id : null;
     if (route.name !== "quiz") quizRun = null;
     if (route.name !== "drill") session = null;
@@ -277,6 +278,10 @@
           <a class="area" href="#/notes"><strong>学习笔记</strong><span>只存在这台手机</span></a>
           <a class="area wide" href="#/practice"><strong>练习与复习</strong><span>赔付、点数、切筹、听懂题、综合模拟</span></a>
         </div>
+        <div class="card" data-privacy-notice="home">
+          <p>学习记录只保存在本机，清除浏览器数据会一起清掉。</p>
+          <p class="small" lang="en">Study records stay on this device only. Clearing browser data deletes them.</p>
+        </div>
         <div class="card">
           <div class="muted">听懂题进度</div>
           <strong>${passed} / ${videos.length} 条已过关</strong>
@@ -298,7 +303,7 @@
   }
 
   function ytRow(pick) {
-    const warn = pick.warn ? '<span class="pill wait">桌规不同</span>' : "";
+    const warn = pick.notice ? '<span class="pill wait">桌规不同</span>' : "";
     const seen = ytWatched(pick.video_id) ? '<span class="pill ok">已看</span>' : '<span class="pill">补充课</span>';
     return `<a class="vrow" href="#/yt/${encodeURIComponent(pick.video_id)}" data-youtube="${esc(pick.video_id)}"><span class="vmeta"><span class="muted">补充课</span> <span lang="en">${esc(pick.title)}</span><br><span class="muted">${esc(pick.note_zh)}</span></span>${warn}${seen}</a>`;
   }
@@ -462,23 +467,27 @@
     </div>`;
   }
 
+  function ytNotice(pick) {
+    if (!pick.notice) {
+      return pick.house_rule_differences ? `<p class="small muted">${esc(pick.house_rule_differences)}</p>` : "";
+    }
+    const kind = pick.notice.kind === "skip" ? "skip" : "remind";
+    return `<div class="callout ${kind === "remind" ? "felt" : ""}" data-warn="${kind}">${esc(pick.notice.text_zh)}</div>`;
+  }
+
   function youtubeView(id) {
     const pick = ((DB.youtube && DB.youtube.picks) || []).find((item) => item.video_id === id);
     if (!pick) return missing("没有这条补充课");
     const online = navigator.onLine;
-    const start = pick.start ? "&start=" + Number(pick.start) : "";
-    const src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(pick.video_id) + "?playsinline=1&rel=0" + start;
     const player = online
-      ? `<div class="yt-frame"><iframe src="${src}" title="${esc(pick.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`
+      ? `<div class="yt-frame"><div id="yt-mount"></div></div>`
       : `<div class="card" data-offline="youtube"><p>需要联网才能播放这条补充课。</p><p lang="en">needs internet</p></div>`;
-    const warning = pick.warn
-      ? `<div class="callout" data-warn="rule">与你们桌规不同，跳过此段</div><p class="small">${esc(pick.house_rule_differences)}</p>`
-      : (pick.house_rule_differences ? `<p class="small muted">${esc(pick.house_rule_differences)}</p>` : "");
     const watched = ytWatched(pick.video_id);
     const level = pick.english_difficulty === "easy" ? "英语 easy" : "英语 medium";
-    return `<div data-screen="youtube">
+    const notice = ytNotice(pick);
+    return `<div data-screen="youtube" data-yt-id="${esc(pick.video_id)}">
       ${bar("补充课", "#/m/" + esc(pick.module))}
-      ${pick.warn ? `<div class="page" style="padding-bottom:0">${warning}</div>` : ""}
+      ${notice ? `<div class="page" style="padding-bottom:0">${notice}</div>` : ""}
       ${player}
       <div class="page">
         <p class="muted">补充课 · 不计入过关，也不锁别的视频</p>
@@ -486,11 +495,84 @@
         <p class="small muted">${esc(pick.channel)} · ${esc(pick.duration)} · ${level}</p>
         <p>${esc(pick.note_zh)}</p>
         ${pick.start ? `<p class="small">这条从 ${fmt(pick.start)} 开始播。前面是另一种发牌，先看鞋台这一段。</p>` : ""}
-        ${pick.warn ? "" : warning}
         <button type="button" class="btn" data-yt-toggle="${esc(pick.video_id)}">${watched ? "取消已看" : "标为已看"}</button>
         <a class="btn" href="${esc(pick.url)}" target="_blank" rel="noopener noreferrer">在 YouTube 打开</a>
       </div>
     </div>`;
+  }
+
+  let ytPlayer = null;
+  let ytTimer = null;
+  let ytApiPromise = null;
+
+  function stopYt() {
+    if (ytTimer) clearInterval(ytTimer);
+    ytTimer = null;
+    if (ytPlayer && ytPlayer.destroy) {
+      try { ytPlayer.destroy(); } catch (err) { /* player already gone */ }
+    }
+    ytPlayer = null;
+  }
+
+  function loadYtApi() {
+    if (window.YT && window.YT.Player) return Promise.resolve();
+    if (ytApiPromise) return ytApiPromise;
+    ytApiPromise = new Promise((resolve, reject) => {
+      const previous = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = () => {
+        if (typeof previous === "function") previous();
+        resolve();
+      };
+      const script = document.createElement("script");
+      script.src = "https://www.youtube.com/iframe_api";
+      script.onerror = () => reject(new Error("youtube api"));
+      document.head.appendChild(script);
+      setTimeout(() => reject(new Error("youtube api timeout")), 8000);
+    });
+    return ytApiPromise;
+  }
+
+  function armSkip(ranges) {
+    if (!ranges.length || ytTimer) return;
+    ytTimer = setInterval(() => {
+      if (!ytPlayer || typeof ytPlayer.getCurrentTime !== "function") return;
+      let time = 0;
+      try { time = ytPlayer.getCurrentTime(); } catch (err) { return; }
+      ranges.forEach((range) => {
+        if (time >= range.start && time < range.end - 0.2) {
+          try { ytPlayer.seekTo(range.end, true); } catch (err) { /* seek unavailable until play starts */ }
+        }
+      });
+    }, 400);
+  }
+
+  function mountYt(pick) {
+    if (!navigator.onLine || !document.getElementById("yt-mount")) return;
+    const ranges = Array.isArray(pick.skip) ? pick.skip : [];
+    loadYtApi().then(() => {
+      if (!document.getElementById("yt-mount")) return;
+      ytPlayer = new window.YT.Player("yt-mount", {
+        videoId: pick.video_id,
+        host: "https://www.youtube-nocookie.com",
+        width: "100%",
+        height: "100%",
+        playerVars: {
+          playsinline: 1,
+          rel: 0,
+          start: pick.start || 0,
+          origin: location.origin
+        },
+        events: {
+          onReady: () => armSkip(ranges),
+          onStateChange: () => armSkip(ranges)
+        }
+      });
+    }).catch(() => {
+      const mount = document.getElementById("yt-mount");
+      if (!mount) return;
+      const start = pick.start ? "&start=" + Number(pick.start) : "";
+      mount.outerHTML = `<iframe title="${esc(pick.title)}" src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(pick.video_id)}?playsinline=1&rel=0${start}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+    });
   }
 
   function overviewPanel(video) {
@@ -728,6 +810,19 @@
     st.attempts += 1;
     st.best = Math.max(st.best || 0, ratio);
     if (passed) st.passed = true;
+    st.lastQuiz = {
+      correct: correct,
+      total: questions.length,
+      ratio: ratio,
+      passed: passed,
+      wrong: detail.filter((item) => !item.ok).map((item) => ({
+        q_zh: item.q.q_zh,
+        q_en: item.q.q_en,
+        picked_zh: item.q.choices[item.pick] ? item.q.choices[item.pick].zh : "",
+        answer_zh: item.q.answer_zh,
+        answer_en: item.q.answer_en
+      }))
+    };
     save();
     quizRun.done = true;
     quizRun.result = { correct, total: questions.length, ratio, passed, detail };
@@ -788,7 +883,13 @@
       <div class="muted" lang="en">${esc(section.title_en)}</div>
       <div class="small muted">${esc(section.source_zh)}</div>
     </a>`).join("");
-    return `<div data-screen="rules">${bar("游戏规则", "#/")}<div class="page"><p class="callout">数字和程序以讲义为准。讲义没写的会标明。Turning Stone 考试日期、笔试还是上桌：没记录。</p>${items}</div></div>`;
+    return `<div data-screen="rules">${bar("游戏规则", "#/")}
+      <div class="page">
+        <p class="callout">数字和程序以这版讲义为准。讲义没写的会标明。Turning Stone 考试日期、笔试还是上桌：没记录。</p>
+        <a class="btn primary" id="download-pdf" href="./handouts/Blackjack_Training_Exact.pdf" download="Blackjack_Training_Exact.pdf">下载讲义 PDF</a>
+        ${items}
+      </div>
+    </div>`;
   }
 
   function ruleView(id) {
@@ -999,10 +1100,15 @@
     const passed = DB.videos.videos.filter((video) => vstat(video.id).passed).length;
     return `<div data-screen="settings">${bar("设置", "#/")}
       <div class="page">
-        <div class="card">
-          <h2>这台手机</h2>
-          <p>已过关 ${passed} / ${DB.videos.videos.length}。观看进度、听懂题和笔记都在 localStorage，不上传。</p>
-          <button type="button" class="btn" id="export-progress">导出进度 JSON</button>
+        <div class="card" data-privacy-notice="settings">
+          <h2>学习记录</h2>
+          <p>学习记录只保存在本机，清除浏览器数据会一起清掉。</p>
+          <p class="small" lang="en">Study records stay on this device only. Clearing browser data deletes them.</p>
+          <p class="small">已过关 ${passed} / ${DB.videos.videos.length}。进度、听懂题、错题和笔记都只在这台设备上，不会上传。</p>
+          <button type="button" class="btn" id="export-records">导出学习记录</button>
+          <label class="btn file-btn">导入学习记录
+            <input id="import-file" type="file" accept="application/json,.json">
+          </label>
         </div>
         <div class="card">
           <h2>朗读</h2>
@@ -1029,6 +1135,10 @@
     }
     if (route.name === "video") bindVideo(videoById(route.id));
     if (route.name === "quiz") paintQuiz();
+    if (route.name === "youtube") {
+      const pick = ((DB.youtube && DB.youtube.picks) || []).find((item) => item.video_id === route.id);
+      if (pick) mountYt(pick);
+    }
     if (route.name === "drill" && session) paintDrill();
     if (route.name === "english") applyEnglishFilter();
     if (route.name === "notes") {
@@ -1048,9 +1158,11 @@
       });
     }
     if (route.name === "settings") {
-      document.getElementById("export-progress").addEventListener("click", () => {
-        download("blackjack-progress.json", JSON.stringify(state, null, 2));
-        toast("已导出进度");
+      document.getElementById("export-records").addEventListener("click", () => { exportRecords(); });
+      document.getElementById("import-file").addEventListener("change", (event) => {
+        const file = event.target.files && event.target.files[0];
+        event.target.value = "";
+        if (file) importRecords(file);
       });
       document.getElementById("reset-progress").addEventListener("click", () => {
         if (!confirm("确定清除这台手机上的观看进度、听懂题成绩和笔记？不能撤销。")) return;
@@ -1091,6 +1203,102 @@
       }
     });
     out.innerHTML = hits.slice(0, 24).map((hit) => `<a class="hit" href="${esc(hit.href)}"><span lang="en">${esc(hit.title)}</span>${hit.locked ? " · 未解锁" : ""}<div class="muted">${esc(hit.zh)}</div></a>`).join("") || '<p class="muted">没有匹配。</p>';
+  }
+
+  function recordsPayload() {
+    return {
+      app: "blackjack-study",
+      format: 1,
+      exportedAt: new Date().toISOString(),
+      records: {
+        videos: state.videos || {},
+        notes: state.notes || {},
+        drills: state.drills || {},
+        ui: state.ui || {},
+        youtube: state.youtube || {},
+        last: state.last || null
+      }
+    };
+  }
+
+  function plainObject(value) {
+    return !!value && typeof value === "object" && !Array.isArray(value);
+  }
+
+  function normalizeRecords(data) {
+    if (!plainObject(data)) return null;
+    let records = null;
+    if (data.format === 1 && plainObject(data.records) && data.app === "blackjack-study") {
+      records = data.records;
+    } else if (plainObject(data.videos) || plainObject(data.notes)) {
+      records = data;
+    }
+    if (!records) return null;
+    const videos = plainObject(records.videos) ? records.videos : {};
+    for (const entry of Object.values(videos)) {
+      if (!plainObject(entry)) return null;
+      if ("passed" in entry && typeof entry.passed !== "boolean") return null;
+      if ("maxRatio" in entry && typeof entry.maxRatio !== "number") return null;
+      if ("attempts" in entry && typeof entry.attempts !== "number") return null;
+    }
+    if ("notes" in records && !plainObject(records.notes)) return null;
+    if ("drills" in records && !plainObject(records.drills)) return null;
+    if ("ui" in records && !plainObject(records.ui)) return null;
+    if ("youtube" in records && !plainObject(records.youtube)) return null;
+    return {
+      videos: videos,
+      notes: plainObject(records.notes) ? records.notes : {},
+      drills: plainObject(records.drills) ? records.drills : {},
+      ui: plainObject(records.ui) ? records.ui : {},
+      youtube: plainObject(records.youtube) ? records.youtube : {},
+      last: records.last || null
+    };
+  }
+
+  async function exportRecords() {
+    const text = JSON.stringify(recordsPayload(), null, 2);
+    const filename = "blackjack-study-records.json";
+    const file = new File([text], filename, { type: "application/json" });
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      try {
+        await navigator.share({ files: [file], title: "Blackjack 学习记录" });
+        return;
+      } catch (err) {
+        if (err && err.name === "AbortError") return;
+      }
+    }
+    download(filename, text);
+    toast("已开始下载");
+  }
+
+  function importRecords(file) {
+    const reader = new FileReader();
+    reader.onload = () => {
+      let data = null;
+      try {
+        data = JSON.parse(String(reader.result || ""));
+      } catch (err) {
+        toast("这个文件不是有效的 JSON");
+        return;
+      }
+      const records = normalizeRecords(data);
+      if (!records) {
+        toast("文件格式不对，没有导入");
+        return;
+      }
+      if (!confirm("用这份记录覆盖这台手机上的进度、听懂题、错题和笔记？不能撤销。")) return;
+      state.videos = records.videos;
+      state.notes = records.notes;
+      state.drills = records.drills;
+      state.ui = records.ui;
+      state.youtube = records.youtube;
+      state.last = records.last;
+      save();
+      toast("已导入到这台手机");
+      render();
+    };
+    reader.onerror = () => toast("读不到这个文件");
+    reader.readAsText(file);
   }
 
   function download(filename, text) {

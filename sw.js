@@ -1,7 +1,8 @@
 /* Blackjack 学习app service worker.
-   Shell is precached. Videos and Fish Audio mp3s are cached on first request.
+   GET only, same origin. Shell is precached. Videos and mp3s are cached on first request.
+   Study records are never sent. YouTube stays on youtube-nocookie and is not cached.
    Range requests are answered from the cached full file so iOS can seek. */
-const VERSION = "bj-v5";
+const VERSION = "bj-v6";
 const SHELL = "bj-shell-" + VERSION;
 const MEDIA = "bj-media-" + VERSION;
 
@@ -23,17 +24,8 @@ const SHELL_URLS = [
   "./data/audio-lines.json",
   "./data/youtube.json",
   "./audio/index.json",
-  "./assets/handouts/card-values.jpg",
-  "./assets/handouts/whiteboard.jpg",
-  "./assets/handouts/splits.jpg",
-  "./assets/handouts/payouts.jpg",
-  "./assets/handouts/insurance.jpg",
-  "./assets/handouts/rundown.jpg",
-  "./assets/handouts/breaking.jpg",
-  "./assets/handouts/terminology.jpg",
-  "./assets/handouts/match.jpg",
-  "./assets/handouts/kings.jpg",
-  "./assets/handouts/policies.jpg"
+  "./assets/cards_clean.png",
+  "./handouts/Blackjack_Training_Exact.pdf"
 ];
 
 self.addEventListener("install", (event) => {

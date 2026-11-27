@@ -52,8 +52,7 @@
       "retell_zh": "用中文加上 soft、hard，说出定义，并各举讲义里的一个例子。",
       "rule_ids": [
         "values",
-        "soft-hard",
-        "payouts-32"
+        "payouts"
       ],
       "drill_ids": [
         "hands"
@@ -238,7 +237,7 @@
       "retell_zh": "从检查下注到发完两圈，包括什么时候喊 Cheques Play。",
       "rule_ids": [
         "values",
-        "calls"
+        "terminology"
       ],
       "drill_ids": [
         "hands"
@@ -312,8 +311,8 @@
           "body": "对子可分，再放一份同额注。最多分 3 次、共 4 手。A 只能分一次，每手 1 张，分开的 A 不能加倍。其他分牌后可以加倍。任意两张可加倍，blackjack 除外。少于原注要喊 doubling down for less。不常见的加倍要喊，例如 doubling down on a hard 12。对子先问 split 还是 double。"
         },
         {
-          "h": "待确认",
-          "body": "分牌那段印着 All double down bets must be moved to the right side of the original bet。加倍那段也写筹码放原注右侧。照原文保留。这句印在分牌段里，问过老师再改。"
+          "h": "讲义原文",
+          "body": "分牌这一节印着 All double down bets must be moved to the right side of the original bet。加倍那一节也写筹码放在原注右侧。这版讲义就是这样规定的，按它执行。"
         },
         {
           "h": "视频里的口头加倍",
@@ -360,7 +359,8 @@
       ],
       "retell_zh": "说清分牌上限、分 A 的限制、加倍放哪、哪两句必须喊。",
       "rule_ids": [
-        "splits"
+        "splits",
+        "doubles"
       ],
       "drill_ids": []
     },
@@ -416,7 +416,7 @@
       "retell_zh": "从翻底牌到停或爆，说明 16 和这张培训桌的软 17。",
       "rule_ids": [
         "felt-h17",
-        "soft-hard"
+        "values"
       ],
       "drill_ids": [
         "hands"
@@ -485,13 +485,13 @@
       ],
       "retell_zh": "说明 1 到 10 怎么推出 $25 的 $37.50，再说 5 张绿为什么是 4-1。",
       "rule_ids": [
-        "payouts-32",
+        "payouts",
         "cheques",
         "rundown",
         "insurance",
         "match",
         "kings",
-        "calls"
+        "terminology"
       ],
       "drill_ids": [
         "payouts",
@@ -545,7 +545,7 @@
       ],
       "retell_zh": "从桌子哪边开始，遇到输、赢、平各做什么。",
       "rule_ids": [
-        "payouts-32"
+        "payouts"
       ],
       "drill_ids": []
     },

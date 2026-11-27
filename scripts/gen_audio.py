@@ -10,9 +10,8 @@ Only missing (or too-small) mp3s are synthesized. Alignment runs for any id
 that has an mp3 but no timings file, and again after new synthesis.
 Rebuilds index.json every run.
 
-The Fish key is read from FISH_KEY_PATH, or from
-/workspace/nova/podcast/.fish_key if that env var is unset. The key is
-never printed, logged, or written into this repo.
+The Fish key is read from the FISH_KEY_PATH environment variable.
+The key is never printed, logged, or written into this repo.
 """
 from __future__ import annotations
 
@@ -32,7 +31,6 @@ ROOT = Path(__file__).resolve().parents[1]
 LINES_PATH = ROOT / "data" / "audio-lines.json"
 AUDIO_DIR = ROOT / "audio"
 INDEX_PATH = AUDIO_DIR / "index.json"
-DEFAULT_KEY_PATH = "/workspace/nova/podcast/.fish_key"
 
 API = "https://api.fish.audio/v1/tts"
 MODEL = "s2.1-pro-free"
@@ -68,7 +66,9 @@ def log(msg: str) -> None:
 
 def load_key() -> str:
     global _KEY
-    path = os.environ.get("FISH_KEY_PATH", DEFAULT_KEY_PATH)
+    path = os.environ.get("FISH_KEY_PATH", "")
+    if not path:
+        raise SystemExit("Set FISH_KEY_PATH to a key file. Do not commit the key.")
     p = Path(path)
     if not p.is_file():
         raise SystemExit(f"Fish key file not found at {path}. Set FISH_KEY_PATH.")
