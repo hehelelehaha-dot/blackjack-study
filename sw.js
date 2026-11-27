@@ -1,10 +1,11 @@
 /* Blackjack 学习app service worker.
-   GET only, same origin. Shell is precached. Videos and mp3s are cached on first request.
-   Study records are never sent. YouTube stays on youtube-nocookie and is not cached.
+   GET only, same origin. Shell is network-first. Videos, audio, captions, and the PDF
+   stay in an unversioned media cache. Study records are never sent.
+   YouTube stays on youtube-nocookie and is not cached.
    Range requests are answered from the cached full file so iOS can seek. */
-const VERSION = "bj-v8";
-const SHELL = "bj-shell-" + VERSION;
-const MEDIA = "bj-media-" + VERSION;
+const V = "bj-v9";
+const SHELL = "bj-shell-" + V;
+const MEDIA = "bj-media";
 
 const SHELL_URLS = [
   "./",
@@ -25,32 +26,43 @@ const SHELL_URLS = [
   "./data/youtube.json",
   "./audio/index.json",
   "./assets/cards_clean.png",
-  "./handouts/Blackjack_Training_Exact.pdf"
+  "./meta.json"
 ];
 
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open(SHELL).then((cache) => cache.addAll(SHELL_URLS)).then(() => self.skipWaiting())
-  );
+  event.waitUntil((async () => {
+    const cache = await caches.open(SHELL);
+    await Promise.all(SHELL_URLS.map((url) =>
+      fetch(url, { cache: "no-store" }).then((res) => res.ok && cache.put(url, res)).catch(() => {})
+    ));
+    await self.skipWaiting();
+  })());
 });
 
 self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    (async () => {
-      const keys = await caches.keys();
-      await Promise.all(
-        keys.filter((key) => key !== SHELL && key !== MEDIA).map((key) => caches.delete(key))
-      );
-      await self.clients.claim();
-    })()
-  );
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(
+      keys.filter((key) => key.startsWith("bj-shell-") && key !== SHELL).map((key) => caches.delete(key))
+    );
+    await self.clients.claim();
+  })());
+});
+
+self.addEventListener("message", (event) => {
+  const data = event.data || {};
+  if (data.t === "skip") self.skipWaiting();
 });
 
 const buffers = new Map();
 const fullLoads = new Map();
 
 function isMedia(pathname) {
-  return /\.(mp4|m4v|webm|mp3|m4a)$/i.test(pathname);
+  return /\.(mp4|m4v|webm|mp3|m4a|vtt|pdf)$/i.test(pathname);
+}
+
+function isMeta(pathname) {
+  return /(?:^|\/)meta\.json$/i.test(pathname);
 }
 
 async function rememberFull(url, buf, type) {
@@ -76,7 +88,16 @@ async function rememberFull(url, buf, type) {
 async function cachedBuffer(url) {
   if (buffers.has(url)) return buffers.get(url);
   const cache = await caches.open(MEDIA);
-  const cached = await cache.match(url);
+  let cached = await cache.match(url);
+  if (!cached) {
+    const keys = await caches.keys();
+    for (const key of keys) {
+      if (!key.startsWith("bj-media-")) continue;
+      const older = await caches.open(key);
+      cached = await older.match(url);
+      if (cached) break;
+    }
+  }
   if (!cached) return null;
   return rememberFull(url, await cached.arrayBuffer(), mediaType(url, cached.headers.get("content-type")));
 }
@@ -99,6 +120,8 @@ function mediaType(pathname, header) {
   if (header) return header;
   if (/\.mp3$/i.test(pathname)) return "audio/mpeg";
   if (/\.m4a$/i.test(pathname)) return "audio/mp4";
+  if (/\.pdf$/i.test(pathname)) return "application/pdf";
+  if (/\.vtt$/i.test(pathname)) return "text/vtt";
   return "video/mp4";
 }
 
@@ -164,20 +187,28 @@ async function handleMedia(event, url) {
 }
 
 async function handleShell(event) {
+  const req = event.request;
+  const url = new URL(req.url);
   const cache = await caches.open(SHELL);
-  const cached = await cache.match(event.request, { ignoreSearch: true });
-  if (cached) return cached;
+  const navigate = req.mode === "navigate";
+  const meta = isMeta(url.pathname);
+  const cacheKey = navigate ? "./index.html" : req;
   try {
-    const fresh = await fetch(event.request);
-    if (fresh && fresh.ok) {
-      const copy = fresh.clone();
-      event.waitUntil(cache.put(event.request, copy));
+    const fresh = await fetch(navigate ? "./index.html" : req.url, { cache: "no-store" });
+    const type = (fresh.headers.get("content-type") || "").toLowerCase();
+    if (fresh.ok && !(meta && type.includes("text/html"))) {
+      event.waitUntil(cache.put(cacheKey, fresh.clone()));
     }
+    if (meta && type.includes("text/html")) return Response.error();
     return fresh;
   } catch (err) {
-    if (event.request.mode === "navigate") {
-      return (await cache.match("./index.html")) || (await cache.match("./")) || Response.error();
+    if (meta) {
+      const hit = await cache.match("./meta.json", { ignoreSearch: true });
+      return hit || Response.error();
     }
+    const hit = await cache.match(cacheKey, { ignoreSearch: true });
+    if (hit) return hit;
+    if (navigate) return (await cache.match("./index.html")) || (await cache.match("./")) || Response.error();
     return Response.error();
   }
 }
@@ -187,6 +218,7 @@ self.addEventListener("fetch", (event) => {
   if (req.method !== "GET") return;
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
+  if (url.pathname.endsWith("/sw.js")) return;
   if (isMedia(url.pathname)) {
     event.respondWith(handleMedia(event, url));
     return;

@@ -1342,6 +1342,12 @@
           </label>
         </div>
         <div class="card">
+          <h2>更新</h2>
+          <p class="small">打开或回到这个页面时会自己检查。正在看视频、做听懂题或练习时不会打断。</p>
+          <button type="button" class="btn" id="check-update">检查更新</button>
+          <button type="button" class="btn" id="force-update">强制更新</button>
+        </div>
+        <div class="card">
           <h2>朗读</h2>
           <p>正式版用仓库里的 Fish Audio mp3（<span lang="en">audio/&lt;id&gt;.mp3</span>）。把 id 写进 <span lang="en">audio/index.json</span> 才会去播文件。有词时间戳的，再放 <span lang="en">audio/&lt;id&gt;.json</span>，并把 id 写进 timings。文件还没放进来时，点朗读会暂时用浏览器的 en-US 声音，方便先学。</p>
         </div>
@@ -1389,6 +1395,8 @@
       });
     }
     if (route.name === "settings") {
+      document.getElementById("check-update").addEventListener("click", () => { checkUpdate(true); });
+      document.getElementById("force-update").addEventListener("click", () => { forceUpdate(); });
       document.getElementById("export-records").addEventListener("click", () => { exportRecords(); });
       document.getElementById("import-file").addEventListener("change", (event) => {
         const file = event.target.files && event.target.files[0];
@@ -1744,9 +1752,166 @@
     window.addEventListener("online", () => { if (parseRoute().name === "youtube") render(); });
     window.addEventListener("offline", () => { if (parseRoute().name === "youtube") render(); });
     render();
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("./sw.js").catch(() => {});
+    await bootUpdate();
+  }
+
+  let META = {};
+  let REG = null;
+  let regP = null;
+  let UPD_PEND = 0;
+  let UPD_ACT = 0;
+
+  function touchUpdate() { UPD_ACT = Date.now(); }
+
+  function updBusy() {
+    const playing = Array.from(document.querySelectorAll("audio,video")).some((el) => !el.paused && !el.ended);
+    if (playing) return true;
+    try { if (window.speechSynthesis && speechSynthesis.speaking) return true; } catch (err) { /* no speech */ }
+    const active = document.activeElement;
+    if (active && active.matches && active.matches("input:not([type=checkbox]):not([type=range]):not([type=file]):not([type=button]),textarea,select,[contenteditable]:not([contenteditable=false])")) return true;
+    const pending = Array.from(document.querySelectorAll("input.field,textarea")).some((el) => {
+      if (el.id === "note-box" || el.dataset.note || el.id === "q" || el.type === "search") return false;
+      return !!(el.value && el.value.trim());
+    });
+    if (pending) return true;
+    if (quizRun && !quizRun.done && quizRun.picks && quizRun.picks[quizRun.i] != null) return true;
+    if (session && !session.finished && !session.checked && (session.pick != null || session.kind)) return true;
+    const light = document.getElementById("lightbox");
+    if ((light && !light.hidden) || document.querySelector("dialog[open]")) return true;
+    const route = parseRoute();
+    if ((route.name === "quiz" || route.name === "drill" || route.name === "practice") && Date.now() - UPD_ACT < 60000) return true;
+    return false;
+  }
+
+  function saveResume() {
+    save();
+    try {
+      const open = Array.from(document.querySelectorAll("details[open]")).map((el) => el.id || el.dataset.fold || "");
+      sessionStorage.setItem("bj_resume", JSON.stringify({
+        h: location.hash || "#/",
+        y: Math.round(window.scrollY),
+        open: open,
+        t: Date.now()
+      }));
+    } catch (err) { /* private mode */ }
+  }
+
+  function resumeView() {
+    let saved = null;
+    try {
+      saved = JSON.parse(sessionStorage.getItem("bj_resume") || "null");
+      sessionStorage.removeItem("bj_resume");
+    } catch (err) { return; }
+    if (!saved || Date.now() - saved.t > 120000 || (saved.h || "#/") !== (location.hash || "#/")) return;
+    (saved.open || []).forEach((id) => {
+      if (!id) return;
+      const el = document.getElementById(id) || document.querySelector('details[data-fold="' + id + '"]');
+      if (el) el.open = true;
+    });
+    const y = saved.y || 0;
+    if (!y) return;
+    const started = Date.now();
+    const retry = () => {
+      const maxY = document.documentElement.scrollHeight - window.innerHeight;
+      if (maxY >= y - 2) { window.scrollTo(0, y); return; }
+      if (Date.now() - started < 2500) setTimeout(retry, 60);
+      else window.scrollTo(0, Math.min(y, Math.max(0, maxY)));
+    };
+    retry();
+  }
+
+  function safeReload() {
+    if (UPD_PEND) return;
+    UPD_PEND = 1;
+    const go = () => {
+      if (updBusy()) { setTimeout(go, 3000); return; }
+      saveResume();
+      location.reload();
+    };
+    go();
+  }
+
+  async function checkUpdate(manual) {
+    try {
+      const next = await (await fetch("meta.json?t=" + Date.now(), { cache: "no-store" })).json();
+      const newer = !!(next.v && META.v && next.v !== META.v);
+      if (REG && (manual || newer)) {
+        try { await REG.update(); } catch (err) { /* offline */ }
+      }
+      if (newer) {
+        if (!UPD_PEND) toast("发现新版本，正在更新…");
+        setTimeout(safeReload, 1500);
+      } else if (manual) toast("已经是最新版本 ✓");
+      return next;
+    } catch (err) {
+      if (manual) toast("没有网络，稍后再试");
     }
+  }
+
+  async function forceUpdate() {
+    if (!confirm("强制更新？会清掉页面缓存后重新打开。视频缓存和学习记录还在。")) return;
+    toast("正在强制更新…");
+    saveResume();
+    try {
+      const regs = await navigator.serviceWorker.getRegistrations();
+      await Promise.all(regs.map((reg) => reg.unregister()));
+    } catch (err) { /* already gone */ }
+    try {
+      const keys = await caches.keys();
+      await Promise.all(keys.filter((key) => key.startsWith("bj-shell-")).map((key) => caches.delete(key)));
+    } catch (err) { /* cache API missing */ }
+    try { sessionStorage.setItem("bj_updated", "1"); } catch (err) { /* private mode */ }
+    location.replace(location.pathname + "?u=" + Date.now() + (location.hash || ""));
+  }
+
+  function startSW() {
+    if (!("serviceWorker" in navigator)) return Promise.resolve(null);
+    if (REG) return Promise.resolve(REG);
+    if (!regP) {
+      regP = navigator.serviceWorker.register("sw.js?v=" + encodeURIComponent(META.v || "0"), { updateViaCache: "none" })
+        .then((reg) => { REG = reg; reg.update().catch(() => {}); return reg; })
+        .catch(() => { regP = null; return null; });
+    }
+    return regP;
+  }
+
+  async function bootUpdate() {
+    try {
+      META = await (await fetch("meta.json?t=" + Date.now(), { cache: "no-store" })).json();
+    } catch (err) { META = {}; }
+    const last = localStorage.getItem("bj_v");
+    let marked = false;
+    try { marked = !!sessionStorage.getItem("bj_updated"); sessionStorage.removeItem("bj_updated"); } catch (err) { /* private mode */ }
+    if (marked || (last && META.v && last !== META.v)) {
+      setTimeout(() => toast("已更新 ✓ 版本 " + (META.v || "")), 600);
+    }
+    if (META.v) localStorage.setItem("bj_v", META.v);
+    ["pointerdown", "keydown"].forEach((type) => {
+      document.addEventListener(type, touchUpdate, { passive: true, capture: true });
+    });
+    if ("serviceWorker" in navigator) {
+      const sw = navigator.serviceWorker;
+      const had = !!sw.controller;
+      let once = 0;
+      sw.addEventListener("controllerchange", () => {
+        if (had && !once) {
+          once = 1;
+          try { sessionStorage.setItem("bj_updated", "1"); } catch (err) { /* private mode */ }
+          safeReload();
+        }
+      });
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") checkUpdate(false);
+      });
+      window.addEventListener("pageshow", (event) => {
+        if (event.persisted) checkUpdate(false);
+      });
+      setInterval(() => {
+        if (document.visibilityState === "visible" && !UPD_PEND) checkUpdate(false);
+      }, 90000);
+      startSW();
+    }
+    resumeView();
   }
 
   init().catch(() => {
